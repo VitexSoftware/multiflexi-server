@@ -29,51 +29,51 @@ declare(strict_types=1);
  * @see https://github.com/PHP-DI/Slim-Bridge basic example.
  */
 
-namespace MultiFlexi\Api\ApiServer;
+namespace MultiFlexi\Api\Server;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Exception\HttpNotImplementedException;
 
 /**
- * AbstractCompanyApi Class Doc Comment.
+ * AbstractRuntemplateApi Class Doc Comment.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-abstract class AbstractCompanyApi
+abstract class AbstractRuntemplateApi
 {
     /**
-     * GET getCompanyById
-     * Summary: Get Company by ID
-     * Notes: Returns a single Company
+     * GET getRunTemplateById
+     * Summary: Get RunTemplate by ID
+     * Notes: Returns a single RunTemplate
      * Output-Formats: [application/json].
      *
-     * @param ServerRequestInterface $request   Request
-     * @param ResponseInterface      $response  Response
-     * @param int                    $companyId ID of Company to return
-     * @param string                 $suffix    force format suffix
+     * @param ServerRequestInterface $request       Request
+     * @param ResponseInterface      $response      Response
+     * @param int                    $runTemplateId ID of RunTemplate to return
+     * @param string                 $suffix        force format suffix
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function getCompanyById(
+    public function getRunTemplateById(
         ServerRequestInterface $request,
         ResponseInterface $response,
-        int $companyId,
+        int $runTemplateId,
         string $suffix
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getCompanyById as a GET method in MultiFlexi\\Api\\ApiServer\\CompanyApi class?';
+        $message = 'How about implementing getRunTemplateById as a GET method in MultiFlexi\\Api\\Server\\RuntemplateApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
 
     /**
-     * GET listCompanies
-     * Summary: Show All Companies
-     * Notes: All Companies registered
+     * GET listRunTemplates
+     * Summary: Show All RunTemplates
+     * Notes: All RunTemplates registered
      * Output-Formats: [application/json].
      *
      * @param ServerRequestInterface $request  Request
@@ -82,22 +82,22 @@ abstract class AbstractCompanyApi
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function listCompanies(
+    public function listRunTemplates(
         ServerRequestInterface $request,
         ResponseInterface $response,
         string $suffix
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing listCompanies as a GET method in MultiFlexi\\Api\\ApiServer\\CompanyApi class?';
+        $message = 'How about implementing listRunTemplates as a GET method in MultiFlexi\\Api\\Server\\RuntemplateApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
 
     /**
-     * POST setCompanyById
-     * Summary: Create or Update Company
-     * Notes: Create or Update Company by ID
+     * POST setRunTemplateById
+     * Summary: Create or Update RunTemplate
+     * Notes: Create or Update RunTemplate by ID
      * Output-Formats: [application/json].
      *
      * @param ServerRequestInterface $request  Request
@@ -105,14 +105,14 @@ abstract class AbstractCompanyApi
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function setCompanyById(
+    public function setRunTemplateById(
         ServerRequestInterface $request,
         ResponseInterface $response
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
-        $companyId = (\array_key_exists('companyId', $queryParams)) ? $queryParams['companyId'] : null;
+        $runTemplateId = (\array_key_exists('runTemplateId', $queryParams)) ? $queryParams['runTemplateId'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing setCompanyById as a POST method in MultiFlexi\\Api\\ApiServer\\CompanyApi class?';
+        $message = 'How about implementing setRunTemplateById as a POST method in MultiFlexi\\Api\\Server\\RuntemplateApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }

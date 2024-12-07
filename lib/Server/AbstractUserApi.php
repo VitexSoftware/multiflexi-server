@@ -29,7 +29,7 @@ declare(strict_types=1);
  * @see https://github.com/PHP-DI/Slim-Bridge basic example.
  */
 
-namespace MultiFlexi\Api\ApiServer;
+namespace MultiFlexi\Api\Server;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -65,7 +65,7 @@ abstract class AbstractUserApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getUserById as a GET method in MultiFlexi\\Api\\ApiServer\\UserApi class?';
+        $message = 'How about implementing getUserById as a GET method in MultiFlexi\\Api\\Server\\UserApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -89,7 +89,7 @@ abstract class AbstractUserApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing listUsers as a GET method in MultiFlexi\\Api\\ApiServer\\UserApi class?';
+        $message = 'How about implementing listUsers as a GET method in MultiFlexi\\Api\\Server\\UserApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -112,7 +112,7 @@ abstract class AbstractUserApi
         $queryParams = $request->getQueryParams();
         $userId = (\array_key_exists('userId', $queryParams)) ? $queryParams['userId'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing setUserById as a POST method in MultiFlexi\\Api\\ApiServer\\UserApi class?';
+        $message = 'How about implementing setUserById as a POST method in MultiFlexi\\Api\\Server\\UserApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }

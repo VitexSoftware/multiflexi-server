@@ -26,7 +26,7 @@ declare(strict_types=1);
  * Please update the test case below to test the endpoint.
  */
 
-namespace MultiFlexi\Api\ApiServer;
+namespace MultiFlexi\Api\Server;
 
 use PHPUnit\Framework\TestCase;
 
@@ -37,7 +37,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @see    https://github.com/openapitools/openapi-generator
  *
- * @coversDefaultClass \MultiFlexi\Api\ApiServer\DefaultApi
+ * @coversDefaultClass \MultiFlexi\Api\Server\DefaultApi
  */
 class DefaultApiTest extends TestCase
 {

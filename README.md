@@ -138,9 +138,9 @@ All URIs are relative to *https://virtserver.swaggerhub.com/VitexSoftware/MultiF
 ```php
 // src/Api/PetApi.php
 
-namespace MultiFlexi\Api\ApiServer;
+namespace MultiFlexi\Api\Server;
 
-use MultiFlexi\Api\ApiServer\AbstractPetApi;
+use MultiFlexi\Api\Server\AbstractPetApi;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 

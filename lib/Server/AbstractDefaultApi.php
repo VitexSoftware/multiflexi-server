@@ -29,7 +29,7 @@ declare(strict_types=1);
  * @see https://github.com/PHP-DI/Slim-Bridge basic example.
  */
 
-namespace MultiFlexi\Api\ApiServer;
+namespace MultiFlexi\Api\Server;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -63,7 +63,7 @@ abstract class AbstractDefaultApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getAllCredentialTypes as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing getAllCredentialTypes as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -87,7 +87,7 @@ abstract class AbstractDefaultApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getAllUserCredentials as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing getAllUserCredentials as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -110,7 +110,7 @@ abstract class AbstractDefaultApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getApiIndex as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing getApiIndex as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -137,7 +137,7 @@ abstract class AbstractDefaultApi
         $queryParams = $request->getQueryParams();
         $token = (\array_key_exists('token', $queryParams)) ? $queryParams['token'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getCredential as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing getCredential as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -163,7 +163,7 @@ abstract class AbstractDefaultApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getCredentialType as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing getCredentialType as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -188,7 +188,7 @@ abstract class AbstractDefaultApi
         $username = (\array_key_exists('username', $queryParams)) ? $queryParams['username'] : null;
         $password = (\array_key_exists('password', $queryParams)) ? $queryParams['password'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing loginSuffixGet as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing loginSuffixGet as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -213,7 +213,7 @@ abstract class AbstractDefaultApi
         $username = (\array_key_exists('username', $queryParams)) ? $queryParams['username'] : null;
         $password = (\array_key_exists('password', $queryParams)) ? $queryParams['password'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing loginSuffixPost as a POST method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing loginSuffixPost as a POST method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -236,7 +236,7 @@ abstract class AbstractDefaultApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing pingSuffixGet as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing pingSuffixGet as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -256,7 +256,7 @@ abstract class AbstractDefaultApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing rootGet as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing rootGet as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -282,7 +282,7 @@ abstract class AbstractDefaultApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing updateCredentialType as a POST method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing updateCredentialType as a POST method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -309,7 +309,7 @@ abstract class AbstractDefaultApi
         $queryParams = $request->getQueryParams();
         $token = (\array_key_exists('token', $queryParams)) ? $queryParams['token'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing updateCredentials as a POST method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+        $message = 'How about implementing updateCredentials as a POST method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }

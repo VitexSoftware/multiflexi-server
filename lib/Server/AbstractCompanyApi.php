@@ -29,51 +29,51 @@ declare(strict_types=1);
  * @see https://github.com/PHP-DI/Slim-Bridge basic example.
  */
 
-namespace MultiFlexi\Api\ApiServer;
+namespace MultiFlexi\Api\Server;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Exception\HttpNotImplementedException;
 
 /**
- * AbstractJobApi Class Doc Comment.
+ * AbstractCompanyApi Class Doc Comment.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-abstract class AbstractJobApi
+abstract class AbstractCompanyApi
 {
     /**
-     * GET getjobById
-     * Summary: Get job by ID
-     * Notes: Returns a single job
+     * GET getCompanyById
+     * Summary: Get Company by ID
+     * Notes: Returns a single Company
      * Output-Formats: [application/json].
      *
-     * @param ServerRequestInterface $request  Request
-     * @param ResponseInterface      $response Response
-     * @param int                    $jobId    ID of app to return
-     * @param string                 $suffix   force format suffix
+     * @param ServerRequestInterface $request   Request
+     * @param ResponseInterface      $response  Response
+     * @param int                    $companyId ID of Company to return
+     * @param string                 $suffix    force format suffix
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function getjobById(
+    public function getCompanyById(
         ServerRequestInterface $request,
         ResponseInterface $response,
-        int $jobId,
+        int $companyId,
         string $suffix
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getjobById as a GET method in MultiFlexi\\Api\\ApiServer\\JobApi class?';
+        $message = 'How about implementing getCompanyById as a GET method in MultiFlexi\\Api\\Server\\CompanyApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
 
     /**
-     * GET listjobs
-     * Summary: Show All jobs
-     * Notes: All job jobs registered
+     * GET listCompanies
+     * Summary: Show All Companies
+     * Notes: All Companies registered
      * Output-Formats: [application/json].
      *
      * @param ServerRequestInterface $request  Request
@@ -82,22 +82,22 @@ abstract class AbstractJobApi
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function listjobs(
+    public function listCompanies(
         ServerRequestInterface $request,
         ResponseInterface $response,
         string $suffix
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing listjobs as a GET method in MultiFlexi\\Api\\ApiServer\\JobApi class?';
+        $message = 'How about implementing listCompanies as a GET method in MultiFlexi\\Api\\Server\\CompanyApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
 
     /**
-     * POST setjobById
-     * Summary: Create or Update job record
-     * Notes: Create or Update single job record
+     * POST setCompanyById
+     * Summary: Create or Update Company
+     * Notes: Create or Update Company by ID
      * Output-Formats: [application/json].
      *
      * @param ServerRequestInterface $request  Request
@@ -105,14 +105,14 @@ abstract class AbstractJobApi
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function setjobById(
+    public function setCompanyById(
         ServerRequestInterface $request,
         ResponseInterface $response
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
-        $jobId = (\array_key_exists('jobId', $queryParams)) ? $queryParams['jobId'] : null;
+        $companyId = (\array_key_exists('companyId', $queryParams)) ? $queryParams['companyId'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing setjobById as a POST method in MultiFlexi\\Api\\ApiServer\\JobApi class?';
+        $message = 'How about implementing setCompanyById as a POST method in MultiFlexi\\Api\\Server\\CompanyApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }

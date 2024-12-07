@@ -29,7 +29,7 @@ declare(strict_types=1);
  * @see https://github.com/PHP-DI/Slim-Bridge basic example.
  */
 
-namespace MultiFlexi\Api\ApiServer;
+namespace MultiFlexi\Api\Server;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -65,7 +65,7 @@ abstract class AbstractAppApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getAppById as a GET method in MultiFlexi\\Api\\ApiServer\\AppApi class?';
+        $message = 'How about implementing getAppById as a GET method in MultiFlexi\\Api\\Server\\AppApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -89,7 +89,7 @@ abstract class AbstractAppApi
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing listApps as a GET method in MultiFlexi\\Api\\ApiServer\\AppApi class?';
+        $message = 'How about implementing listApps as a GET method in MultiFlexi\\Api\\Server\\AppApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -112,7 +112,7 @@ abstract class AbstractAppApi
         $queryParams = $request->getQueryParams();
         $appId = (\array_key_exists('appId', $queryParams)) ? $queryParams['appId'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing setAppById as a POST method in MultiFlexi\\Api\\ApiServer\\AppApi class?';
+        $message = 'How about implementing setAppById as a POST method in MultiFlexi\\Api\\Server\\AppApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
