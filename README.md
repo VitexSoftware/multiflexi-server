@@ -169,10 +169,16 @@ Class | Method | HTTP request | Description
 *AbstractCompanyApi* | **getCompanyById** | **GET** /company/{companyId}.{suffix} | Get Company by ID
 *AbstractCompanyApi* | **listCompanies** | **GET** /companies.{suffix} | Show All Companies
 *AbstractDefaultApi* | **rootGet** | **GET** / | Redirect to index
+*AbstractDefaultApi* | **getAllCredentialTypes** | **GET** /credential_types.{suffix} | Get All Credential Types
+*AbstractDefaultApi* | **getAllUserCredentials** | **GET** /credentials.{suffix} | Get All User Credentials
 *AbstractDefaultApi* | **getApiIndex** | **GET** /index.{suffix} | Endpoints listing
+*AbstractDefaultApi* | **getCredential** | **GET** /credential/{credentialId}.{suffix} | Get User Credentials
+*AbstractDefaultApi* | **getCredentialType** | **GET** /credential_type/{credentialTypeID}.{suffix} | Get Credential Type by ID
 *AbstractDefaultApi* | **loginSuffixGet** | **GET** /login.{suffix} | Return User's token
 *AbstractDefaultApi* | **loginSuffixPost** | **POST** /login.{suffix} | Return User's token
 *AbstractDefaultApi* | **pingSuffixGet** | **GET** /ping.{suffix} | job heartbeat operation
+*AbstractDefaultApi* | **updateCredentialType** | **POST** /credential_type/{credentialTypeID}.{suffix} | Update Credential Type
+*AbstractDefaultApi* | **updateCredentials** | **POST** /credential/{credentialId}.{suffix} | Update Credentials
 *AbstractJobApi* | **setjobById** | **POST** /job/ | Create or Update job record
 *AbstractJobApi* | **getjobById** | **GET** /job/{jobId}.{suffix} | Get job by ID
 *AbstractJobApi* | **listjobs** | **GET** /jobs.{suffix} | Show All jobs
@@ -190,7 +196,11 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\Company
 * MultiFlexi\Api\Model\ConfField
 * MultiFlexi\Api\Model\Configuration
+* MultiFlexi\Api\Model\Credential
+* MultiFlexi\Api\Model\CredentialType
 * MultiFlexi\Api\Model\Customer
+* MultiFlexi\Api\Model\GetCredential200Response
+* MultiFlexi\Api\Model\GetCredentialType200Response
 * MultiFlexi\Api\Model\Job
 * MultiFlexi\Api\Model\RunTemplate
 * MultiFlexi\Api\Model\Tag

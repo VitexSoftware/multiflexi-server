@@ -45,6 +45,54 @@ use Slim\Exception\HttpNotImplementedException;
 abstract class AbstractDefaultApi
 {
     /**
+     * GET getAllCredentialTypes
+     * Summary: Get All Credential Types
+     * Notes: Retrieve all credential types
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function getAllCredentialTypes(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing getAllCredentialTypes as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * GET getAllUserCredentials
+     * Summary: Get All User Credentials
+     * Notes: Retrieve all user credentials
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function getAllUserCredentials(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing getAllUserCredentials as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
      * GET getApiIndex
      * Summary: Endpoints listing
      * Notes: Show current API.
@@ -63,6 +111,59 @@ abstract class AbstractDefaultApi
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
         $message = 'How about implementing getApiIndex as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * GET getCredential
+     * Summary: Get User Credentials
+     * Notes: Retrieve user credentials based on provided token
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request      Request
+     * @param ResponseInterface      $response     Response
+     * @param int                    $credentialId ID of Credential to return
+     * @param string                 $suffix       force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function getCredential(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $credentialId,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $token = (\array_key_exists('token', $queryParams)) ? $queryParams['token'] : null;
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing getCredential as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * GET getCredentialType
+     * Summary: Get Credential Type by ID
+     * Notes: Retrieve credential type by ID
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request          Request
+     * @param ResponseInterface      $response         Response
+     * @param int                    $credentialTypeID ID of Credential Type to return
+     * @param string                 $suffix           force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function getCredentialType(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $credentialTypeID,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing getCredentialType as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -156,6 +257,59 @@ abstract class AbstractDefaultApi
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
         $message = 'How about implementing rootGet as a GET method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * POST updateCredentialType
+     * Summary: Update Credential Type
+     * Notes: Update credential type
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request          Request
+     * @param ResponseInterface      $response         Response
+     * @param int                    $credentialTypeID ID of Credential Type to return
+     * @param string                 $suffix           force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function updateCredentialType(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $credentialTypeID,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing updateCredentialType as a POST method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * POST updateCredentials
+     * Summary: Update Credentials
+     * Notes: Update credentials
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request      Request
+     * @param ResponseInterface      $response     Response
+     * @param int                    $credentialId ID of Credential to return
+     * @param string                 $suffix       force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function updateCredentials(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $credentialId,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $token = (\array_key_exists('token', $queryParams)) ? $queryParams['token'] : null;
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing updateCredentials as a POST method in MultiFlexi\\Api\\ApiServer\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }

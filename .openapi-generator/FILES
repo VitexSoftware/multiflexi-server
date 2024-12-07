@@ -24,7 +24,11 @@ lib/Model/App.php
 lib/Model/Company.php
 lib/Model/ConfField.php
 lib/Model/Configuration.php
+lib/Model/Credential.php
+lib/Model/CredentialType.php
 lib/Model/Customer.php
+lib/Model/GetCredential200Response.php
+lib/Model/GetCredentialType200Response.php
 lib/Model/Job.php
 lib/Model/RunTemplate.php
 lib/Model/Tag.php
@@ -47,7 +51,11 @@ tests/Model/AppTest.php
 tests/Model/CompanyTest.php
 tests/Model/ConfFieldTest.php
 tests/Model/ConfigurationTest.php
+tests/Model/CredentialTest.php
+tests/Model/CredentialTypeTest.php
 tests/Model/CustomerTest.php
+tests/Model/GetCredential200ResponseTest.php
+tests/Model/GetCredentialType200ResponseTest.php
 tests/Model/JobTest.php
 tests/Model/RunTemplateTest.php
 tests/Model/TagTest.php

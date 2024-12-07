@@ -26,6 +26,3 @@ composer.phar
 # Logs folder
 /logs/**/*.*
 !/logs/.htaccess
-/nbproject/private/
-/.build/
-/nbproject/

@@ -70,6 +70,34 @@ class DefaultApiTest extends TestCase
     }
 
     /**
+     * Test case for getAllCredentialTypes.
+     *
+     * Get All Credential Types.
+     *
+     * @covers ::getAllCredentialTypes
+     */
+    public function testGetAllCredentialTypes(): void
+    {
+        self::markTestIncomplete(
+            'Test of "getAllCredentialTypes" method has not been implemented yet.',
+        );
+    }
+
+    /**
+     * Test case for getAllUserCredentials.
+     *
+     * Get All User Credentials.
+     *
+     * @covers ::getAllUserCredentials
+     */
+    public function testGetAllUserCredentials(): void
+    {
+        self::markTestIncomplete(
+            'Test of "getAllUserCredentials" method has not been implemented yet.',
+        );
+    }
+
+    /**
      * Test case for getApiIndex.
      *
      * Endpoints listing.
@@ -80,6 +108,34 @@ class DefaultApiTest extends TestCase
     {
         self::markTestIncomplete(
             'Test of "getApiIndex" method has not been implemented yet.',
+        );
+    }
+
+    /**
+     * Test case for getCredential.
+     *
+     * Get User Credentials.
+     *
+     * @covers ::getCredential
+     */
+    public function testGetCredential(): void
+    {
+        self::markTestIncomplete(
+            'Test of "getCredential" method has not been implemented yet.',
+        );
+    }
+
+    /**
+     * Test case for getCredentialType.
+     *
+     * Get Credential Type by ID.
+     *
+     * @covers ::getCredentialType
+     */
+    public function testGetCredentialType(): void
+    {
+        self::markTestIncomplete(
+            'Test of "getCredentialType" method has not been implemented yet.',
         );
     }
 
@@ -136,6 +192,34 @@ class DefaultApiTest extends TestCase
     {
         self::markTestIncomplete(
             'Test of "rootGet" method has not been implemented yet.',
+        );
+    }
+
+    /**
+     * Test case for updateCredentialType.
+     *
+     * Update Credential Type.
+     *
+     * @covers ::updateCredentialType
+     */
+    public function testUpdateCredentialType(): void
+    {
+        self::markTestIncomplete(
+            'Test of "updateCredentialType" method has not been implemented yet.',
+        );
+    }
+
+    /**
+     * Test case for updateCredentials.
+     *
+     * Update Credentials.
+     *
+     * @covers ::updateCredentials
+     */
+    public function testUpdateCredentials(): void
+    {
+        self::markTestIncomplete(
+            'Test of "updateCredentials" method has not been implemented yet.',
         );
     }
 }
