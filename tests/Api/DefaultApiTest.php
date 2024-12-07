@@ -84,6 +84,20 @@ class DefaultApiTest extends TestCase
     }
 
     /**
+     * Test case for getAllTopics.
+     *
+     * Get All Topics.
+     *
+     * @covers ::getAllTopics
+     */
+    public function testGetAllTopics(): void
+    {
+        self::markTestIncomplete(
+            'Test of "getAllTopics" method has not been implemented yet.',
+        );
+    }
+
+    /**
      * Test case for getAllUserCredentials.
      *
      * Get All User Credentials.
@@ -136,6 +150,20 @@ class DefaultApiTest extends TestCase
     {
         self::markTestIncomplete(
             'Test of "getCredentialType" method has not been implemented yet.',
+        );
+    }
+
+    /**
+     * Test case for getTopic.
+     *
+     * Get Topic by ID.
+     *
+     * @covers ::getTopic
+     */
+    public function testGetTopic(): void
+    {
+        self::markTestIncomplete(
+            'Test of "getTopic" method has not been implemented yet.',
         );
     }
 
@@ -220,6 +248,20 @@ class DefaultApiTest extends TestCase
     {
         self::markTestIncomplete(
             'Test of "updateCredentials" method has not been implemented yet.',
+        );
+    }
+
+    /**
+     * Test case for updateTopic.
+     *
+     * Update Topic.
+     *
+     * @covers ::updateTopic
+     */
+    public function testUpdateTopic(): void
+    {
+        self::markTestIncomplete(
+            'Test of "updateTopic" method has not been implemented yet.',
         );
     }
 }

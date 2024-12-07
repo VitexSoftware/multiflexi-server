@@ -23,9 +23,11 @@ lib/Model/CredentialType.php
 lib/Model/Customer.php
 lib/Model/GetCredential200Response.php
 lib/Model/GetCredentialType200Response.php
+lib/Model/GetTopic200Response.php
 lib/Model/Job.php
 lib/Model/RunTemplate.php
 lib/Model/Tag.php
+lib/Model/Topic.php
 lib/Model/User.php
 lib/Server/AbstractAppApi.php
 lib/Server/AbstractCompanyApi.php
@@ -56,7 +58,9 @@ tests/Model/CredentialTypeTest.php
 tests/Model/CustomerTest.php
 tests/Model/GetCredential200ResponseTest.php
 tests/Model/GetCredentialType200ResponseTest.php
+tests/Model/GetTopic200ResponseTest.php
 tests/Model/JobTest.php
 tests/Model/RunTemplateTest.php
 tests/Model/TagTest.php
+tests/Model/TopicTest.php
 tests/Model/UserTest.php

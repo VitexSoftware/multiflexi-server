@@ -69,6 +69,30 @@ abstract class AbstractDefaultApi
     }
 
     /**
+     * GET getAllTopics
+     * Summary: Get All Topics
+     * Notes: Retrieve all topics
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function getAllTopics(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing getAllTopics as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
      * GET getAllUserCredentials
      * Summary: Get All User Credentials
      * Notes: Retrieve all user credentials
@@ -164,6 +188,32 @@ abstract class AbstractDefaultApi
         $queryParams = $request->getQueryParams();
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
         $message = 'How about implementing getCredentialType as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * GET getTopic
+     * Summary: Get Topic by ID
+     * Notes: Retrieve topic by ID
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param int                    $topicId  ID of Topic to return
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function getTopic(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $topicId,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing getTopic as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
@@ -310,6 +360,32 @@ abstract class AbstractDefaultApi
         $token = (\array_key_exists('token', $queryParams)) ? $queryParams['token'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
         $message = 'How about implementing updateCredentials as a POST method in MultiFlexi\\Api\\Server\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * POST updateTopic
+     * Summary: Update Topic
+     * Notes: Update topic
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param int                    $topicId  ID of Topic to return
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function updateTopic(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $topicId,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing updateTopic as a POST method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }

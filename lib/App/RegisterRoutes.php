@@ -501,6 +501,52 @@ EOD,
         [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/topics.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'getAllTopics',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Topic"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/credentials.{suffix}',
             'apiPackage' => 'MultiFlexi\Api\Server',
             'classname' => 'AbstractDefaultApi',
@@ -631,6 +677,56 @@ EOD,
     "application/json" : {
       "schema" : {
         "$ref" : "#/components/schemas/getCredentialType_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/topic/{topicId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'getTopic',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/getTopic_200_response"
       }
     }
   }
@@ -801,6 +897,56 @@ EOD,
                     'jsonSchema' => <<<'EOD'
 {
   "description" : "Invalid token supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+            ],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/topic/{topicId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'updateTopic',
+            'responses' => [
+                '201' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Record was updated",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/getTopic_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
 }
 EOD,
                 ],
