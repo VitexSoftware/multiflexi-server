@@ -1,0 +1,46 @@
+{
+  "name": "deb/multiflexi-api",
+  "description": "MultiFlexi - PHP Slim 4 Server library for MultiFlexi API",
+  "authors": [
+    {
+      "name": "Vítězslav Dvořák",
+      "email": "info@vitexsoftware.cz",
+      "homepage": "https://vitexsoftware.com/"
+    }
+  ],
+  "config": {
+    "vendor-dir": "/var/lib/composer/php-vitexsoftware-multiflexi-server"
+  },
+  "autoload": {
+    "psr-4": {
+      "MultiFlexi\\Api\\": "./",
+      "MultiFlexi\\Api\\App\\": "./App/",
+      "MultiFlexi\\Api\\Auth\\": "./Auth/",
+      "MultiFlexi\\Api\\Model\\": "./Model/",
+      "MultiFlexi\\Api\\Server\\": "./Server/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "^7.3",
+    "deb/ease-core": "*"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseCore"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/MultiFlexiApi"
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/GuzzleHttp"
+    }
+  ],
+  "type": "library",
+  "homepage": "https://github.com/VitexSoftware/php-vitexsoftware-rbczpremiumapi",
+  "license": "MIT"
+}

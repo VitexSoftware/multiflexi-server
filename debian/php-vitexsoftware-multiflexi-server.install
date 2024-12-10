@@ -1,0 +1,6 @@
+lib/*.php                         usr/share/php/MultiFlexiApi/
+lib/App/*.php                     usr/share/php/MultiFlexiApi/App/
+lib/Auth/*.php                    usr/share/php/MultiFlexiApi/Auth/
+lib/Model/*.php                   usr/share/php/MultiFlexiApi/Model/
+lib/Server/*.php                  usr/share/php/MultiFlexiApi/Server/
+debian/conf/composer.json         usr/share/php/MultiFlexiApi/

@@ -1,0 +1,6 @@
+multiflexi-server (0.1.0) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Tue, 10 Dec 2024 18:07:00 +0100

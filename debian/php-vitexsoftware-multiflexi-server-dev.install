@@ -1,0 +1,12 @@
+tests/*.php       		usr/share/php/MultiFlexiApi/Test/
+tests/Api/*.php       		usr/share/php/MultiFlexiApi/Test/Api/
+tests/Model/*.php       	usr/share/php/MultiFlexiApi/Test/Model/
+
+#examples/example.env            var/lib/composer/php-vitexsoftware-multiflexi-server-dev/
+
+#debian/test/phpunit.xml         usr/share/php/MultiFlexiApi/Test
+
+#debian/test/composer.json    	usr/lib/php-vitexsoftware-multiflexi-server-dev
+#debian/test/bootstrap.php	usr/share/php/MultiFlexiApi/Test
+
+#examples/*      		usr/share/doc/php-vitexsoftware-multiflexi-server-dev

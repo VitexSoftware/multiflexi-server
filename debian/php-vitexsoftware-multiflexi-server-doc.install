@@ -1,0 +1,5 @@
+docs/Api/*              usr/share/doc/php-vitexsoftware-multiflexi-server/Api/
+docs/Model/*            usr/share/doc/php-vitexsoftware-multiflexi-server/Model/
+
+debian/php-vitexsoftware-multiflexi-server-doc.conf	usr/share/doc/php-vitexsoftware-multiflexi-server-doc/apache
+README.md		usr/share/doc/php-vitexsoftware-multiflexi-server
