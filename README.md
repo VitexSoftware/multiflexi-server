@@ -169,6 +169,7 @@ Class | Method | HTTP request | Description
 *AbstractCompanyApi* | **getCompanyById** | **GET** /company/{companyId}.{suffix} | Get Company by ID
 *AbstractCompanyApi* | **listCompanies** | **GET** /companies.{suffix} | Show All Companies
 *AbstractDefaultApi* | **rootGet** | **GET** / | Redirect to index
+*AbstractDefaultApi* | **statusGet** | **GET** /status | Get API status
 *AbstractDefaultApi* | **getAllCredentialTypes** | **GET** /credential_types.{suffix} | Get All Credential Types
 *AbstractDefaultApi* | **getAllTopics** | **GET** /topics.{suffix} | Get All Topics
 *AbstractDefaultApi* | **getAllUserCredentials** | **GET** /credentials.{suffix} | Get All User Credentials
