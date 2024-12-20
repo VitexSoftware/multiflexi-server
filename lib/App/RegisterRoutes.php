@@ -455,26 +455,6 @@ EOD,
         [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/status',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'statusGet',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "OK"
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/credential_types.{suffix}',
             'apiPackage' => 'MultiFlexi\Api\Server',
             'classname' => 'AbstractDefaultApi',
@@ -833,6 +813,33 @@ EOD,
                     'jsonSchema' => <<<'EOD'
 {
   "description" : "OK"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/status.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'statusSuffixGet',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Status"
+      }
+    }
+  }
 }
 EOD,
                 ],

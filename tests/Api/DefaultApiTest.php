@@ -224,16 +224,16 @@ class DefaultApiTest extends TestCase
     }
 
     /**
-     * Test case for statusGet.
+     * Test case for statusSuffixGet.
      *
      * Get API status.
      *
-     * @covers ::statusGet
+     * @covers ::statusSuffixGet
      */
-    public function testStatusGet(): void
+    public function testStatusSuffixGet(): void
     {
         self::markTestIncomplete(
-            'Test of "statusGet" method has not been implemented yet.',
+            'Test of "statusSuffixGet" method has not been implemented yet.',
         );
     }
 

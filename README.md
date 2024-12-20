@@ -169,7 +169,6 @@ Class | Method | HTTP request | Description
 *AbstractCompanyApi* | **getCompanyById** | **GET** /company/{companyId}.{suffix} | Get Company by ID
 *AbstractCompanyApi* | **listCompanies** | **GET** /companies.{suffix} | Show All Companies
 *AbstractDefaultApi* | **rootGet** | **GET** / | Redirect to index
-*AbstractDefaultApi* | **statusGet** | **GET** /status | Get API status
 *AbstractDefaultApi* | **getAllCredentialTypes** | **GET** /credential_types.{suffix} | Get All Credential Types
 *AbstractDefaultApi* | **getAllTopics** | **GET** /topics.{suffix} | Get All Topics
 *AbstractDefaultApi* | **getAllUserCredentials** | **GET** /credentials.{suffix} | Get All User Credentials
@@ -180,6 +179,7 @@ Class | Method | HTTP request | Description
 *AbstractDefaultApi* | **loginSuffixGet** | **GET** /login.{suffix} | Return User's token
 *AbstractDefaultApi* | **loginSuffixPost** | **POST** /login.{suffix} | Return User's token
 *AbstractDefaultApi* | **pingSuffixGet** | **GET** /ping.{suffix} | job heartbeat operation
+*AbstractDefaultApi* | **statusSuffixGet** | **GET** /status.{suffix} | Get API status
 *AbstractDefaultApi* | **updateCredentialType** | **POST** /credential_type/{credentialTypeID}.{suffix} | Update Credential Type
 *AbstractDefaultApi* | **updateCredentials** | **POST** /credential/{credentialId}.{suffix} | Update Credentials
 *AbstractDefaultApi* | **updateTopic** | **POST** /topic/{topicId}.{suffix} | Update Topic
@@ -208,6 +208,7 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\GetTopic200Response
 * MultiFlexi\Api\Model\Job
 * MultiFlexi\Api\Model\RunTemplate
+* MultiFlexi\Api\Model\Status
 * MultiFlexi\Api\Model\Tag
 * MultiFlexi\Api\Model\Topic
 * MultiFlexi\Api\Model\User

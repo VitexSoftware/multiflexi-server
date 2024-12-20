@@ -30,13 +30,13 @@ namespace MultiFlexi\Api\Model;
 use MultiFlexi\Api\BaseModel;
 
 /**
- * Topic.
+ * Status.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-class Topic extends BaseModel
+class Status extends BaseModel
 {
     /**
      * @var string Models namespace.
@@ -51,30 +51,42 @@ class Topic extends BaseModel
     protected const MODEL_SCHEMA = <<<'SCHEMA'
 {
   "properties" : {
-    "id" : {
+    "companies" : {
       "type" : "integer",
-      "format" : "int64",
-      "example" : 10
+      "example" : 200
     },
-    "name" : {
-      "maxLength" : 32,
-      "type" : "string"
+    "apps" : {
+      "type" : "integer",
+      "example" : 200
     },
-    "description" : {
-      "maxLength" : 255,
-      "type" : "string"
+    "runtemplates" : {
+      "type" : "integer",
+      "example" : 200
     },
-    "color" : {
-      "maxLength" : 7,
+    "topics" : {
+      "type" : "integer",
+      "example" : 200
+    },
+    "credentials" : {
+      "type" : "integer",
+      "example" : 200
+    },
+    "credentialtypes" : {
+      "type" : "integer",
+      "example" : 200
+    },
+    "database" : {
       "type" : "string",
-      "example" : "#000000"
+      "example" : "mysql:host=localhost;port=3307;dbname=testdb"
     },
-    "DatCreate" : {
+    "daemon" : {
       "type" : "string",
-      "format" : "date-time"
+      "example" : "running"
     },
-    "DatUpdate" : {
-      "type" : "string"
+    "timestamp" : {
+      "type" : "string",
+      "format" : "date-time",
+      "example" : "2023-10-01T12:00:00Z"
     }
   }
 }

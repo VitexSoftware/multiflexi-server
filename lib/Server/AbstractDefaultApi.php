@@ -312,20 +312,25 @@ abstract class AbstractDefaultApi
     }
 
     /**
-     * GET statusGet
+     * GET statusSuffixGet
      * Summary: Get API status
      * Notes: This operation shows how to override the global security defined above, as we want to open it up for all users.
+     * Output-Formats: [application/json].
      *
      * @param ServerRequestInterface $request  Request
      * @param ResponseInterface      $response Response
+     * @param string                 $suffix   force format suffix
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function statusGet(
+    public function statusSuffixGet(
         ServerRequestInterface $request,
-        ResponseInterface $response
+        ResponseInterface $response,
+        string $suffix
     ): ResponseInterface {
-        $message = 'How about implementing statusGet as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing statusSuffixGet as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
