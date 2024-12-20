@@ -193,6 +193,30 @@ abstract class AbstractDefaultApi
     }
 
     /**
+     * GET getJobsStatus
+     * Summary: Get Jobs Status
+     * Notes: Retrieve all jobs status
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function getJobsStatus(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $message = 'How about implementing getJobsStatus as a GET method in MultiFlexi\\Api\\Server\\DefaultApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
      * GET getTopic
      * Summary: Get Topic by ID
      * Notes: Retrieve topic by ID

@@ -713,6 +713,52 @@ EOD,
         [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/jobs/status.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'getJobsStatus',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/JobsStatus"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/topic/{topicId}.{suffix}',
             'apiPackage' => 'MultiFlexi\Api\Server',
             'classname' => 'AbstractDefaultApi',

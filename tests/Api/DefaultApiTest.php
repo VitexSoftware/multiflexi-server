@@ -154,6 +154,20 @@ class DefaultApiTest extends TestCase
     }
 
     /**
+     * Test case for getJobsStatus.
+     *
+     * Get Jobs Status.
+     *
+     * @covers ::getJobsStatus
+     */
+    public function testGetJobsStatus(): void
+    {
+        self::markTestIncomplete(
+            'Test of "getJobsStatus" method has not been implemented yet.',
+        );
+    }
+
+    /**
      * Test case for getTopic.
      *
      * Get Topic by ID.

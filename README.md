@@ -175,6 +175,7 @@ Class | Method | HTTP request | Description
 *AbstractDefaultApi* | **getApiIndex** | **GET** /index.{suffix} | Endpoints listing
 *AbstractDefaultApi* | **getCredential** | **GET** /credential/{credentialId}.{suffix} | Get User Credentials
 *AbstractDefaultApi* | **getCredentialType** | **GET** /credential_type/{credentialTypeID}.{suffix} | Get Credential Type by ID
+*AbstractDefaultApi* | **getJobsStatus** | **GET** /jobs/status.{suffix} | Get Jobs Status
 *AbstractDefaultApi* | **getTopic** | **GET** /topic/{topicId}.{suffix} | Get Topic by ID
 *AbstractDefaultApi* | **loginSuffixGet** | **GET** /login.{suffix} | Return User's token
 *AbstractDefaultApi* | **loginSuffixPost** | **POST** /login.{suffix} | Return User's token
@@ -207,6 +208,7 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\GetCredentialType200Response
 * MultiFlexi\Api\Model\GetTopic200Response
 * MultiFlexi\Api\Model\Job
+* MultiFlexi\Api\Model\JobsStatus
 * MultiFlexi\Api\Model\RunTemplate
 * MultiFlexi\Api\Model\Status
 * MultiFlexi\Api\Model\Tag

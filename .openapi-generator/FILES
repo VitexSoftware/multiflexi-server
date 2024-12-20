@@ -25,6 +25,7 @@ lib/Model/GetCredential200Response.php
 lib/Model/GetCredentialType200Response.php
 lib/Model/GetTopic200Response.php
 lib/Model/Job.php
+lib/Model/JobsStatus.php
 lib/Model/RunTemplate.php
 lib/Model/Status.php
 lib/Model/Tag.php
@@ -61,6 +62,7 @@ tests/Model/GetCredential200ResponseTest.php
 tests/Model/GetCredentialType200ResponseTest.php
 tests/Model/GetTopic200ResponseTest.php
 tests/Model/JobTest.php
+tests/Model/JobsStatusTest.php
 tests/Model/RunTemplateTest.php
 tests/Model/StatusTest.php
 tests/Model/TagTest.php

@@ -30,13 +30,13 @@ namespace MultiFlexi\Api\Model;
 use MultiFlexi\Api\BaseModel;
 
 /**
- * CredentialType.
+ * JobsStatus.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-class CredentialType extends BaseModel
+class JobsStatus extends BaseModel
 {
     /**
      * @var string Models namespace.
@@ -51,33 +51,34 @@ class CredentialType extends BaseModel
     protected const MODEL_SCHEMA = <<<'SCHEMA'
 {
   "properties" : {
-    "id" : {
-      "type" : "integer",
-      "format" : "int64",
-      "example" : 10
-    },
-    "name" : {
-      "maxLength" : 32,
-      "type" : "string"
-    },
-    "description" : {
-      "maxLength" : 255,
-      "type" : "string"
-    },
-    "url" : {
-      "maxLength" : 255,
-      "type" : "string"
-    },
-    "logo" : {
-      "maxLength" : 255,
-      "type" : "string"
-    },
-    "DatCreate" : {
+    "timestamp" : {
       "type" : "string",
-      "format" : "date-time"
+      "format" : "date-time",
+      "example" : "2023-10-01T12:00:00Z"
     },
-    "DatUpdate" : {
-      "type" : "string"
+    "successful_jobs" : {
+      "type" : "integer",
+      "description" : "Successful jobs"
+    },
+    "failed_jobs" : {
+      "type" : "integer",
+      "description" : "Failed jobs"
+    },
+    "incomplete_jobs" : {
+      "type" : "integer",
+      "description" : "Incomplete jobs"
+    },
+    "total_applications" : {
+      "type" : "integer",
+      "description" : "Total applications"
+    },
+    "repeated_jobs" : {
+      "type" : "integer",
+      "description" : "Repeated jobs"
+    },
+    "total_jobs" : {
+      "type" : "integer",
+      "description" : "Total jobs"
     }
   }
 }
