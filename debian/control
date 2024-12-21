@@ -10,7 +10,7 @@ Vcs-Git: https://github.com/VitexSoftware/multiflexi-server.git
 Vcs-Browser: https://github.com/VitexSoftware/multiflexi-server
 
 Package: php-vitexsoftware-multiflexi-server
-Depends: ${misc:Depends}, php-guzzlehttp-psr7, composer-debian, php-vitexsoftware-ease-core
+Depends: ${misc:Depends}, php-guzzlehttp-psr7, composer-debian, php-vitexsoftware-ease-core, php-symfony-dependency-injection
 Architecture: all
 Suggests: abraflexi-raiffasenbank
 Section: office
