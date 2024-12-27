@@ -11,7 +11,7 @@
   "license": "MIT",
   "require": {
     "php": "^7.4 || ^8.0",
-    "dyorg/slim-token-authentication": "*",
+    "dyorg/slim-token-authentication": "dev-slim4",
     "monolog/monolog": "^2.4",
     "neomerx/cors-psr7": "^2.0",
     "php-di/slim-bridge": "^3.2",
