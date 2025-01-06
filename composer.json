@@ -11,12 +11,15 @@
   "license": "MIT",
   "require": {
     "php": "^7.4 || ^8.0",
+    "dyorg/slim-token-authentication": "*",
+    "php-di/slim-bridge": "^3.4",
+    "slim/psr7": "^1.5",
     "dyorg/slim-token-authentication": "dev-slim4",
+    "tuupola/slim-basic-auth": "^3.0",
     "monolog/monolog": "^2.4",
     "neomerx/cors-psr7": "^2.0",
     "php-di/slim-bridge": "^3.2",
     "slim/psr7": "*",
-    "tuupola/slim-basic-auth": "^3.0",        
     "ybelenko/openapi-data-mocker": "^1.0",
     "ybelenko/openapi-data-mocker-server-middleware": "^1.2"
   },

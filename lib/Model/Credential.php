@@ -56,11 +56,6 @@ class Credential extends BaseModel
       "format" : "int64",
       "example" : 10
     },
-    "user_id" : {
-      "type" : "integer",
-      "format" : "int64",
-      "example" : 10
-    },
     "company_id" : {
       "type" : "integer",
       "format" : "int64",

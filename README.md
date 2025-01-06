@@ -204,7 +204,6 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\Credential
 * MultiFlexi\Api\Model\CredentialType
 * MultiFlexi\Api\Model\Customer
-* MultiFlexi\Api\Model\GetCredential200Response
 * MultiFlexi\Api\Model\GetCredentialType200Response
 * MultiFlexi\Api\Model\GetTopic200Response
 * MultiFlexi\Api\Model\Job
@@ -213,6 +212,7 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\Status
 * MultiFlexi\Api\Model\Tag
 * MultiFlexi\Api\Model\Topic
+* MultiFlexi\Api\Model\UpdateCredentials201Response
 * MultiFlexi\Api\Model\User
 
 

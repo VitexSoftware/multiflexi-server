@@ -626,7 +626,7 @@ EOD,
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/getCredential_200_response"
+        "$ref" : "#/components/schemas/Credential"
       }
     }
   }
@@ -959,7 +959,7 @@ EOD,
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/getCredential_200_response"
+        "$ref" : "#/components/schemas/updateCredentials_201_response"
       }
     }
   }

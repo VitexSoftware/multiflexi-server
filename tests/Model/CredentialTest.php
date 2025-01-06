@@ -97,16 +97,6 @@ class CredentialTest extends TestCase
     }
 
     /**
-     * Test attribute "userId".
-     */
-    public function testPropertyUserId(): void
-    {
-        self::markTestIncomplete(
-            'Test of "userId" property in "Credential" model has not been implemented yet.',
-        );
-    }
-
-    /**
      * Test attribute "companyId".
      */
     public function testPropertyCompanyId(): void

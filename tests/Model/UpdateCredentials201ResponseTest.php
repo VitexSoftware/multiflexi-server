@@ -31,15 +31,15 @@ namespace MultiFlexi\Api\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GetCredential200ResponseTest Class Doc Comment.
+ * UpdateCredentials201ResponseTest Class Doc Comment.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  *
- * @coversDefaultClass \MultiFlexi\Api\Model\GetCredential200Response
+ * @coversDefaultClass \MultiFlexi\Api\Model\UpdateCredentials201Response
  */
-class GetCredential200ResponseTest extends TestCase
+class UpdateCredentials201ResponseTest extends TestCase
 {
     /**
      * Setup before running any test cases.
@@ -70,19 +70,19 @@ class GetCredential200ResponseTest extends TestCase
     }
 
     /**
-     * Test "GetCredential200Response".
+     * Test "UpdateCredentials201Response".
      */
-    public function testGetCredential200Response(): void
+    public function testUpdateCredentials201Response(): void
     {
-        $testGetCredential200Response = new GetCredential200Response();
-        $namespacedClassname = GetCredential200Response::getModelsNamespace().'\\GetCredential200Response';
-        $this->assertSame('\\'.GetCredential200Response::class, $namespacedClassname);
+        $testUpdateCredentials201Response = new UpdateCredentials201Response();
+        $namespacedClassname = UpdateCredentials201Response::getModelsNamespace().'\\UpdateCredentials201Response';
+        $this->assertSame('\\'.UpdateCredentials201Response::class, $namespacedClassname);
         $this->assertTrue(
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
         self::markTestIncomplete(
-            'Test of "GetCredential200Response" model has not been implemented yet.',
+            'Test of "UpdateCredentials201Response" model has not been implemented yet.',
         );
     }
 
@@ -92,7 +92,7 @@ class GetCredential200ResponseTest extends TestCase
     public function testPropertyName(): void
     {
         self::markTestIncomplete(
-            'Test of "name" property in "GetCredential200Response" model has not been implemented yet.',
+            'Test of "name" property in "UpdateCredentials201Response" model has not been implemented yet.',
         );
     }
 
@@ -102,7 +102,7 @@ class GetCredential200ResponseTest extends TestCase
     public function testPropertyCompanyId(): void
     {
         self::markTestIncomplete(
-            'Test of "companyId" property in "GetCredential200Response" model has not been implemented yet.',
+            'Test of "companyId" property in "UpdateCredentials201Response" model has not been implemented yet.',
         );
     }
 
@@ -112,7 +112,7 @@ class GetCredential200ResponseTest extends TestCase
     public function testPropertyType(): void
     {
         self::markTestIncomplete(
-            'Test of "type" property in "GetCredential200Response" model has not been implemented yet.',
+            'Test of "type" property in "UpdateCredentials201Response" model has not been implemented yet.',
         );
     }
 
@@ -123,7 +123,7 @@ class GetCredential200ResponseTest extends TestCase
      */
     public function testGetOpenApiSchema(): void
     {
-        $schemaArr = GetCredential200Response::getOpenApiSchema();
+        $schemaArr = UpdateCredentials201Response::getOpenApiSchema();
         $this->assertIsArray($schemaArr);
     }
 }

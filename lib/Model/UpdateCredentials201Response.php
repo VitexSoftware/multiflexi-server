@@ -30,13 +30,13 @@ namespace MultiFlexi\Api\Model;
 use MultiFlexi\Api\BaseModel;
 
 /**
- * GetCredential200Response.
+ * UpdateCredentials201Response.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-class GetCredential200Response extends BaseModel
+class UpdateCredentials201Response extends BaseModel
 {
     /**
      * @var string Models namespace.
