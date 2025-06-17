@@ -66,35 +66,23 @@ class Company extends BaseModel
     "logo" : {
       "type" : "string"
     },
-    "server" : {
-      "type" : "integer",
-      "format" : "int64",
-      "example" : 0
-    },
     "name" : {
       "maxLength" : 32,
       "type" : "string"
+    },
+    "code" : {
+      "maxLength" : 10,
+      "type" : "string",
+      "description" : "Company Code",
+      "example" : ""
     },
     "ic" : {
       "maxLength" : 32,
       "type" : "string"
     },
-    "company" : {
-      "maxLength" : 255,
-      "type" : "string",
-      "description" : "Company Code"
-    },
     "rw" : {
       "type" : "boolean",
       "description" : "Write permissions"
-    },
-    "setup" : {
-      "type" : "boolean",
-      "example" : false
-    },
-    "webhook" : {
-      "type" : "boolean",
-      "description" : "Webhook ready"
     },
     "DatCreate" : {
       "type" : "string",
@@ -113,11 +101,6 @@ class Company extends BaseModel
       "maxLength" : 64,
       "type" : "string",
       "format" : "email"
-    },
-    "code" : {
-      "maxLength" : 10,
-      "type" : "string",
-      "example" : ""
     }
   }
 }

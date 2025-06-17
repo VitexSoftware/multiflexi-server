@@ -56,6 +56,10 @@ class RunTemplate extends BaseModel
       "format" : "int64",
       "example" : 10
     },
+    "active" : {
+      "type" : "boolean",
+      "example" : true
+    },
     "app_id" : {
       "type" : "integer",
       "format" : "int64",

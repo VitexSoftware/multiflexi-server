@@ -97,6 +97,16 @@ class RunTemplateTest extends TestCase
     }
 
     /**
+     * Test attribute "active".
+     */
+    public function testPropertyActive(): void
+    {
+        self::markTestIncomplete(
+            'Test of "active" property in "RunTemplate" model has not been implemented yet.',
+        );
+    }
+
+    /**
      * Test attribute "appId".
      */
     public function testPropertyAppId(): void

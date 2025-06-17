@@ -45,7 +45,7 @@ abstract class AbstractAuthenticator
     /**
      * @var null|string[] List of required scopes
      */
-    protected ?array $requiredScope = null;
+    protected ?array $requiredScope;
 
     /**
      * Authenticator constructor.

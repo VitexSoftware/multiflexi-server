@@ -83,7 +83,7 @@ SCHEMA;
      *            PHP has restrictions on variable names, while OAS is much more permissive.
      *            This container helps to store unusual properties like '123_prop' without renaming.
      */
-    protected mixed $dataContainer = null;
+    protected mixed $dataContainer;
     // phpcs:enable
 
     /**
