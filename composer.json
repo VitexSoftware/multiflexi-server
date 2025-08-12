@@ -15,7 +15,7 @@
     "php-di/slim-bridge": "^3.4",
     "slim/psr7": "^1.5",
     "dyorg/slim-token-authentication": "dev-slim4",
-    "tuupola/slim-basic-auth": "^3.0",
+    "tuupola/slim-basic-auth": "^3.4",
     "monolog/monolog": "^2.4",
     "neomerx/cors-psr7": "^2.0",
     "php-di/slim-bridge": "^3.4",
