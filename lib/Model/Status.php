@@ -77,7 +77,8 @@ class Status extends BaseModel
     },
     "database" : {
       "type" : "string",
-      "example" : "mysql:host=localhost;port=3307;dbname=testdb"
+      "example" : "mysql:host=localhost;port=3307;dbname=testdb",
+      "description" : "Database connection string (supports MySQL, PostgreSQL, SQLite, SQL Server)"
     },
     "daemon" : {
       "type" : "string",

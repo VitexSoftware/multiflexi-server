@@ -64,10 +64,14 @@ return [
         true, // isCheckHost
     ],
 
-    // PDO
-    'pdo.dsn' => 'mysql:host=localhost;charset=utf8mb4',
-    'pdo.username' => 'root',
-    'pdo.password' => 'root',
+    // PDO - Database configuration (supports MySQL, PostgreSQL, SQLite)
+    // Examples:
+    // MySQL:    'mysql:host=localhost;dbname=multiflexi;charset=utf8mb4'
+    // PostgreSQL: 'pgsql:host=localhost;dbname=multiflexi'
+    // SQLite:   'sqlite:/path/to/database.sqlite'
+    'pdo.dsn' => $_ENV['DB_DSN'] ?? 'mysql:host=localhost;charset=utf8mb4',
+    'pdo.username' => $_ENV['DB_USERNAME'] ?? 'root',
+    'pdo.password' => $_ENV['DB_PASSWORD'] ?? 'root',
     'pdo.options' => [
         \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
     ],

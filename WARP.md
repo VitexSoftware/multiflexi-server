@@ -3,6 +3,7 @@
 This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
 Repository: MultiFlexi API Server (PHP Slim 4 + PHP-DI, OpenAPI-generated)
+Database Support: Multi-database compatible (MySQL, PostgreSQL, SQLite, SQL Server)
 
 What Warp should know first
 - Language and framework: PHP 7.4+ or 8.x, Slim 4 with PHP-DI. Autoloaded namespace: MultiFlexi\Api\ (lib/).
@@ -36,6 +37,9 @@ Environment and runtime notes
 - Environment selection: Set APP_ENV to dev or production.
   - bash: export APP_ENV=dev
   - Apache: public/.htaccess shows example using SetEnv.
+- **Database Configuration**: Set database connection via environment variables:
+  - DB_DSN (e.g., 'mysql:host=localhost;dbname=multiflexi', 'pgsql:host=localhost;dbname=multiflexi', 'sqlite:/path/to/database.sqlite')
+  - DB_USERNAME, DB_PASSWORD
 - Logging: Monolog is configured; ensure logs/ is writable. Log path configured in config/*/default.inc.php.
 - CORS: neomerx/cors-psr7 settings are defined in config/*/default.inc.php.
 - Mock responses for development: With APP_ENV=dev, send header X-MultiFlexi\Api-Mock: ping (optional X-MultiFlexi\Api-Mock-Code) to receive mocked responses from openapi-data-mocker middleware.
