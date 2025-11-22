@@ -28,19 +28,15 @@ ini_set('display_errors', '0');
  */
 return [
     'mode' => 'production',
-
     // Returns a detailed HTML page with error details and
     // a stack trace. Should be disabled in production.
     'slim.displayErrorDetails' => false,
-
     // Whether to display errors on the internal PHP log or not.
     'slim.logErrors' => true,
-
     // If true, display full errors with message and stack trace on the PHP log.
     // If false, display only "Slim Application Error" on the PHP log.
     // Doesn't do anything when 'logErrors' is false.
     'slim.logErrorDetails' => true,
-
     // CORS settings
     // https://github.com/neomerx/cors-psr7/blob/master/src/Strategies/Settings.php
     'cors.settings' => [
@@ -63,19 +59,13 @@ return [
         '', // exposedHeadersList
         true, // isCheckHost
     ],
-
-    // PDO - Database configuration (supports MySQL, PostgreSQL, SQLite)
-    // Examples:
-    // MySQL:    'mysql:host=localhost;dbname=multiflexi;charset=utf8mb4'
-    // PostgreSQL: 'pgsql:host=localhost;dbname=multiflexi'
-    // SQLite:   'sqlite:/path/to/database.sqlite'
-    'pdo.dsn' => $_ENV['DB_DSN'] ?? 'mysql:host=localhost;charset=utf8mb4',
-    'pdo.username' => $_ENV['DB_USERNAME'] ?? 'root',
-    'pdo.password' => $_ENV['DB_PASSWORD'] ?? 'root',
+    // PDO
+    'pdo.dsn' => 'mysql:host=localhost;charset=utf8mb4',
+    'pdo.username' => 'root',
+    'pdo.password' => 'root',
     'pdo.options' => [
         \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
     ],
-
     // logger
     'logger.name' => 'App',
     'logger.path' => \realpath(__DIR__.'/../../logs').'/app.log',

@@ -28,19 +28,15 @@ ini_set('display_errors', 1);
  */
 return [
     'mode' => 'development',
-
     // Returns a detailed HTML page with error details and
     // a stack trace. Should be disabled in production.
     'slim.displayErrorDetails' => true,
-
     // Whether to display errors on the internal PHP log or not.
     'slim.logErrors' => false,
-
     // If true, display full errors with message and stack trace on the PHP log.
     // If false, display only "Slim Application Error" on the PHP log.
     // Doesn't do anything when 'logErrors' is false.
     'slim.logErrorDetails' => false,
-
     // CORS settings
     // @see https://github.com/neomerx/cors-psr7/blob/master/src/Strategies/Settings.php
     'cors.settings' => [
@@ -63,19 +59,13 @@ return [
         '', // exposedHeadersList
         true, // isCheckHost
     ],
-
-    // PDO - Database configuration (supports MySQL, PostgreSQL, SQLite)
-    // Examples:
-    // MySQL:    'mysql:host=localhost;dbname=multiflexi;charset=utf8mb4'
-    // PostgreSQL: 'pgsql:host=localhost;dbname=multiflexi'
-    // SQLite:   'sqlite:/path/to/database.sqlite'
-    'pdo.dsn' => $_ENV['DB_DSN'] ?? 'mysql:host=localhost;charset=utf8mb4',
-    'pdo.username' => $_ENV['DB_USERNAME'] ?? 'root',
-    'pdo.password' => $_ENV['DB_PASSWORD'] ?? 'root',
+    // PDO
+    'pdo.dsn' => 'mysql:host=localhost;charset=utf8mb4',
+    'pdo.username' => 'root',
+    'pdo.password' => 'root',
     'pdo.options' => [
         \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
     ],
-
     // mocker
     // OBVIOUSLY MUST NOT BE USED for production
     // @see https://github.com/ybelenko/openapi-data-mocker-server-middleware
@@ -111,7 +101,6 @@ return [
             return $response->withHeader('X-MultiFlexi\Api-Mock', 'pong');
         };
     },
-
     // logger
     'logger.name' => 'App',
     'logger.path' => \realpath(__DIR__.'/../../logs').'/app.log',
