@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="web-application">
+  <id>cz.vitexsoftware.php_vitexsoftware_multiflexi_server</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>php-vitexsoftware-multiflexi-server</name>
+  <summary>Description:REST API server library for MultiFlexi ecosystem</summary>
+  <description>
+    <p>
+      MultiFlexi - PHP Slim 4 Server library for MultiFlexi API Only for developers
+    </p>
+  </description>
+  <categories>
+    <category>Network</category>
+    <category>WebApplication</category>
+  </categories>
+  <url type="homepage">https://github.com/VitexSoftware/multiflexi-server</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/multiflexi-server/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
