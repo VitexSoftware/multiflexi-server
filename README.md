@@ -9,7 +9,7 @@ This server has been generated with [Slim PSR-7](https://github.com/slimphp/Slim
 ## Requirements
 
 * Web server with URL rewriting
-* PHP 7.4 or newer
+* PHP 8.1 or newer
 
 This package contains `.htaccess` for Apache configuration.
 If you use another server(Nginx, HHVM, IIS, lighttpd) check out [Web Servers](https://www.slimframework.com/docs/v3/start/web-servers.html) doc.
@@ -185,6 +185,15 @@ Class | Method | HTTP request | Description
 *AbstractDefaultApi* | **updateCredentialType** | **POST** /credential_type/{credentialTypeID}.{suffix} | Update Credential Type
 *AbstractDefaultApi* | **updateCredentials** | **POST** /credential/{credentialId}.{suffix} | Update Credentials
 *AbstractDefaultApi* | **updateTopic** | **POST** /topic/{topicId}.{suffix} | Update Topic
+*AbstractEventruleApi* | **setEventRuleById** | **POST** /eventrule/ | Create or Update EventRule
+*AbstractEventruleApi* | **deleteEventRuleById** | **DELETE** /eventrule/{eventRuleId}.{suffix} | Delete EventRule by ID
+*AbstractEventruleApi* | **getEventRuleById** | **GET** /eventrule/{eventRuleId}.{suffix} | Get EventRule by ID
+*AbstractEventruleApi* | **listEventRules** | **GET** /eventrules.{suffix} | Show All EventRules
+*AbstractEventsourceApi* | **setEventSourceById** | **POST** /eventsource/ | Create or Update EventSource
+*AbstractEventsourceApi* | **deleteEventSourceById** | **DELETE** /eventsource/{eventSourceId}.{suffix} | Delete EventSource by ID
+*AbstractEventsourceApi* | **getEventSourceById** | **GET** /eventsource/{eventSourceId}.{suffix} | Get EventSource by ID
+*AbstractEventsourceApi* | **listEventSources** | **GET** /eventsources.{suffix} | Show All EventSources
+*AbstractEventsourceApi* | **testEventSourceConnection** | **POST** /eventsource/{eventSourceId}/test.{suffix} | Test EventSource connection
 *AbstractGdprApi* | **downloadDataExport** | **GET** /data-export-download | Download personal data export file
 *AbstractGdprApi* | **requestDataExport** | **GET** /data-export | Request personal data export (GDPR Article 15)
 *AbstractGdprApi* | **requestDataExportPost** | **POST** /data-export | Request personal data export (GDPR Article 15)
@@ -229,6 +238,8 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\DataExportStatusResponse
 * MultiFlexi\Api\Model\DataExportStatusResponseExportsInner
 * MultiFlexi\Api\Model\ErrorResponse
+* MultiFlexi\Api\Model\EventRule
+* MultiFlexi\Api\Model\EventSource
 * MultiFlexi\Api\Model\GetCredentialType200Response
 * MultiFlexi\Api\Model\GetTopic200Response
 * MultiFlexi\Api\Model\Job
@@ -239,6 +250,7 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\RunTemplate
 * MultiFlexi\Api\Model\Status
 * MultiFlexi\Api\Model\Tag
+* MultiFlexi\Api\Model\TestEventSourceConnection200Response
 * MultiFlexi\Api\Model\Topic
 * MultiFlexi\Api\Model\UpdateCredentials201Response
 * MultiFlexi\Api\Model\UpdateRunTemplateById400Response
