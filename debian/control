@@ -10,7 +10,7 @@ Vcs-Git: https://github.com/VitexSoftware/multiflexi-server.git
 Vcs-Browser: https://github.com/VitexSoftware/multiflexi-server
 
 Package: php-vitexsoftware-multiflexi-server
-Depends: ${misc:Depends}, php-guzzlehttp-psr7, composer-debian, multiflexi-database, php-vitexsoftware-multiflexi-core, php-symfony-dependency-injection
+Depends: ${misc:Depends}, php-guzzlehttp-psr7, multiflexi-database, php-vitexsoftware-multiflexi-core, php-symfony-dependency-injection
 Architecture: all
 Recommends: multiflexi-cli
 Section: office
