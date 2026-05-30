@@ -3,6 +3,6 @@ lib/App/*.php                     usr/share/php/MultiFlexiApi/App/
 lib/Auth/*.php                    usr/share/php/MultiFlexiApi/Auth/
 lib/Model/*.php                   usr/share/php/MultiFlexiApi/Model/
 lib/Server/*.php                  usr/share/php/MultiFlexiApi/Server/
-debian/conf/composer.json         usr/share/php/MultiFlexiApi/
+composer.json                     usr/share/php/MultiFlexiApi/
 php-vitexsoftware-multiflexi-server.svg	usr/share/icons/hicolor/scalable/apps/
-cz.vitexsoftware.php_vitexsoftware_multiflexi_server.metainfo.xml	usr/share/metainfo/
+debian/cz.vitexsoftware.php_vitexsoftware_multiflexi_server.metainfo.xml	usr/share/metainfo/
