@@ -2080,6 +2080,84 @@ EOD,
             ],
         ],
         [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/tasks.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractTaskApi',
+            'userClassname' => 'TaskApi',
+            'operationId' => 'listTasks',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Task"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/task/{taskId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractTaskApi',
+            'userClassname' => 'TaskApi',
+            'operationId' => 'getTaskById',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Task"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Task not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
             'httpMethod' => 'POST',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/runtemplate',
@@ -2621,6 +2699,7 @@ EOD,
                             'cookie' => null,
                             'argument' => null,
                             'attribute' => 'authorization_token',
+                            'secure' => false,
                             'error' => ['MultiFlexi\Api\Auth\BasicAuthenticator', 'handleUnauthorized'],
                         ]));
                     }
