@@ -74,6 +74,15 @@ $container = $builder->build();
 // Instantiate the app
 $app = Bridge::create($container);
 
+// Strip the script-name prefix so Slim routes match regardless of the Apache
+// Alias or subdirectory the API lives under (e.g. /multiflexi/api).
+// SCRIPT_NAME is e.g. "/multiflexi/api/index.php" → base = "/multiflexi/api"
+$scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+$basePath = (string) preg_replace('/\/index\.php$/', '', $scriptName);
+if ($basePath !== '') {
+    $app->setBasePath($basePath);
+}
+
 // Register middleware
 $middleware = new RegisterMiddlewares();
 $middleware($app);

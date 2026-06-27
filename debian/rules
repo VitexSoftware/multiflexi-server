@@ -1,15 +1,31 @@
 #!/usr/bin/make -f
-# You must remove unused comment lines for the released package.
 #export DH_VERBOSE = 1
-#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+PKG_VERSION := $(shell dpkg-parsechangelog -S Version | sed 's/~.*//')
+PKG_SOURCE  := $(shell jq -r '.name' composer.json)
+PKG_TYPE    := $(shell jq -r '.type' composer.json)
 
 %:
 	dh $@
 
-#override_dh_auto_install:
-#	dh_auto_install -- prefix=/usr
-
-#override_dh_install:
-#	dh_install --list-missing -X.pyc -X.pyo
+override_dh_install:
+	dh_install
+	# Install static autoloader
+	install -m 0644 debian/autoload.php \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/autoload.php
+	# Inject build-time version/name into static autoloader
+	sed -i "s|'unknown'|'$(PKG_SOURCE)'|" \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/autoload.php
+	sed -i "s|'0.0.0'|'$(PKG_VERSION)'|" \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/autoload.php
+	sed -i "s|'library'|'$(PKG_TYPE)'|g" \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/autoload.php
+	# Patch index.php: replace dev vendor/autoload.php with installed static autoloader
+	sed -i -e "/vendor\/autoload\.php/c\\require_once '/usr/share/multiflexi-server/api/autoload.php';" \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/index.php
+	# Point site-specific config to /etc/multiflexi-server/
+	sed -i -e '/userConfig.*config\.inc\.php/c\$$userConfig = "/etc/multiflexi-server/config.inc.php";' \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/index.php
+	# Fix logger path in installed default config
+	sed -i -e "/logger\.path/c\\    'logger.path' => '/var/log/multiflexi-server/app.log'," \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/config/prod/default.inc.php

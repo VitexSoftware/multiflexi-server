@@ -2,7 +2,7 @@ Source: multiflexi-server
 Section: web
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13), jq
 Standards-Version: 4.5.1
 Homepage: https://multiflexi.eu/
 Rules-Requires-Root: no
@@ -10,7 +10,32 @@ Vcs-Git: https://github.com/VitexSoftware/multiflexi-server.git
 Vcs-Browser: https://github.com/VitexSoftware/multiflexi-server
 
 Package: php-vitexsoftware-multiflexi-server
-Depends: ${misc:Depends}, php-guzzlehttp-psr7, multiflexi-database, php-vitexsoftware-multiflexi-core, php-symfony-dependency-injection
+Replaces: multiflexi-api (<< 2.4)
+Depends: ${misc:Depends},
+ composer,
+ multiflexi-database,
+ php-vitexsoftware-multiflexi-core,
+ php-slim,
+ php-slim-psr7,
+ php-di,
+ php-di-slim-bridge,
+ php-monolog,
+ php-nikic-fast-route,
+ php-psr-http-message,
+ php-psr-http-factory,
+ php-psr-http-server-handler,
+ php-psr-http-server-middleware,
+ php-psr-container,
+ php-psr-log,
+ php-fig-http-message-util,
+ php-laravel-serializable-closure,
+ php-neomerx-cors-psr7,
+ php-dyorg-slim-token-authentication,
+ php-jimtools-basic-auth,
+ php-tuupola-http-factory,
+ php-tuupola-callable-handler,
+ php-ybelenko-openapi-data-mocker,
+ php-ybelenko-openapi-data-mocker-server-middleware
 Architecture: all
 Recommends: multiflexi-cli
 Section: office

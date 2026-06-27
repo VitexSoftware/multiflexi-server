@@ -1,3 +1,37 @@
+multiflexi-server (0.1.4) trixie; urgency=medium
+
+  * Add MultiFlexi core autoloader to debian/autoload.php so MultiFlexi\Engine
+    and other core classes are available when the API handlers execute
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Sat, 27 Jun 2026 12:30:00 +0200
+
+multiflexi-server (0.1.3) trixie; urgency=medium
+
+  * Set Slim base path from SCRIPT_NAME so routes match under /multiflexi/api
+    Apache alias without hardcoding the prefix
+  * Fix postinst: set www-data group ownership on /var/log/multiflexi-server
+    so Monolog can write the application log under Apache
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Sat, 27 Jun 2026 12:00:00 +0200
+
+multiflexi-server (0.1.2) trixie; urgency=medium
+
+  * Install src/MultiFlexi/Api/Auth/*.php and src/MultiFlexi/Api/Server/*.php
+    to MultiFlexiApi/Auth/ and MultiFlexiApi/Server/ so BasicAuthenticator
+    and concrete server implementations are available at runtime
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Sat, 27 Jun 2026 11:30:00 +0200
+
+multiflexi-server (0.1.1) trixie; urgency=medium
+
+  * Switch to DI container architecture (Slim 4 + PHP-DI bridge)
+  * Set 'secure' => false in TokenAuthentication so API works over plain
+    HTTP; production deployments terminate TLS at the upstream proxy
+  * Add AbstractTaskApi with listTasks and getTaskById stubs
+  * Register /tasks.{suffix} and /task/{taskId}.{suffix} routes in RegisterRoutes
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Sat, 27 Jun 2026 10:00:00 +0200
+
 multiflexi-server (0.1.0) unstable; urgency=low
 
   * Initial release
