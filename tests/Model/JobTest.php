@@ -81,9 +81,7 @@ class JobTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "Job" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class JobTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class JobTest extends TestCase
      */
     public function testPropertyAppId(): void
     {
-        self::markTestIncomplete(
-            'Test of "appId" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "appId" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class JobTest extends TestCase
      */
     public function testPropertyBegin(): void
     {
-        self::markTestIncomplete(
-            'Test of "begin" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "begin" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class JobTest extends TestCase
      */
     public function testPropertyEnd(): void
     {
-        self::markTestIncomplete(
-            'Test of "end" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "end" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class JobTest extends TestCase
      */
     public function testPropertyCompanyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyId" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyId" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class JobTest extends TestCase
      */
     public function testPropertyExitcode(): void
     {
-        self::markTestIncomplete(
-            'Test of "exitcode" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "exitcode" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class JobTest extends TestCase
      */
     public function testPropertyStdout(): void
     {
-        self::markTestIncomplete(
-            'Test of "stdout" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "stdout" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class JobTest extends TestCase
      */
     public function testPropertyStderr(): void
     {
-        self::markTestIncomplete(
-            'Test of "stderr" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "stderr" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class JobTest extends TestCase
      */
     public function testPropertyLaunchedBy(): void
     {
-        self::markTestIncomplete(
-            'Test of "launchedBy" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "launchedBy" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class JobTest extends TestCase
      */
     public function testPropertyEnv(): void
     {
-        self::markTestIncomplete(
-            'Test of "env" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "env" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -191,9 +169,7 @@ class JobTest extends TestCase
      */
     public function testPropertyCommand(): void
     {
-        self::markTestIncomplete(
-            'Test of "command" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "command" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -201,9 +177,7 @@ class JobTest extends TestCase
      */
     public function testPropertySchedule(): void
     {
-        self::markTestIncomplete(
-            'Test of "schedule" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "schedule" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -211,9 +185,7 @@ class JobTest extends TestCase
      */
     public function testPropertyExecutor(): void
     {
-        self::markTestIncomplete(
-            'Test of "executor" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "executor" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -221,9 +193,7 @@ class JobTest extends TestCase
      */
     public function testPropertyRuntemplateId(): void
     {
-        self::markTestIncomplete(
-            'Test of "runtemplateId" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "runtemplateId" property in "Job" model has not been implemented yet.');
     }
 
     /**
@@ -231,9 +201,7 @@ class JobTest extends TestCase
      */
     public function testPropertyAppVersion(): void
     {
-        self::markTestIncomplete(
-            'Test of "appVersion" property in "Job" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "appVersion" property in "Job" model has not been implemented yet.');
     }
 
     /**

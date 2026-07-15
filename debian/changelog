@@ -1,3 +1,31 @@
+multiflexi-server (0.1.5) UNRELEASED; urgency=medium
+
+  [ CyberVitexus ]
+  * Fix apps.json/runtemplates.json returning an ID-keyed object instead
+    of a JSON array (schema declared array, server emitted object).
+
+  [ vitex ]
+  * Fix RunTemplate.active returned as int instead of bool on single-
+    record GET; success/fail returned '' instead of null when empty.
+  * Fix AppApi::setAppById referencing an undefined $suffix variable
+    (pre-existing bug, always fell through to HTML output regardless of
+    requested format).
+  * Remove dead StatusApi.php: extended a nonexistent AbstractStatusApi,
+    never wired into any route; GET /status.json already works correctly
+    via DefaultApi::statusSuffixGet.
+  * Implement UserApi (was a stub, listUsers caused a 500), CompanyApi
+    (was a 0-byte file, caused 501).
+  * Relocate TaskApi.php from the wrong repo (multiflexi-api) into this
+    one and wire it in; fix its list/get responses to match the schema's
+    declared bare array/object shape (was wrapping under 'tasks'/'task'
+    keys).
+  * Implement EventruleApi, EventsourceApi (incl.
+    testEventSourceConnection), CredentialApi, CredentialTypeApi,
+    TopicApi, UserCompanyApi, UserRoleApi - all previously 501 due to
+    missing concrete classes or missing OpenAPI tags.
+
+ -- CyberVitexus <cybervitexus@gmail.com>  Wed, 15 Jul 2026 08:22:50 +0200
+
 multiflexi-server (0.1.4) trixie; urgency=medium
 
   * Add MultiFlexi core autoloader to debian/autoload.php so MultiFlexi\Engine

@@ -78,9 +78,7 @@ class UserApiTest extends TestCase
      */
     public function testGetUserById(): void
     {
-        self::markTestIncomplete(
-            'Test of "getUserById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getUserById" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class UserApiTest extends TestCase
      */
     public function testListUsers(): void
     {
-        self::markTestIncomplete(
-            'Test of "listUsers" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "listUsers" method has not been implemented yet.');
     }
 
     /**
@@ -106,8 +102,6 @@ class UserApiTest extends TestCase
      */
     public function testSetUserById(): void
     {
-        self::markTestIncomplete(
-            'Test of "setUserById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setUserById" method has not been implemented yet.');
     }
 }

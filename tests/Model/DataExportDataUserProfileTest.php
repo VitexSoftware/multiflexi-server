@@ -81,9 +81,7 @@ class DataExportDataUserProfileTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyUserId(): void
     {
-        self::markTestIncomplete(
-            'Test of "userId" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "userId" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyUsername(): void
     {
-        self::markTestIncomplete(
-            'Test of "username" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "username" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyEmail(): void
     {
-        self::markTestIncomplete(
-            'Test of "email" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "email" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyFirstName(): void
     {
-        self::markTestIncomplete(
-            'Test of "firstName" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "firstName" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyLastName(): void
     {
-        self::markTestIncomplete(
-            'Test of "lastName" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "lastName" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyAccountEnabled(): void
     {
-        self::markTestIncomplete(
-            'Test of "accountEnabled" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "accountEnabled" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyAccountCreated(): void
     {
-        self::markTestIncomplete(
-            'Test of "accountCreated" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "accountCreated" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyLastUpdated(): void
     {
-        self::markTestIncomplete(
-            'Test of "lastUpdated" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "lastUpdated" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class DataExportDataUserProfileTest extends TestCase
      */
     public function testPropertyUserSettings(): void
     {
-        self::markTestIncomplete(
-            'Test of "userSettings" property in "DataExportDataUserProfile" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "userSettings" property in "DataExportDataUserProfile" model has not been implemented yet.');
     }
 
     /**

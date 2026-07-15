@@ -81,9 +81,7 @@ class UserTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "User" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class UserTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class UserTest extends TestCase
      */
     public function testPropertyEnabled(): void
     {
-        self::markTestIncomplete(
-            'Test of "enabled" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "enabled" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class UserTest extends TestCase
      */
     public function testPropertySettings(): void
     {
-        self::markTestIncomplete(
-            'Test of "settings" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "settings" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class UserTest extends TestCase
      */
     public function testPropertyEmail(): void
     {
-        self::markTestIncomplete(
-            'Test of "email" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "email" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class UserTest extends TestCase
      */
     public function testPropertyFirstname(): void
     {
-        self::markTestIncomplete(
-            'Test of "firstname" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "firstname" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class UserTest extends TestCase
      */
     public function testPropertyLastname(): void
     {
-        self::markTestIncomplete(
-            'Test of "lastname" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "lastname" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class UserTest extends TestCase
      */
     public function testPropertyPassword(): void
     {
-        self::markTestIncomplete(
-            'Test of "password" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "password" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class UserTest extends TestCase
      */
     public function testPropertyLogin(): void
     {
-        self::markTestIncomplete(
-            'Test of "login" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "login" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class UserTest extends TestCase
      */
     public function testPropertyDatCreate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datCreate" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datCreate" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class UserTest extends TestCase
      */
     public function testPropertyDatSave(): void
     {
-        self::markTestIncomplete(
-            'Test of "datSave" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datSave" property in "User" model has not been implemented yet.');
     }
 
     /**
@@ -191,9 +169,7 @@ class UserTest extends TestCase
      */
     public function testPropertyLastModifierId(): void
     {
-        self::markTestIncomplete(
-            'Test of "lastModifierId" property in "User" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "lastModifierId" property in "User" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class UpdateCredentials201ResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "UpdateCredentials201Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "UpdateCredentials201Response" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class UpdateCredentials201ResponseTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "UpdateCredentials201Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "UpdateCredentials201Response" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class UpdateCredentials201ResponseTest extends TestCase
      */
     public function testPropertyCompanyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyId" property in "UpdateCredentials201Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyId" property in "UpdateCredentials201Response" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class UpdateCredentials201ResponseTest extends TestCase
      */
     public function testPropertyType(): void
     {
-        self::markTestIncomplete(
-            'Test of "type" property in "UpdateCredentials201Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "type" property in "UpdateCredentials201Response" model has not been implemented yet.');
     }
 
     /**

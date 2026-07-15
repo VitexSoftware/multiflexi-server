@@ -81,9 +81,7 @@ class DataExportResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportResponse" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportResponseTest extends TestCase
      */
     public function testPropertySuccess(): void
     {
-        self::markTestIncomplete(
-            'Test of "success" property in "DataExportResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "success" property in "DataExportResponse" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportResponseTest extends TestCase
      */
     public function testPropertyDownloadUrl(): void
     {
-        self::markTestIncomplete(
-            'Test of "downloadUrl" property in "DataExportResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "downloadUrl" property in "DataExportResponse" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportResponseTest extends TestCase
      */
     public function testPropertyFormat(): void
     {
-        self::markTestIncomplete(
-            'Test of "format" property in "DataExportResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "format" property in "DataExportResponse" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportResponseTest extends TestCase
      */
     public function testPropertyGeneratedAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "generatedAt" property in "DataExportResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "generatedAt" property in "DataExportResponse" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportResponseTest extends TestCase
      */
     public function testPropertyExpiresAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "expiresAt" property in "DataExportResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "expiresAt" property in "DataExportResponse" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportResponseTest extends TestCase
      */
     public function testPropertyNotificationSent(): void
     {
-        self::markTestIncomplete(
-            'Test of "notificationSent" property in "DataExportResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "notificationSent" property in "DataExportResponse" model has not been implemented yet.');
     }
 
     /**

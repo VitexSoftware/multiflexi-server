@@ -78,9 +78,7 @@ class AppApiTest extends TestCase
      */
     public function testGetAppById(): void
     {
-        self::markTestIncomplete(
-            'Test of "getAppById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getAppById" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class AppApiTest extends TestCase
      */
     public function testListApps(): void
     {
-        self::markTestIncomplete(
-            'Test of "listApps" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "listApps" method has not been implemented yet.');
     }
 
     /**
@@ -106,8 +102,6 @@ class AppApiTest extends TestCase
      */
     public function testSetAppById(): void
     {
-        self::markTestIncomplete(
-            'Test of "setAppById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setAppById" method has not been implemented yet.');
     }
 }

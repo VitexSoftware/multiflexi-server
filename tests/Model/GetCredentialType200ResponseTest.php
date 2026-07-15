@@ -81,9 +81,7 @@ class GetCredentialType200ResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "GetCredentialType200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "GetCredentialType200Response" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class GetCredentialType200ResponseTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "GetCredentialType200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "GetCredentialType200Response" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class GetCredentialType200ResponseTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "GetCredentialType200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "GetCredentialType200Response" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class GetCredentialType200ResponseTest extends TestCase
      */
     public function testPropertyUrl(): void
     {
-        self::markTestIncomplete(
-            'Test of "url" property in "GetCredentialType200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "url" property in "GetCredentialType200Response" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class GetCredentialType200ResponseTest extends TestCase
      */
     public function testPropertyLogo(): void
     {
-        self::markTestIncomplete(
-            'Test of "logo" property in "GetCredentialType200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "logo" property in "GetCredentialType200Response" model has not been implemented yet.');
     }
 
     /**

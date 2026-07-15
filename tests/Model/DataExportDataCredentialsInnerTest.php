@@ -81,9 +81,7 @@ class DataExportDataCredentialsInnerTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataCredentialsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataCredentialsInner" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataCredentialsInnerTest extends TestCase
      */
     public function testPropertyCredentialId(): void
     {
-        self::markTestIncomplete(
-            'Test of "credentialId" property in "DataExportDataCredentialsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "credentialId" property in "DataExportDataCredentialsInner" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataCredentialsInnerTest extends TestCase
      */
     public function testPropertyCredentialName(): void
     {
-        self::markTestIncomplete(
-            'Test of "credentialName" property in "DataExportDataCredentialsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "credentialName" property in "DataExportDataCredentialsInner" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataCredentialsInnerTest extends TestCase
      */
     public function testPropertyCompanyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyId" property in "DataExportDataCredentialsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyId" property in "DataExportDataCredentialsInner" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataCredentialsInnerTest extends TestCase
      */
     public function testPropertyCredentialType(): void
     {
-        self::markTestIncomplete(
-            'Test of "credentialType" property in "DataExportDataCredentialsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "credentialType" property in "DataExportDataCredentialsInner" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataCredentialsInnerTest extends TestCase
      */
     public function testPropertyNote(): void
     {
-        self::markTestIncomplete(
-            'Test of "note" property in "DataExportDataCredentialsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "note" property in "DataExportDataCredentialsInner" model has not been implemented yet.');
     }
 
     /**

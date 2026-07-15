@@ -81,9 +81,7 @@ class ConfFieldTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "ConfField" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "ConfField" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class ConfFieldTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "ConfField" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "ConfField" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class ConfFieldTest extends TestCase
      */
     public function testPropertyAppId(): void
     {
-        self::markTestIncomplete(
-            'Test of "appId" property in "ConfField" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "appId" property in "ConfField" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class ConfFieldTest extends TestCase
      */
     public function testPropertyKeyname(): void
     {
-        self::markTestIncomplete(
-            'Test of "keyname" property in "ConfField" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "keyname" property in "ConfField" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class ConfFieldTest extends TestCase
      */
     public function testPropertyType(): void
     {
-        self::markTestIncomplete(
-            'Test of "type" property in "ConfField" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "type" property in "ConfField" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class ConfFieldTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "ConfField" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "ConfField" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class ConfFieldTest extends TestCase
      */
     public function testPropertyDefval(): void
     {
-        self::markTestIncomplete(
-            'Test of "defval" property in "ConfField" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "defval" property in "ConfField" model has not been implemented yet.');
     }
 
     /**

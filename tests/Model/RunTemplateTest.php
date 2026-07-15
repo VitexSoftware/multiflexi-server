@@ -81,9 +81,7 @@ class RunTemplateTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyAppId(): void
     {
-        self::markTestIncomplete(
-            'Test of "appId" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "appId" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyCompanyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyId" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyId" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyInterv(): void
     {
-        self::markTestIncomplete(
-            'Test of "interv" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "interv" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyPrepared(): void
     {
-        self::markTestIncomplete(
-            'Test of "prepared" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "prepared" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertySuccess(): void
     {
-        self::markTestIncomplete(
-            'Test of "success" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "success" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyFail(): void
     {
-        self::markTestIncomplete(
-            'Test of "fail" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "fail" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyDelay(): void
     {
-        self::markTestIncomplete(
-            'Test of "delay" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "delay" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyExecutor(): void
     {
-        self::markTestIncomplete(
-            'Test of "executor" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "executor" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -191,9 +169,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyActive(): void
     {
-        self::markTestIncomplete(
-            'Test of "active" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "active" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -201,9 +177,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyCron(): void
     {
-        self::markTestIncomplete(
-            'Test of "cron" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "cron" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -211,9 +185,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyLastSchedule(): void
     {
-        self::markTestIncomplete(
-            'Test of "lastSchedule" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "lastSchedule" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -221,9 +193,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyNextSchedule(): void
     {
-        self::markTestIncomplete(
-            'Test of "nextSchedule" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "nextSchedule" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -231,9 +201,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyNote(): void
     {
-        self::markTestIncomplete(
-            'Test of "note" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "note" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -241,9 +209,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyDatCreate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datCreate" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datCreate" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -251,9 +217,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyDatSave(): void
     {
-        self::markTestIncomplete(
-            'Test of "datSave" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datSave" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -261,9 +225,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertySuccessfullJobsCount(): void
     {
-        self::markTestIncomplete(
-            'Test of "successfullJobsCount" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "successfullJobsCount" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**
@@ -271,9 +233,7 @@ class RunTemplateTest extends TestCase
      */
     public function testPropertyFailedJobsCount(): void
     {
-        self::markTestIncomplete(
-            'Test of "failedJobsCount" property in "RunTemplate" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "failedJobsCount" property in "RunTemplate" model has not been implemented yet.');
     }
 
     /**

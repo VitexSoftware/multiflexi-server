@@ -81,9 +81,7 @@ class UpdateRunTemplateById400ResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "UpdateRunTemplateById400Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "UpdateRunTemplateById400Response" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class UpdateRunTemplateById400ResponseTest extends TestCase
      */
     public function testPropertyError(): void
     {
-        self::markTestIncomplete(
-            'Test of "error" property in "UpdateRunTemplateById400Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "error" property in "UpdateRunTemplateById400Response" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class UpdateRunTemplateById400ResponseTest extends TestCase
      */
     public function testPropertyExpected(): void
     {
-        self::markTestIncomplete(
-            'Test of "expected" property in "UpdateRunTemplateById400Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "expected" property in "UpdateRunTemplateById400Response" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class UpdateRunTemplateById400ResponseTest extends TestCase
      */
     public function testPropertyReceived(): void
     {
-        self::markTestIncomplete(
-            'Test of "received" property in "UpdateRunTemplateById400Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "received" property in "UpdateRunTemplateById400Response" model has not been implemented yet.');
     }
 
     /**

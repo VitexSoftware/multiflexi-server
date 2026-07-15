@@ -132,7 +132,7 @@ class AppApi extends \MultiFlexi\Api\Server\AbstractAppApi
             }
         }
 
-        return DefaultApi::prepareResponse($response, $appsList, $suffix, null, 'application');
+        return DefaultApi::prepareResponse($response, array_values($appsList), $suffix, null, 'application');
     }
 
     /**
@@ -150,6 +150,6 @@ class AppApi extends \MultiFlexi\Api\Server\AbstractAppApi
         $appId = (\array_key_exists('appId', $queryParams)) ? $queryParams['appId'] : null;
         $appInfo = ['id' => $appId, 'success' => $this->engine->dbsync($queryParams)];
 
-        return DefaultApi::prepareResponse($response, $appInfo, $suffix, 'app'.$appId);
+        return DefaultApi::prepareResponse($response, $appInfo, 'json', 'app'.$appId);
     }
 }

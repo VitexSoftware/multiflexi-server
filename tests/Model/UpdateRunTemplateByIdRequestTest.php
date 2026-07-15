@@ -81,9 +81,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyActive(): void
     {
-        self::markTestIncomplete(
-            'Test of "active" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "active" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyInterv(): void
     {
-        self::markTestIncomplete(
-            'Test of "interv" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "interv" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyDelay(): void
     {
-        self::markTestIncomplete(
-            'Test of "delay" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "delay" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyExecutor(): void
     {
-        self::markTestIncomplete(
-            'Test of "executor" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "executor" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyCron(): void
     {
-        self::markTestIncomplete(
-            'Test of "cron" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "cron" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class UpdateRunTemplateByIdRequestTest extends TestCase
      */
     public function testPropertyNote(): void
     {
-        self::markTestIncomplete(
-            'Test of "note" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "note" property in "UpdateRunTemplateByIdRequest" model has not been implemented yet.');
     }
 
     /**

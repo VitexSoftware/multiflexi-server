@@ -81,9 +81,7 @@ class TestEventSourceConnection200ResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "TestEventSourceConnection200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "TestEventSourceConnection200Response" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class TestEventSourceConnection200ResponseTest extends TestCase
      */
     public function testPropertyReachable(): void
     {
-        self::markTestIncomplete(
-            'Test of "reachable" property in "TestEventSourceConnection200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "reachable" property in "TestEventSourceConnection200Response" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class TestEventSourceConnection200ResponseTest extends TestCase
      */
     public function testPropertyMessage(): void
     {
-        self::markTestIncomplete(
-            'Test of "message" property in "TestEventSourceConnection200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "message" property in "TestEventSourceConnection200Response" model has not been implemented yet.');
     }
 
     /**

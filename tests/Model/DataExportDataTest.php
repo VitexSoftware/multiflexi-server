@@ -81,9 +81,7 @@ class DataExportDataTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyExportMetadata(): void
     {
-        self::markTestIncomplete(
-            'Test of "exportMetadata" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "exportMetadata" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyUserProfile(): void
     {
-        self::markTestIncomplete(
-            'Test of "userProfile" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "userProfile" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyCompanyAssociations(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyAssociations" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyAssociations" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyCredentials(): void
     {
-        self::markTestIncomplete(
-            'Test of "credentials" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "credentials" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyActivityLogs(): void
     {
-        self::markTestIncomplete(
-            'Test of "activityLogs" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "activityLogs" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyJobHistory(): void
     {
-        self::markTestIncomplete(
-            'Test of "jobHistory" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "jobHistory" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyConsentRecords(): void
     {
-        self::markTestIncomplete(
-            'Test of "consentRecords" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "consentRecords" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertySessionHistory(): void
     {
-        self::markTestIncomplete(
-            'Test of "sessionHistory" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "sessionHistory" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class DataExportDataTest extends TestCase
      */
     public function testPropertyAuditTrails(): void
     {
-        self::markTestIncomplete(
-            'Test of "auditTrails" property in "DataExportData" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "auditTrails" property in "DataExportData" model has not been implemented yet.');
     }
 
     /**

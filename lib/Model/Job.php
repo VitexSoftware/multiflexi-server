@@ -106,6 +106,12 @@ class Job extends BaseModel
       "type" : "integer",
       "format" : "int64"
     },
+    "task_id" : {
+      "type" : "integer",
+      "description" : "FK to the Task this job belongs to",
+      "format" : "int64",
+      "nullable" : true
+    },
     "app_version" : {
       "type" : "string",
       "default" : "n/a"

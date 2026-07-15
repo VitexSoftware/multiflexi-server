@@ -3,11 +3,16 @@
 declare(strict_types=1);
 
 /**
- * Debian autoloader for php-vitexsoftware-multiflexi-server
+ * This file is part of the MultiFlexi package
  *
- * Registers PSR-4 autoloading for the MultiFlexi API library classes
- * installed under /usr/share/php/MultiFlexiApi/.
+ * https://multiflexi.eu/
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 spl_autoload_register(static function (string $class): void {
     $prefix = 'MultiFlexi\\Api\\';
     $baseDir = '/usr/share/php/MultiFlexiApi/';
@@ -17,7 +22,7 @@ spl_autoload_register(static function (string $class): void {
     }
 
     $relativeClass = substr($class, \strlen($prefix));
-    $file = $baseDir . str_replace('\\', '/', $relativeClass) . '.php';
+    $file = $baseDir.str_replace('\\', '/', $relativeClass).'.php';
 
     if (file_exists($file)) {
         require $file;

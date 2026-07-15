@@ -81,9 +81,7 @@ class LogoutPostRequestTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "LogoutPostRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "LogoutPostRequest" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class LogoutPostRequestTest extends TestCase
      */
     public function testPropertyToken(): void
     {
-        self::markTestIncomplete(
-            'Test of "token" property in "LogoutPostRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "token" property in "LogoutPostRequest" model has not been implemented yet.');
     }
 
     /**

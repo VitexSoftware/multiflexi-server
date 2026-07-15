@@ -81,9 +81,7 @@ class CredentialTypeTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "CredentialType" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class CredentialTypeTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "CredentialType" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class CredentialTypeTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "CredentialType" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class CredentialTypeTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "CredentialType" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class CredentialTypeTest extends TestCase
      */
     public function testPropertyUrl(): void
     {
-        self::markTestIncomplete(
-            'Test of "url" property in "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "url" property in "CredentialType" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class CredentialTypeTest extends TestCase
      */
     public function testPropertyLogo(): void
     {
-        self::markTestIncomplete(
-            'Test of "logo" property in "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "logo" property in "CredentialType" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class CredentialTypeTest extends TestCase
      */
     public function testPropertyDatCreate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datCreate" property in "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datCreate" property in "CredentialType" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class CredentialTypeTest extends TestCase
      */
     public function testPropertyDatUpdate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datUpdate" property in "CredentialType" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datUpdate" property in "CredentialType" model has not been implemented yet.');
     }
 
     /**

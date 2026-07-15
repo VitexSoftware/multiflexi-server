@@ -68,6 +68,13 @@ class ConfField extends BaseModel
       "type" : "string",
       "enum" : [ "text", "number", "date", "email", "password", "checkbox" ]
     },
+    "category" : {
+      "maxLength" : 32,
+      "type" : "string",
+      "description" : "Configuration option category: API, Database, Behavior, Security or Other",
+      "example" : "API",
+      "default" : ""
+    },
     "description" : {
       "type" : "string"
     },

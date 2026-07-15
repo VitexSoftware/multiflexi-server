@@ -78,9 +78,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetAllCredentialTypes(): void
     {
-        self::markTestIncomplete(
-            'Test of "getAllCredentialTypes" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getAllCredentialTypes" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetAllTopics(): void
     {
-        self::markTestIncomplete(
-            'Test of "getAllTopics" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getAllTopics" method has not been implemented yet.');
     }
 
     /**
@@ -106,9 +102,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetAllUserCredentials(): void
     {
-        self::markTestIncomplete(
-            'Test of "getAllUserCredentials" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getAllUserCredentials" method has not been implemented yet.');
     }
 
     /**
@@ -120,9 +114,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetApiIndex(): void
     {
-        self::markTestIncomplete(
-            'Test of "getApiIndex" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getApiIndex" method has not been implemented yet.');
     }
 
     /**
@@ -134,9 +126,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetCredential(): void
     {
-        self::markTestIncomplete(
-            'Test of "getCredential" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getCredential" method has not been implemented yet.');
     }
 
     /**
@@ -148,9 +138,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetCredentialType(): void
     {
-        self::markTestIncomplete(
-            'Test of "getCredentialType" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getCredentialType" method has not been implemented yet.');
     }
 
     /**
@@ -162,9 +150,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetJobsStatus(): void
     {
-        self::markTestIncomplete(
-            'Test of "getJobsStatus" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getJobsStatus" method has not been implemented yet.');
     }
 
     /**
@@ -176,9 +162,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetTopic(): void
     {
-        self::markTestIncomplete(
-            'Test of "getTopic" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getTopic" method has not been implemented yet.');
     }
 
     /**
@@ -190,9 +174,7 @@ class DefaultApiTest extends TestCase
      */
     public function testLoginSuffixGet(): void
     {
-        self::markTestIncomplete(
-            'Test of "loginSuffixGet" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "loginSuffixGet" method has not been implemented yet.');
     }
 
     /**
@@ -204,9 +186,7 @@ class DefaultApiTest extends TestCase
      */
     public function testLoginSuffixPost(): void
     {
-        self::markTestIncomplete(
-            'Test of "loginSuffixPost" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "loginSuffixPost" method has not been implemented yet.');
     }
 
     /**
@@ -218,9 +198,7 @@ class DefaultApiTest extends TestCase
      */
     public function testLogoutPost(): void
     {
-        self::markTestIncomplete(
-            'Test of "logoutPost" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "logoutPost" method has not been implemented yet.');
     }
 
     /**
@@ -232,9 +210,7 @@ class DefaultApiTest extends TestCase
      */
     public function testPingSuffixGet(): void
     {
-        self::markTestIncomplete(
-            'Test of "pingSuffixGet" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "pingSuffixGet" method has not been implemented yet.');
     }
 
     /**
@@ -246,9 +222,7 @@ class DefaultApiTest extends TestCase
      */
     public function testRootGet(): void
     {
-        self::markTestIncomplete(
-            'Test of "rootGet" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "rootGet" method has not been implemented yet.');
     }
 
     /**
@@ -260,9 +234,7 @@ class DefaultApiTest extends TestCase
      */
     public function testStatusSuffixGet(): void
     {
-        self::markTestIncomplete(
-            'Test of "statusSuffixGet" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "statusSuffixGet" method has not been implemented yet.');
     }
 
     /**
@@ -274,9 +246,7 @@ class DefaultApiTest extends TestCase
      */
     public function testUpdateCredentialType(): void
     {
-        self::markTestIncomplete(
-            'Test of "updateCredentialType" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "updateCredentialType" method has not been implemented yet.');
     }
 
     /**
@@ -288,9 +258,7 @@ class DefaultApiTest extends TestCase
      */
     public function testUpdateCredentials(): void
     {
-        self::markTestIncomplete(
-            'Test of "updateCredentials" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "updateCredentials" method has not been implemented yet.');
     }
 
     /**
@@ -302,8 +270,6 @@ class DefaultApiTest extends TestCase
      */
     public function testUpdateTopic(): void
     {
-        self::markTestIncomplete(
-            'Test of "updateTopic" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "updateTopic" method has not been implemented yet.');
     }
 }

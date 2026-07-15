@@ -81,9 +81,7 @@ class ErrorResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "ErrorResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "ErrorResponse" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class ErrorResponseTest extends TestCase
      */
     public function testPropertyError(): void
     {
-        self::markTestIncomplete(
-            'Test of "error" property in "ErrorResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "error" property in "ErrorResponse" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class ErrorResponseTest extends TestCase
      */
     public function testPropertySuccess(): void
     {
-        self::markTestIncomplete(
-            'Test of "success" property in "ErrorResponse" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "success" property in "ErrorResponse" model has not been implemented yet.');
     }
 
     /**

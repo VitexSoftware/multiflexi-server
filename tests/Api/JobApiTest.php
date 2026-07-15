@@ -78,9 +78,7 @@ class JobApiTest extends TestCase
      */
     public function testGetjobById(): void
     {
-        self::markTestIncomplete(
-            'Test of "getjobById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getjobById" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class JobApiTest extends TestCase
      */
     public function testListjobs(): void
     {
-        self::markTestIncomplete(
-            'Test of "listjobs" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "listjobs" method has not been implemented yet.');
     }
 
     /**
@@ -106,8 +102,6 @@ class JobApiTest extends TestCase
      */
     public function testSetjobById(): void
     {
-        self::markTestIncomplete(
-            'Test of "setjobById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setjobById" method has not been implemented yet.');
     }
 }

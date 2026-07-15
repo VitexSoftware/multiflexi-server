@@ -78,9 +78,7 @@ class CompanyApiTest extends TestCase
      */
     public function testGetCompanyById(): void
     {
-        self::markTestIncomplete(
-            'Test of "getCompanyById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getCompanyById" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class CompanyApiTest extends TestCase
      */
     public function testListCompanies(): void
     {
-        self::markTestIncomplete(
-            'Test of "listCompanies" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "listCompanies" method has not been implemented yet.');
     }
 
     /**
@@ -106,8 +102,6 @@ class CompanyApiTest extends TestCase
      */
     public function testSetCompanyById(): void
     {
-        self::markTestIncomplete(
-            'Test of "setCompanyById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setCompanyById" method has not been implemented yet.');
     }
 }

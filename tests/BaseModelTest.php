@@ -333,12 +333,10 @@ class BaseModelTest extends TestCase
     public function testSetterWithUnknownProp(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage(
-            sprintf(
-                'Cannot set unknownProp property of %s model because it doesn\'t exist in related OAS schema',
-                CatRefTestClass::class,
-            ),
-        );
+        $this->expectExceptionMessage(sprintf(
+            'Cannot set unknownProp property of %s model because it doesn\'t exist in related OAS schema',
+            CatRefTestClass::class,
+        ));
         $item = new CatRefTestClass();
         $item->unknownProp = 'foobar';
     }
@@ -349,12 +347,10 @@ class BaseModelTest extends TestCase
     public function testGetterWithUnknownProp(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage(
-            sprintf(
-                'Cannot get unknownProp property of %s model because it doesn\'t exist in related OAS schema',
-                CatRefTestClass::class,
-            ),
-        );
+        $this->expectExceptionMessage(sprintf(
+            'Cannot get unknownProp property of %s model because it doesn\'t exist in related OAS schema',
+            CatRefTestClass::class,
+        ));
         $item = new CatRefTestClass();
         $unknownProp = $item->unknownProp;
     }

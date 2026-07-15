@@ -131,9 +131,7 @@ SCHEMA;
                 $definedProps = (\array_key_exists('properties', $schema)) ? (array) $schema['properties'] : null;
 
                 if (\is_array($definedProps) && !\in_array($param, array_keys($definedProps), true)) {
-                    throw new \InvalidArgumentException(
-                        sprintf('Cannot set %s property of %s model because it doesn\'t exist in related OAS schema', $param, static::class),
-                    );
+                    throw new \InvalidArgumentException(sprintf('Cannot set %s property of %s model because it doesn\'t exist in related OAS schema', $param, static::class));
                 }
 
                 $this->dataContainer[$param] = $value;
@@ -146,9 +144,7 @@ SCHEMA;
             case IMocker::DATA_TYPE_ARRAY:
             default:
                 // scalar type and array cannot use property assignation
-                throw new \InvalidArgumentException(
-                    sprintf('Cannot set %s property of %s model because it\'s %s type. Use setData method instead', $param, static::class, $modelType),
-                );
+                throw new \InvalidArgumentException(sprintf('Cannot set %s property of %s model because it\'s %s type. Use setData method instead', $param, static::class, $modelType));
         }
     }
 
@@ -170,9 +166,7 @@ SCHEMA;
 
         if (!\in_array($modelType, [null, IMocker::DATA_TYPE_OBJECT], true)) {
             // scalar type
-            throw new \InvalidArgumentException(
-                sprintf('Cannot get %s property of %s model because getter is for object OAS type only', $param, static::class),
-            );
+            throw new \InvalidArgumentException(sprintf('Cannot get %s property of %s model because getter is for object OAS type only', $param, static::class));
         }
 
         if (
@@ -187,9 +181,7 @@ SCHEMA;
             return (isset($this->dataContainer[$param])) ? $this->dataContainer[$param] : null;
         }
 
-        throw new \InvalidArgumentException(
-            sprintf('Cannot get %s property of %s model because it doesn\'t exist in related OAS schema', $param, static::class),
-        );
+        throw new \InvalidArgumentException(sprintf('Cannot get %s property of %s model because it doesn\'t exist in related OAS schema', $param, static::class));
     }
 
     /**
@@ -244,9 +236,7 @@ SCHEMA;
                     }
                 }
 
-                throw new \InvalidArgumentException(
-                    sprintf('Invalid data for %s model because it accepts straight indexed arrays only', static::class),
-                );
+                throw new \InvalidArgumentException(sprintf('Invalid data for %s model because it accepts straight indexed arrays only', static::class));
 
                 break;
             case IMocker::DATA_TYPE_OBJECT:
@@ -340,13 +330,11 @@ SCHEMA;
         $isValid = \in_array($type, static::VALID_OAS_DATA_TYPES, true);
 
         if ($type !== null && $isValid === false && $throwException) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    'Invalid OAS schema of %s model, "type" must be one of %s',
-                    static::class,
-                    implode(', ', static::VALID_OAS_DATA_TYPES),
-                ),
-            );
+            throw new \InvalidArgumentException(sprintf(
+                'Invalid OAS schema of %s model, "type" must be one of %s',
+                static::class,
+                implode(', ', static::VALID_OAS_DATA_TYPES),
+            ));
         }
 
         return $isValid;

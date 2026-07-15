@@ -78,9 +78,7 @@ class RuntemplateApiTest extends TestCase
      */
     public function testGetRunTemplateById(): void
     {
-        self::markTestIncomplete(
-            'Test of "getRunTemplateById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getRunTemplateById" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class RuntemplateApiTest extends TestCase
      */
     public function testListRunTemplates(): void
     {
-        self::markTestIncomplete(
-            'Test of "listRunTemplates" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "listRunTemplates" method has not been implemented yet.');
     }
 
     /**
@@ -106,9 +102,7 @@ class RuntemplateApiTest extends TestCase
      */
     public function testSetRunTemplateById(): void
     {
-        self::markTestIncomplete(
-            'Test of "setRunTemplateById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setRunTemplateById" method has not been implemented yet.');
     }
 
     /**
@@ -120,8 +114,6 @@ class RuntemplateApiTest extends TestCase
      */
     public function testUpdateRunTemplateById(): void
     {
-        self::markTestIncomplete(
-            'Test of "updateRunTemplateById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "updateRunTemplateById" method has not been implemented yet.');
     }
 }

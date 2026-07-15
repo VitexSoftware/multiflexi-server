@@ -78,9 +78,7 @@ class GdprApiTest extends TestCase
      */
     public function testDownloadDataExport(): void
     {
-        self::markTestIncomplete(
-            'Test of "downloadDataExport" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "downloadDataExport" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class GdprApiTest extends TestCase
      */
     public function testRequestDataExport(): void
     {
-        self::markTestIncomplete(
-            'Test of "requestDataExport" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "requestDataExport" method has not been implemented yet.');
     }
 
     /**
@@ -106,8 +102,6 @@ class GdprApiTest extends TestCase
      */
     public function testRequestDataExportPost(): void
     {
-        self::markTestIncomplete(
-            'Test of "requestDataExportPost" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "requestDataExportPost" method has not been implemented yet.');
     }
 }

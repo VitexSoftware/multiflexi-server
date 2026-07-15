@@ -81,9 +81,7 @@ class DataExportDataSessionHistoryCurrentSessionInfoTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataSessionHistoryCurrentSessionInfoTest extends TestCase
      */
     public function testPropertySessionId(): void
     {
-        self::markTestIncomplete(
-            'Test of "sessionId" property in "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "sessionId" property in "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataSessionHistoryCurrentSessionInfoTest extends TestCase
      */
     public function testPropertyStartedAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "startedAt" property in "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "startedAt" property in "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataSessionHistoryCurrentSessionInfoTest extends TestCase
      */
     public function testPropertyIpAddress(): void
     {
-        self::markTestIncomplete(
-            'Test of "ipAddress" property in "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "ipAddress" property in "DataExportDataSessionHistoryCurrentSessionInfo" model has not been implemented yet.');
     }
 
     /**

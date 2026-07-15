@@ -81,9 +81,7 @@ class DataExportDataConsentRecordsTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataConsentRecords" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataConsentRecords" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataConsentRecordsTest extends TestCase
      */
     public function testPropertyConsentRecords(): void
     {
-        self::markTestIncomplete(
-            'Test of "consentRecords" property in "DataExportDataConsentRecords" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "consentRecords" property in "DataExportDataConsentRecords" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataConsentRecordsTest extends TestCase
      */
     public function testPropertyConsentAuditTrail(): void
     {
-        self::markTestIncomplete(
-            'Test of "consentAuditTrail" property in "DataExportDataConsentRecords" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "consentAuditTrail" property in "DataExportDataConsentRecords" model has not been implemented yet.');
     }
 
     /**

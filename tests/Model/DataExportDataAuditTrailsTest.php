@@ -81,9 +81,7 @@ class DataExportDataAuditTrailsTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataAuditTrails" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataAuditTrails" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataAuditTrailsTest extends TestCase
      */
     public function testPropertyDataExportRequests(): void
     {
-        self::markTestIncomplete(
-            'Test of "dataExportRequests" property in "DataExportDataAuditTrails" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dataExportRequests" property in "DataExportDataAuditTrails" model has not been implemented yet.');
     }
 
     /**

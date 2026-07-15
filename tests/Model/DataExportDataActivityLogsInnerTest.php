@@ -81,9 +81,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
      */
     public function testPropertyLogId(): void
     {
-        self::markTestIncomplete(
-            'Test of "logId" property in "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "logId" property in "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
      */
     public function testPropertyCompanyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyId" property in "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyId" property in "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
      */
     public function testPropertyApplicationId(): void
     {
-        self::markTestIncomplete(
-            'Test of "applicationId" property in "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "applicationId" property in "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
      */
     public function testPropertySeverity(): void
     {
-        self::markTestIncomplete(
-            'Test of "severity" property in "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "severity" property in "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
      */
     public function testPropertySource(): void
     {
-        self::markTestIncomplete(
-            'Test of "source" property in "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "source" property in "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
      */
     public function testPropertyMessage(): void
     {
-        self::markTestIncomplete(
-            'Test of "message" property in "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "message" property in "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class DataExportDataActivityLogsInnerTest extends TestCase
      */
     public function testPropertyTimestamp(): void
     {
-        self::markTestIncomplete(
-            'Test of "timestamp" property in "DataExportDataActivityLogsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "timestamp" property in "DataExportDataActivityLogsInner" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class UpdateRunTemplateById404ResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "UpdateRunTemplateById404Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "UpdateRunTemplateById404Response" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class UpdateRunTemplateById404ResponseTest extends TestCase
      */
     public function testPropertyError(): void
     {
-        self::markTestIncomplete(
-            'Test of "error" property in "UpdateRunTemplateById404Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "error" property in "UpdateRunTemplateById404Response" model has not been implemented yet.');
     }
 
     /**

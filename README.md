@@ -168,23 +168,20 @@ Class | Method | HTTP request | Description
 *AbstractCompanyApi* | **setCompanyById** | **POST** /company/ | Create or Update Company
 *AbstractCompanyApi* | **getCompanyById** | **GET** /company/{companyId}.{suffix} | Get Company by ID
 *AbstractCompanyApi* | **listCompanies** | **GET** /companies.{suffix} | Show All Companies
+*AbstractCredentialApi* | **getAllUserCredentials** | **GET** /credentials.{suffix} | Get All User Credentials
+*AbstractCredentialApi* | **getCredential** | **GET** /credential/{credentialId}.{suffix} | Get User Credentials
+*AbstractCredentialApi* | **updateCredentials** | **POST** /credential/{credentialId}.{suffix} | Update Credentials
+*AbstractCredentialTypeApi* | **getAllCredentialTypes** | **GET** /credential_types.{suffix} | Get All Credential Types
+*AbstractCredentialTypeApi* | **getCredentialType** | **GET** /credential_type/{credentialTypeID}.{suffix} | Get Credential Type by ID
+*AbstractCredentialTypeApi* | **updateCredentialType** | **POST** /credential_type/{credentialTypeID}.{suffix} | Update Credential Type
 *AbstractDefaultApi* | **logoutPost** | **POST** /logout | Odhlášení uživatele (invalidate token/session)
 *AbstractDefaultApi* | **rootGet** | **GET** / | Redirect to index
-*AbstractDefaultApi* | **getAllCredentialTypes** | **GET** /credential_types.{suffix} | Get All Credential Types
-*AbstractDefaultApi* | **getAllTopics** | **GET** /topics.{suffix} | Get All Topics
-*AbstractDefaultApi* | **getAllUserCredentials** | **GET** /credentials.{suffix} | Get All User Credentials
 *AbstractDefaultApi* | **getApiIndex** | **GET** /index.{suffix} | Endpoints listing
-*AbstractDefaultApi* | **getCredential** | **GET** /credential/{credentialId}.{suffix} | Get User Credentials
-*AbstractDefaultApi* | **getCredentialType** | **GET** /credential_type/{credentialTypeID}.{suffix} | Get Credential Type by ID
 *AbstractDefaultApi* | **getJobsStatus** | **GET** /jobs/status.{suffix} | Get Jobs Status
-*AbstractDefaultApi* | **getTopic** | **GET** /topic/{topicId}.{suffix} | Get Topic by ID
 *AbstractDefaultApi* | **loginSuffixGet** | **GET** /login.{suffix} | Return User's token
 *AbstractDefaultApi* | **loginSuffixPost** | **POST** /login.{suffix} | Return User's token
 *AbstractDefaultApi* | **pingSuffixGet** | **GET** /ping.{suffix} | job heartbeat operation
 *AbstractDefaultApi* | **statusSuffixGet** | **GET** /status.{suffix} | Get API status
-*AbstractDefaultApi* | **updateCredentialType** | **POST** /credential_type/{credentialTypeID}.{suffix} | Update Credential Type
-*AbstractDefaultApi* | **updateCredentials** | **POST** /credential/{credentialId}.{suffix} | Update Credentials
-*AbstractDefaultApi* | **updateTopic** | **POST** /topic/{topicId}.{suffix} | Update Topic
 *AbstractEventruleApi* | **setEventRuleById** | **POST** /eventrule/ | Create or Update EventRule
 *AbstractEventruleApi* | **deleteEventRuleById** | **DELETE** /eventrule/{eventRuleId}.{suffix} | Delete EventRule by ID
 *AbstractEventruleApi* | **getEventRuleById** | **GET** /eventrule/{eventRuleId}.{suffix} | Get EventRule by ID
@@ -197,24 +194,35 @@ Class | Method | HTTP request | Description
 *AbstractGdprApi* | **downloadDataExport** | **GET** /data-export-download | Download personal data export file
 *AbstractGdprApi* | **requestDataExport** | **GET** /data-export | Request personal data export (GDPR Article 15)
 *AbstractGdprApi* | **requestDataExportPost** | **POST** /data-export | Request personal data export (GDPR Article 15)
-*AbstractJobApi* | **setjobById** | **POST** /job/ | Create or Update job record
+*AbstractJobApi* | **setjobById** | **POST** /job/ | Schedule a job from a RunTemplate
 *AbstractJobApi* | **getjobById** | **GET** /job/{jobId}.{suffix} | Get job by ID
 *AbstractJobApi* | **listjobs** | **GET** /jobs.{suffix} | Show All jobs
 *AbstractRuntemplateApi* | **setRunTemplateById** | **POST** /runtemplate | Create or Update RunTemplate
 *AbstractRuntemplateApi* | **getRunTemplateById** | **GET** /runtemplate/{runTemplateId}.{suffix} | Get RunTemplate by ID
 *AbstractRuntemplateApi* | **listRunTemplates** | **GET** /runtemplates.{suffix} | Show All RunTemplates
 *AbstractRuntemplateApi* | **updateRunTemplateById** | **POST** /runtemplate/{runTemplateId}.{suffix} | Update RunTemplate by ID
+*AbstractTaskApi* | **getTaskById** | **GET** /task/{taskId}.{suffix} | Get Task by ID
+*AbstractTaskApi* | **listTasks** | **GET** /tasks.{suffix} | List Tasks
+*AbstractTopicApi* | **getAllTopics** | **GET** /topics.{suffix} | Get All Topics
+*AbstractTopicApi* | **getTopic** | **GET** /topic/{topicId}.{suffix} | Get Topic by ID
+*AbstractTopicApi* | **updateTopic** | **POST** /topic/{topicId}.{suffix} | Update Topic
 *AbstractUserApi* | **setUserById** | **POST** /user/ | Create or Update User
 *AbstractUserApi* | **getUserById** | **GET** /user/{userId}.{suffix} | Get User by ID
 *AbstractUserApi* | **listUsers** | **GET** /users.{suffix} | Show All Users
+*AbstractUserCompanyApi* | **assignUserToCompany** | **POST** /company/{companyId}/user/ | Assign a user to a company
+*AbstractUserCompanyApi* | **listCompanyUsers** | **GET** /company/{companyId}/users.{suffix} | List users assigned to a company
+*AbstractUserCompanyApi* | **unassignUserFromCompany** | **DELETE** /company/{companyId}/user/{userId} | Remove a user from a company
+*AbstractUserRoleApi* | **getUserRoles** | **GET** /user/{userId}/roles.{suffix} | Get RBAC roles for a user
+*AbstractUserRoleApi* | **setUserRoles** | **POST** /user/{userId}/roles/ | Set RBAC roles for a user
 
 
 ## Models
 
 * MultiFlexi\Api\Model\App
 * MultiFlexi\Api\Model\AppEnvironmentValue
-* MultiFlexi\Api\Model\AppExitCodesInner
+* MultiFlexi\Api\Model\AssignUserToCompanyRequest
 * MultiFlexi\Api\Model\Company
+* MultiFlexi\Api\Model\CompanyUser
 * MultiFlexi\Api\Model\ConfField
 * MultiFlexi\Api\Model\Configuration
 * MultiFlexi\Api\Model\Credential
@@ -240,18 +248,26 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\ErrorResponse
 * MultiFlexi\Api\Model\EventRule
 * MultiFlexi\Api\Model\EventSource
+* MultiFlexi\Api\Model\ExitCodeDetail
 * MultiFlexi\Api\Model\GetCredentialType200Response
 * MultiFlexi\Api\Model\GetTopic200Response
 * MultiFlexi\Api\Model\Job
 * MultiFlexi\Api\Model\JobsStatus
+* MultiFlexi\Api\Model\ListCompanyUsers200ResponseInner
 * MultiFlexi\Api\Model\LogoutPostRequest
+* MultiFlexi\Api\Model\RbacRole
 * MultiFlexi\Api\Model\RequestDataExport200Response
 * MultiFlexi\Api\Model\RequestDataExportPostRequest
 * MultiFlexi\Api\Model\RunTemplate
+* MultiFlexi\Api\Model\SetUserRoles200Response
+* MultiFlexi\Api\Model\SetUserRolesRequest
+* MultiFlexi\Api\Model\SetjobByIdRequest
 * MultiFlexi\Api\Model\Status
 * MultiFlexi\Api\Model\Tag
+* MultiFlexi\Api\Model\Task
 * MultiFlexi\Api\Model\TestEventSourceConnection200Response
 * MultiFlexi\Api\Model\Topic
+* MultiFlexi\Api\Model\UnassignUserFromCompany200Response
 * MultiFlexi\Api\Model\UpdateCredentials201Response
 * MultiFlexi\Api\Model\UpdateRunTemplateById400Response
 * MultiFlexi\Api\Model\UpdateRunTemplateById404Response

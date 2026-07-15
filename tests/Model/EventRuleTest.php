@@ -81,9 +81,7 @@ class EventRuleTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyEventSourceId(): void
     {
-        self::markTestIncomplete(
-            'Test of "eventSourceId" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "eventSourceId" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyEvidence(): void
     {
-        self::markTestIncomplete(
-            'Test of "evidence" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "evidence" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyOperation(): void
     {
-        self::markTestIncomplete(
-            'Test of "operation" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "operation" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyRuntemplateId(): void
     {
-        self::markTestIncomplete(
-            'Test of "runtemplateId" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "runtemplateId" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyPriority(): void
     {
-        self::markTestIncomplete(
-            'Test of "priority" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "priority" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyEnabled(): void
     {
-        self::markTestIncomplete(
-            'Test of "enabled" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "enabled" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyEnvMapping(): void
     {
-        self::markTestIncomplete(
-            'Test of "envMapping" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "envMapping" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyCreated(): void
     {
-        self::markTestIncomplete(
-            'Test of "created" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "created" property in "EventRule" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class EventRuleTest extends TestCase
      */
     public function testPropertyModified(): void
     {
-        self::markTestIncomplete(
-            'Test of "modified" property in "EventRule" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "modified" property in "EventRule" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class DataExportStatusResponseExportsInnerTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportStatusResponseExportsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportStatusResponseExportsInner" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportStatusResponseExportsInnerTest extends TestCase
      */
     public function testPropertyMessage(): void
     {
-        self::markTestIncomplete(
-            'Test of "message" property in "DataExportStatusResponseExportsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "message" property in "DataExportStatusResponseExportsInner" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportStatusResponseExportsInnerTest extends TestCase
      */
     public function testPropertyRequestedAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "requestedAt" property in "DataExportStatusResponseExportsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "requestedAt" property in "DataExportStatusResponseExportsInner" model has not been implemented yet.');
     }
 
     /**

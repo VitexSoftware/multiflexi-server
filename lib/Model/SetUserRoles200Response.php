@@ -30,13 +30,13 @@ namespace MultiFlexi\Api\Model;
 use MultiFlexi\Api\BaseModel;
 
 /**
- * AppExitCodesInner.
+ * SetUserRoles200Response.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-class AppExitCodesInner extends BaseModel
+class SetUserRoles200Response extends BaseModel
 {
     /**
      * @var string Models namespace.
@@ -52,21 +52,24 @@ class AppExitCodesInner extends BaseModel
 {
   "type" : "object",
   "properties" : {
-    "severity" : {
-      "type" : "string",
-      "description" : "Exit code severity level",
-      "enum" : [ "success", "error", "warning", "info" ]
+    "user_id" : {
+      "type" : "integer",
+      "format" : "int64"
     },
-    "retry" : {
-      "type" : "boolean",
-      "description" : "Whether to retry on this exit code"
+    "replace" : {
+      "type" : "boolean"
     },
-    "description" : {
-      "type" : "object",
-      "additionalProperties" : {
+    "roles" : {
+      "type" : "array",
+      "items" : {
         "type" : "string"
-      },
-      "description" : "Multilingual descriptions (en, cs, etc.)"
+      }
+    },
+    "role_details" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/components/schemas/RbacRole"
+      }
     }
   }
 }

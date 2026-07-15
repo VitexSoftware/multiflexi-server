@@ -31,15 +31,15 @@ namespace MultiFlexi\Api\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AppExitCodesInnerTest Class Doc Comment.
+ * ExitCodeDetailTest Class Doc Comment.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  *
- * @coversDefaultClass \MultiFlexi\Api\Model\AppExitCodesInner
+ * @coversDefaultClass \MultiFlexi\Api\Model\ExitCodeDetail
  */
-class AppExitCodesInnerTest extends TestCase
+class ExitCodeDetailTest extends TestCase
 {
     /**
      * Setup before running any test cases.
@@ -70,20 +70,18 @@ class AppExitCodesInnerTest extends TestCase
     }
 
     /**
-     * Test "AppExitCodesInner".
+     * Test "ExitCodeDetail".
      */
-    public function testAppExitCodesInner(): void
+    public function testExitCodeDetail(): void
     {
-        $testAppExitCodesInner = new AppExitCodesInner();
-        $namespacedClassname = AppExitCodesInner::getModelsNamespace().'\\AppExitCodesInner';
-        $this->assertSame('\\'.AppExitCodesInner::class, $namespacedClassname);
+        $testExitCodeDetail = new ExitCodeDetail();
+        $namespacedClassname = ExitCodeDetail::getModelsNamespace().'\\ExitCodeDetail';
+        $this->assertSame('\\'.ExitCodeDetail::class, $namespacedClassname);
         $this->assertTrue(
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "AppExitCodesInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "ExitCodeDetail" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class AppExitCodesInnerTest extends TestCase
      */
     public function testPropertySeverity(): void
     {
-        self::markTestIncomplete(
-            'Test of "severity" property in "AppExitCodesInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "severity" property in "ExitCodeDetail" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class AppExitCodesInnerTest extends TestCase
      */
     public function testPropertyRetry(): void
     {
-        self::markTestIncomplete(
-            'Test of "retry" property in "AppExitCodesInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "retry" property in "ExitCodeDetail" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class AppExitCodesInnerTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "AppExitCodesInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "ExitCodeDetail" model has not been implemented yet.');
     }
 
     /**
@@ -123,7 +115,7 @@ class AppExitCodesInnerTest extends TestCase
      */
     public function testGetOpenApiSchema(): void
     {
-        $schemaArr = AppExitCodesInner::getOpenApiSchema();
+        $schemaArr = ExitCodeDetail::getOpenApiSchema();
         $this->assertIsArray($schemaArr);
     }
 }

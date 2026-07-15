@@ -81,9 +81,7 @@ class DataExportDataAuditTrailsDataExportRequestsInnerTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataAuditTrailsDataExportRequestsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataAuditTrailsDataExportRequestsInner" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataAuditTrailsDataExportRequestsInnerTest extends TestCase
      */
     public function testPropertyMessage(): void
     {
-        self::markTestIncomplete(
-            'Test of "message" property in "DataExportDataAuditTrailsDataExportRequestsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "message" property in "DataExportDataAuditTrailsDataExportRequestsInner" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataAuditTrailsDataExportRequestsInnerTest extends TestCase
      */
     public function testPropertyTimestamp(): void
     {
-        self::markTestIncomplete(
-            'Test of "timestamp" property in "DataExportDataAuditTrailsDataExportRequestsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "timestamp" property in "DataExportDataAuditTrailsDataExportRequestsInner" model has not been implemented yet.');
     }
 
     /**

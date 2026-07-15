@@ -81,9 +81,7 @@ class DataExportDataExportMetadataTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataExportMetadataTest extends TestCase
      */
     public function testPropertyExportDate(): void
     {
-        self::markTestIncomplete(
-            'Test of "exportDate" property in "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "exportDate" property in "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataExportMetadataTest extends TestCase
      */
     public function testPropertyUserId(): void
     {
-        self::markTestIncomplete(
-            'Test of "userId" property in "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "userId" property in "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataExportMetadataTest extends TestCase
      */
     public function testPropertyExportVersion(): void
     {
-        self::markTestIncomplete(
-            'Test of "exportVersion" property in "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "exportVersion" property in "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataExportMetadataTest extends TestCase
      */
     public function testPropertyGdprArticle(): void
     {
-        self::markTestIncomplete(
-            'Test of "gdprArticle" property in "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "gdprArticle" property in "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataExportMetadataTest extends TestCase
      */
     public function testPropertyDataController(): void
     {
-        self::markTestIncomplete(
-            'Test of "dataController" property in "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dataController" property in "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportDataExportMetadataTest extends TestCase
      */
     public function testPropertyRetentionInfo(): void
     {
-        self::markTestIncomplete(
-            'Test of "retentionInfo" property in "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "retentionInfo" property in "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class DataExportDataExportMetadataTest extends TestCase
      */
     public function testPropertyContactInfo(): void
     {
-        self::markTestIncomplete(
-            'Test of "contactInfo" property in "DataExportDataExportMetadata" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "contactInfo" property in "DataExportDataExportMetadata" model has not been implemented yet.');
     }
 
     /**

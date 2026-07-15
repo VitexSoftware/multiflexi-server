@@ -81,9 +81,7 @@ class DataExportDataSessionHistoryTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataSessionHistory" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataSessionHistory" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataSessionHistoryTest extends TestCase
      */
     public function testPropertyNote(): void
     {
-        self::markTestIncomplete(
-            'Test of "note" property in "DataExportDataSessionHistory" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "note" property in "DataExportDataSessionHistory" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataSessionHistoryTest extends TestCase
      */
     public function testPropertyCurrentSessionInfo(): void
     {
-        self::markTestIncomplete(
-            'Test of "currentSessionInfo" property in "DataExportDataSessionHistory" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "currentSessionInfo" property in "DataExportDataSessionHistory" model has not been implemented yet.');
     }
 
     /**

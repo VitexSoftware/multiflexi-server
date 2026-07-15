@@ -81,9 +81,7 @@ class DataExportDataConsentRecordsConsentAuditTrailInnerTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataConsentRecordsConsentAuditTrailInnerTest extends TestCase
      */
     public function testPropertyAction(): void
     {
-        self::markTestIncomplete(
-            'Test of "action" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "action" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataConsentRecordsConsentAuditTrailInnerTest extends TestCase
      */
     public function testPropertyConsentType(): void
     {
-        self::markTestIncomplete(
-            'Test of "consentType" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "consentType" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataConsentRecordsConsentAuditTrailInnerTest extends TestCase
      */
     public function testPropertyOldValue(): void
     {
-        self::markTestIncomplete(
-            'Test of "oldValue" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "oldValue" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataConsentRecordsConsentAuditTrailInnerTest extends TestCase
      */
     public function testPropertyNewValue(): void
     {
-        self::markTestIncomplete(
-            'Test of "newValue" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "newValue" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataConsentRecordsConsentAuditTrailInnerTest extends TestCase
      */
     public function testPropertyTimestamp(): void
     {
-        self::markTestIncomplete(
-            'Test of "timestamp" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "timestamp" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportDataConsentRecordsConsentAuditTrailInnerTest extends TestCase
      */
     public function testPropertyIpAddress(): void
     {
-        self::markTestIncomplete(
-            'Test of "ipAddress" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "ipAddress" property in "DataExportDataConsentRecordsConsentAuditTrailInner" model has not been implemented yet.');
     }
 
     /**

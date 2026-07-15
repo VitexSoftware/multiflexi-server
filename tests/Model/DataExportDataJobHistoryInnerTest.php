@@ -81,9 +81,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
      */
     public function testPropertyJobId(): void
     {
-        self::markTestIncomplete(
-            'Test of "jobId" property in "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "jobId" property in "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
      */
     public function testPropertyApplicationId(): void
     {
-        self::markTestIncomplete(
-            'Test of "applicationId" property in "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "applicationId" property in "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
      */
     public function testPropertyCompanyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyId" property in "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyId" property in "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
      */
     public function testPropertyStartedAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "startedAt" property in "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "startedAt" property in "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
      */
     public function testPropertyCompletedAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "completedAt" property in "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "completedAt" property in "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
      */
     public function testPropertyExitCode(): void
     {
-        self::markTestIncomplete(
-            'Test of "exitCode" property in "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "exitCode" property in "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class DataExportDataJobHistoryInnerTest extends TestCase
      */
     public function testPropertyStatus(): void
     {
-        self::markTestIncomplete(
-            'Test of "status" property in "DataExportDataJobHistoryInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "status" property in "DataExportDataJobHistoryInner" model has not been implemented yet.');
     }
 
     /**

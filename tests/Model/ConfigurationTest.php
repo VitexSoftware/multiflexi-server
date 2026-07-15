@@ -81,9 +81,7 @@ class ConfigurationTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "Configuration" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "Configuration" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class ConfigurationTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "Configuration" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "Configuration" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class ConfigurationTest extends TestCase
      */
     public function testPropertyAppId(): void
     {
-        self::markTestIncomplete(
-            'Test of "appId" property in "Configuration" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "appId" property in "Configuration" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class ConfigurationTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "Configuration" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "Configuration" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class ConfigurationTest extends TestCase
      */
     public function testPropertyValue(): void
     {
-        self::markTestIncomplete(
-            'Test of "value" property in "Configuration" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "value" property in "Configuration" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class RequestDataExport200ResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class RequestDataExport200ResponseTest extends TestCase
      */
     public function testPropertySuccess(): void
     {
-        self::markTestIncomplete(
-            'Test of "success" property in "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "success" property in "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class RequestDataExport200ResponseTest extends TestCase
      */
     public function testPropertyDownloadUrl(): void
     {
-        self::markTestIncomplete(
-            'Test of "downloadUrl" property in "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "downloadUrl" property in "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class RequestDataExport200ResponseTest extends TestCase
      */
     public function testPropertyFormat(): void
     {
-        self::markTestIncomplete(
-            'Test of "format" property in "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "format" property in "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class RequestDataExport200ResponseTest extends TestCase
      */
     public function testPropertyGeneratedAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "generatedAt" property in "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "generatedAt" property in "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class RequestDataExport200ResponseTest extends TestCase
      */
     public function testPropertyExpiresAt(): void
     {
-        self::markTestIncomplete(
-            'Test of "expiresAt" property in "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "expiresAt" property in "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class RequestDataExport200ResponseTest extends TestCase
      */
     public function testPropertyNotificationSent(): void
     {
-        self::markTestIncomplete(
-            'Test of "notificationSent" property in "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "notificationSent" property in "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class RequestDataExport200ResponseTest extends TestCase
      */
     public function testPropertyExports(): void
     {
-        self::markTestIncomplete(
-            'Test of "exports" property in "RequestDataExport200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "exports" property in "RequestDataExport200Response" model has not been implemented yet.');
     }
 
     /**

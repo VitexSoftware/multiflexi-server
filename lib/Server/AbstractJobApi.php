@@ -98,8 +98,8 @@ abstract class AbstractJobApi
 
     /**
      * POST setjobById
-     * Summary: Create or Update job record
-     * Notes: Create or Update single job record
+     * Summary: Schedule a job from a RunTemplate
+     * Notes: Schedules a job for an existing RunTemplate (mirrors &#x60;multiflexi-cli run-template:schedule&#x60;). Used as the inbound trigger by external orchestrators such as Node-RED.
      * Output-Formats: [application/json].
      *
      * @param ServerRequestInterface $request  Request
@@ -114,6 +114,7 @@ abstract class AbstractJobApi
         $queryParams = $request->getQueryParams();
         $jobId = (\array_key_exists('jobId', $queryParams)) ? $queryParams['jobId'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
+        $body = $request->getParsedBody();
         $message = 'How about implementing setjobById as a POST method in MultiFlexi\\Api\\Server\\JobApi class?';
 
         throw new HttpNotImplementedException($request, $message);

@@ -47,8 +47,9 @@ class RuntemplateApi extends AbstractRuntemplateApi
     {
         $this->engine->loadFromSQL($runTemplateId);
         $runtemplateData = $this->engine->getData();
-        $runtemplateData['success'] = empty($runtemplateData['success']) ? '' : unserialize($runtemplateData['success']);
-        $runtemplateData['fail'] = empty($runtemplateData['fail']) ? '' : unserialize($runtemplateData['fail']);
+        $runtemplateData['active'] = (bool) $runtemplateData['active'];
+        $runtemplateData['success'] = empty($runtemplateData['success']) ? null : unserialize($runtemplateData['success']);
+        $runtemplateData['fail'] = empty($runtemplateData['fail']) ? null : unserialize($runtemplateData['fail']);
 
         switch ($suffix) {
             case 'html':
@@ -85,8 +86,9 @@ class RuntemplateApi extends AbstractRuntemplateApi
 
         foreach ($this->engine->listingQuery()->limit($limit) as $runtemplate) {
             $runtemplateId = $runtemplate['id'];
-            $runtemplate['success'] = empty($runtemplate['success']) ? '' : unserialize($runtemplate['success']);
-            $runtemplate['fail'] = empty($runtemplate['fail']) ? '' : unserialize($runtemplate['fail']);
+            $runtemplate['active'] = (bool) $runtemplate['active'];
+            $runtemplate['success'] = empty($runtemplate['success']) ? null : unserialize($runtemplate['success']);
+            $runtemplate['fail'] = empty($runtemplate['fail']) ? null : unserialize($runtemplate['fail']);
 
             switch ($suffix) {
                 case 'html':
@@ -103,7 +105,7 @@ class RuntemplateApi extends AbstractRuntemplateApi
             $runtemplatesList[$runtemplateId] = $runtemplate;
         }
 
-        return DefaultApi::prepareResponse($response, $runtemplatesList, $suffix, null, 'runtemplate');
+        return DefaultApi::prepareResponse($response, array_values($runtemplatesList), $suffix, null, 'runtemplate');
     }
 
     /**
@@ -154,8 +156,9 @@ class RuntemplateApi extends AbstractRuntemplateApi
         if ($this->engine->dbsync()) {
             // Return updated data
             $updatedData = $this->engine->getData();
-            $updatedData['success'] = empty($updatedData['success']) ? '' : unserialize($updatedData['success']);
-            $updatedData['fail'] = empty($updatedData['fail']) ? '' : unserialize($updatedData['fail']);
+            $updatedData['active'] = (bool) $updatedData['active'];
+            $updatedData['success'] = empty($updatedData['success']) ? null : unserialize($updatedData['success']);
+            $updatedData['fail'] = empty($updatedData['fail']) ? null : unserialize($updatedData['fail']);
 
             return DefaultApi::prepareResponse($response->withStatus(201), $updatedData, $suffix, null, 'runtemplate');
         }

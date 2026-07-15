@@ -81,9 +81,7 @@ class TagTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "Tag" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "Tag" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class TagTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "Tag" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "Tag" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class TagTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "Tag" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "Tag" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class AppTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "App" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class AppTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class AppTest extends TestCase
      */
     public function testPropertyEnabled(): void
     {
-        self::markTestIncomplete(
-            'Test of "enabled" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "enabled" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class AppTest extends TestCase
      */
     public function testPropertyImage(): void
     {
-        self::markTestIncomplete(
-            'Test of "image" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "image" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class AppTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class AppTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class AppTest extends TestCase
      */
     public function testPropertyExecutable(): void
     {
-        self::markTestIncomplete(
-            'Test of "executable" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "executable" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class AppTest extends TestCase
      */
     public function testPropertyDatCreate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datCreate" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datCreate" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class AppTest extends TestCase
      */
     public function testPropertyDatUpdate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datUpdate" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datUpdate" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class AppTest extends TestCase
      */
     public function testPropertySetup(): void
     {
-        self::markTestIncomplete(
-            'Test of "setup" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setup" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class AppTest extends TestCase
      */
     public function testPropertyCmdparams(): void
     {
-        self::markTestIncomplete(
-            'Test of "cmdparams" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "cmdparams" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -191,9 +169,7 @@ class AppTest extends TestCase
      */
     public function testPropertyDeploy(): void
     {
-        self::markTestIncomplete(
-            'Test of "deploy" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "deploy" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -201,9 +177,7 @@ class AppTest extends TestCase
      */
     public function testPropertyHomepage(): void
     {
-        self::markTestIncomplete(
-            'Test of "homepage" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "homepage" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -211,9 +185,7 @@ class AppTest extends TestCase
      */
     public function testPropertyRequirements(): void
     {
-        self::markTestIncomplete(
-            'Test of "requirements" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "requirements" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -221,9 +193,7 @@ class AppTest extends TestCase
      */
     public function testPropertyOciimage(): void
     {
-        self::markTestIncomplete(
-            'Test of "ociimage" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "ociimage" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -231,9 +201,7 @@ class AppTest extends TestCase
      */
     public function testPropertyVersion(): void
     {
-        self::markTestIncomplete(
-            'Test of "version" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "version" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -241,9 +209,7 @@ class AppTest extends TestCase
      */
     public function testPropertyCode(): void
     {
-        self::markTestIncomplete(
-            'Test of "code" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "code" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -251,9 +217,7 @@ class AppTest extends TestCase
      */
     public function testPropertyUuid(): void
     {
-        self::markTestIncomplete(
-            'Test of "uuid" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "uuid" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -261,9 +225,7 @@ class AppTest extends TestCase
      */
     public function testPropertyTopics(): void
     {
-        self::markTestIncomplete(
-            'Test of "topics" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "topics" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -271,9 +233,7 @@ class AppTest extends TestCase
      */
     public function testPropertyResultfile(): void
     {
-        self::markTestIncomplete(
-            'Test of "resultfile" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "resultfile" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -281,9 +241,7 @@ class AppTest extends TestCase
      */
     public function testPropertyArtifacts(): void
     {
-        self::markTestIncomplete(
-            'Test of "artifacts" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "artifacts" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -291,9 +249,7 @@ class AppTest extends TestCase
      */
     public function testPropertyEnvironment(): void
     {
-        self::markTestIncomplete(
-            'Test of "environment" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "environment" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -301,9 +257,7 @@ class AppTest extends TestCase
      */
     public function testPropertyExitCodes(): void
     {
-        self::markTestIncomplete(
-            'Test of "exitCodes" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "exitCodes" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -311,9 +265,7 @@ class AppTest extends TestCase
      */
     public function testPropertyTags(): void
     {
-        self::markTestIncomplete(
-            'Test of "tags" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "tags" property in "App" model has not been implemented yet.');
     }
 
     /**
@@ -321,9 +273,7 @@ class AppTest extends TestCase
      */
     public function testPropertyStatus(): void
     {
-        self::markTestIncomplete(
-            'Test of "status" property in "App" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "status" property in "App" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class TopicTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "Topic" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "Topic" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class TopicTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "Topic" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "Topic" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class TopicTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "Topic" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "Topic" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class TopicTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "Topic" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "Topic" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class TopicTest extends TestCase
      */
     public function testPropertyColor(): void
     {
-        self::markTestIncomplete(
-            'Test of "color" property in "Topic" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "color" property in "Topic" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class TopicTest extends TestCase
      */
     public function testPropertyDatCreate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datCreate" property in "Topic" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datCreate" property in "Topic" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class TopicTest extends TestCase
      */
     public function testPropertyDatUpdate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datUpdate" property in "Topic" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datUpdate" property in "Topic" model has not been implemented yet.');
     }
 
     /**

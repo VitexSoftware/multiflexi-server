@@ -78,9 +78,7 @@ class EventsourceApiTest extends TestCase
      */
     public function testDeleteEventSourceById(): void
     {
-        self::markTestIncomplete(
-            'Test of "deleteEventSourceById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "deleteEventSourceById" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class EventsourceApiTest extends TestCase
      */
     public function testGetEventSourceById(): void
     {
-        self::markTestIncomplete(
-            'Test of "getEventSourceById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getEventSourceById" method has not been implemented yet.');
     }
 
     /**
@@ -106,9 +102,7 @@ class EventsourceApiTest extends TestCase
      */
     public function testListEventSources(): void
     {
-        self::markTestIncomplete(
-            'Test of "listEventSources" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "listEventSources" method has not been implemented yet.');
     }
 
     /**
@@ -120,9 +114,7 @@ class EventsourceApiTest extends TestCase
      */
     public function testSetEventSourceById(): void
     {
-        self::markTestIncomplete(
-            'Test of "setEventSourceById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setEventSourceById" method has not been implemented yet.');
     }
 
     /**
@@ -134,8 +126,6 @@ class EventsourceApiTest extends TestCase
      */
     public function testTestEventSourceConnection(): void
     {
-        self::markTestIncomplete(
-            'Test of "testEventSourceConnection" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "testEventSourceConnection" method has not been implemented yet.');
     }
 }

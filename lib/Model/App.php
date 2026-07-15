@@ -129,7 +129,8 @@ class App extends BaseModel
     },
     "topics" : {
       "type" : "string",
-      "description" : "Comma-separated list of topics/tags"
+      "description" : "Comma-separated list of topics/tags (deprecated — use the tags array)",
+      "deprecated" : true
     },
     "resultfile" : {
       "type" : "string",
@@ -138,6 +139,16 @@ class App extends BaseModel
     "artifacts" : {
       "type" : "string",
       "description" : "Output artifacts produced by the application"
+    },
+    "deffile" : {
+      "type" : "string",
+      "description" : "Path to the application definition JSON file",
+      "example" : "/etc/multiflexi/apps/myapp.multiflexi.app.json"
+    },
+    "helmchart" : {
+      "type" : "string",
+      "description" : "URI or local path to Helm chart",
+      "example" : "oci://registry.example.com/charts/myapp"
     },
     "environment" : {
       "type" : "object",
@@ -161,25 +172,28 @@ class App extends BaseModel
       }
     },
     "exitCodes" : {
-      "type" : "array",
-      "description" : "Exit code definitions with multilingual descriptions",
-      "example" : [ {
-        "severity" : "success",
-        "retry" : false,
-        "description" : {
-          "en" : "Success",
-          "cs" : "Úspěch"
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/ExitCodeDetail"
+      },
+      "description" : "Exit code definitions with multilingual descriptions, keyed by exit code",
+      "example" : {
+        "0" : {
+          "severity" : "success",
+          "retry" : false,
+          "description" : {
+            "en" : "Success",
+            "cs" : "Úspěch"
+          }
+        },
+        "1" : {
+          "severity" : "error",
+          "retry" : true,
+          "description" : {
+            "en" : "General error",
+            "cs" : "Obecná chyba"
+          }
         }
-      }, {
-        "severity" : "error",
-        "retry" : true,
-        "description" : {
-          "en" : "General error",
-          "cs" : "Obecná chyba"
-        }
-      } ],
-      "items" : {
-        "$ref" : "#/components/schemas/App_exitCodes_inner"
       }
     },
     "tags" : {

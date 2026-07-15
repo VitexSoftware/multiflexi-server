@@ -81,9 +81,7 @@ class CompanyTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "Company" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyEnabled(): void
     {
-        self::markTestIncomplete(
-            'Test of "enabled" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "enabled" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertySettings(): void
     {
-        self::markTestIncomplete(
-            'Test of "settings" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "settings" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyLogo(): void
     {
-        self::markTestIncomplete(
-            'Test of "logo" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "logo" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyCode(): void
     {
-        self::markTestIncomplete(
-            'Test of "code" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "code" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyIc(): void
     {
-        self::markTestIncomplete(
-            'Test of "ic" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "ic" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyDatCreate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datCreate" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datCreate" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyDatUpdate(): void
     {
-        self::markTestIncomplete(
-            'Test of "datUpdate" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "datUpdate" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyCustomer(): void
     {
-        self::markTestIncomplete(
-            'Test of "customer" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "customer" property in "Company" model has not been implemented yet.');
     }
 
     /**
@@ -191,9 +169,7 @@ class CompanyTest extends TestCase
      */
     public function testPropertyEmail(): void
     {
-        self::markTestIncomplete(
-            'Test of "email" property in "Company" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "email" property in "Company" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class RequestDataExportPostRequestTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "RequestDataExportPostRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "RequestDataExportPostRequest" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class RequestDataExportPostRequestTest extends TestCase
      */
     public function testPropertyAction(): void
     {
-        self::markTestIncomplete(
-            'Test of "action" property in "RequestDataExportPostRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "action" property in "RequestDataExportPostRequest" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class RequestDataExportPostRequestTest extends TestCase
      */
     public function testPropertyFormat(): void
     {
-        self::markTestIncomplete(
-            'Test of "format" property in "RequestDataExportPostRequest" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "format" property in "RequestDataExportPostRequest" model has not been implemented yet.');
     }
 
     /**

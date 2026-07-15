@@ -81,9 +81,7 @@ class AppEnvironmentValueTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "AppEnvironmentValue" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "AppEnvironmentValue" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class AppEnvironmentValueTest extends TestCase
      */
     public function testPropertyType(): void
     {
-        self::markTestIncomplete(
-            'Test of "type" property in "AppEnvironmentValue" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "type" property in "AppEnvironmentValue" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class AppEnvironmentValueTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "AppEnvironmentValue" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "AppEnvironmentValue" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class AppEnvironmentValueTest extends TestCase
      */
     public function testPropertyDefval(): void
     {
-        self::markTestIncomplete(
-            'Test of "defval" property in "AppEnvironmentValue" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "defval" property in "AppEnvironmentValue" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class AppEnvironmentValueTest extends TestCase
      */
     public function testPropertyRequired(): void
     {
-        self::markTestIncomplete(
-            'Test of "required" property in "AppEnvironmentValue" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "required" property in "AppEnvironmentValue" model has not been implemented yet.');
     }
 
     /**

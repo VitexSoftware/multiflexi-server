@@ -81,9 +81,7 @@ class StatusTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "Status" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyCompanies(): void
     {
-        self::markTestIncomplete(
-            'Test of "companies" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companies" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyApps(): void
     {
-        self::markTestIncomplete(
-            'Test of "apps" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "apps" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyRuntemplates(): void
     {
-        self::markTestIncomplete(
-            'Test of "runtemplates" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "runtemplates" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyTopics(): void
     {
-        self::markTestIncomplete(
-            'Test of "topics" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "topics" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyCredentials(): void
     {
-        self::markTestIncomplete(
-            'Test of "credentials" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "credentials" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyCredentialtypes(): void
     {
-        self::markTestIncomplete(
-            'Test of "credentialtypes" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "credentialtypes" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyEventsources(): void
     {
-        self::markTestIncomplete(
-            'Test of "eventsources" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "eventsources" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyEventrules(): void
     {
-        self::markTestIncomplete(
-            'Test of "eventrules" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "eventrules" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyDatabase(): void
     {
-        self::markTestIncomplete(
-            'Test of "database" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "database" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyDaemon(): void
     {
-        self::markTestIncomplete(
-            'Test of "daemon" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "daemon" property in "Status" model has not been implemented yet.');
     }
 
     /**
@@ -191,9 +169,7 @@ class StatusTest extends TestCase
      */
     public function testPropertyTimestamp(): void
     {
-        self::markTestIncomplete(
-            'Test of "timestamp" property in "Status" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "timestamp" property in "Status" model has not been implemented yet.');
     }
 
     /**

@@ -81,9 +81,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
      */
     public function testPropertyCompanyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyId" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyId" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
      */
     public function testPropertyCompanyCode(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyCode" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyCode" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
      */
     public function testPropertyCompanyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyName" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyName" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
      */
     public function testPropertyCompanyIdentifier(): void
     {
-        self::markTestIncomplete(
-            'Test of "companyIdentifier" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "companyIdentifier" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
      */
     public function testPropertyEnabled(): void
     {
-        self::markTestIncomplete(
-            'Test of "enabled" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "enabled" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
      */
     public function testPropertyAssociatedSince(): void
     {
-        self::markTestIncomplete(
-            'Test of "associatedSince" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "associatedSince" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class DataExportDataCompanyAssociationsInnerTest extends TestCase
      */
     public function testPropertyRelationshipType(): void
     {
-        self::markTestIncomplete(
-            'Test of "relationshipType" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "relationshipType" property in "DataExportDataCompanyAssociationsInner" model has not been implemented yet.');
     }
 
     /**

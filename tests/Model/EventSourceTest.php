@@ -81,9 +81,7 @@ class EventSourceTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyId(): void
     {
-        self::markTestIncomplete(
-            'Test of "id" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "id" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyAdapterType(): void
     {
-        self::markTestIncomplete(
-            'Test of "adapterType" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "adapterType" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -121,9 +113,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyDbConnection(): void
     {
-        self::markTestIncomplete(
-            'Test of "dbConnection" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dbConnection" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -131,9 +121,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyDbHost(): void
     {
-        self::markTestIncomplete(
-            'Test of "dbHost" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dbHost" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -141,9 +129,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyDbPort(): void
     {
-        self::markTestIncomplete(
-            'Test of "dbPort" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dbPort" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -151,9 +137,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyDbDatabase(): void
     {
-        self::markTestIncomplete(
-            'Test of "dbDatabase" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dbDatabase" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -161,9 +145,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyDbUsername(): void
     {
-        self::markTestIncomplete(
-            'Test of "dbUsername" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dbUsername" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -171,9 +153,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyDbPassword(): void
     {
-        self::markTestIncomplete(
-            'Test of "dbPassword" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "dbPassword" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -181,9 +161,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyPollInterval(): void
     {
-        self::markTestIncomplete(
-            'Test of "pollInterval" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "pollInterval" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -191,9 +169,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyEnabled(): void
     {
-        self::markTestIncomplete(
-            'Test of "enabled" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "enabled" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -201,9 +177,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyLastProcessedId(): void
     {
-        self::markTestIncomplete(
-            'Test of "lastProcessedId" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "lastProcessedId" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -211,9 +185,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyCreated(): void
     {
-        self::markTestIncomplete(
-            'Test of "created" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "created" property in "EventSource" model has not been implemented yet.');
     }
 
     /**
@@ -221,9 +193,7 @@ class EventSourceTest extends TestCase
      */
     public function testPropertyModified(): void
     {
-        self::markTestIncomplete(
-            'Test of "modified" property in "EventSource" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "modified" property in "EventSource" model has not been implemented yet.');
     }
 
     /**

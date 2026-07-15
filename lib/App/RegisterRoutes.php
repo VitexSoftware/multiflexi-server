@@ -433,151 +433,12 @@ EOD,
             ],
         ],
         [
-            'httpMethod' => 'POST',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/logout',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'logoutPost',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Odhlášení proběhlo úspěšně"
-}
-EOD,
-                ],
-                '401' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Uživatel není přihlášen nebo token je neplatný"
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'rootGet',
-            'responses' => [
-                '301' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "redirect to index.html"
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/credential_types.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'getAllCredentialTypes',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "successful operation",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "type" : "array",
-        "items" : {
-          "$ref" : "#/components/schemas/CredentialType"
-        }
-      }
-    }
-  }
-}
-EOD,
-                ],
-                '401' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Authentication information is missing or invalid",
-  "headers" : {
-    "WWW_Authenticate" : {
-      "style" : "simple",
-      "explode" : false,
-      "schema" : {
-        "type" : "string"
-      }
-    }
-  }
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/topics.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'getAllTopics',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "successful operation",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "type" : "array",
-        "items" : {
-          "$ref" : "#/components/schemas/Topic"
-        }
-      }
-    }
-  }
-}
-EOD,
-                ],
-                '401' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Authentication information is missing or invalid",
-  "headers" : {
-    "WWW_Authenticate" : {
-      "style" : "simple",
-      "explode" : false,
-      "schema" : {
-        "type" : "string"
-      }
-    }
-  }
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
-        ],
-        [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/credentials.{suffix}',
             'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
+            'classname' => 'AbstractCredentialApi',
+            'userClassname' => 'CredentialApi',
             'operationId' => 'getAllUserCredentials',
             'responses' => [
                 '200' => [
@@ -614,36 +475,15 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/index.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'getApiIndex',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "OK"
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/credential/{credentialId}.{suffix}',
             'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
+            'classname' => 'AbstractCredentialApi',
+            'userClassname' => 'CredentialApi',
             'operationId' => 'getCredential',
             'responses' => [
                 '200' => [
@@ -684,16 +524,109 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/credential/{credentialId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractCredentialApi',
+            'userClassname' => 'CredentialApi',
+            'operationId' => 'updateCredentials',
+            'responses' => [
+                '201' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Record was updated",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/updateCredentials_201_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid token supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
             ],
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/credential_types.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractCredentialTypeApi',
+            'userClassname' => 'CredentialTypeApi',
+            'operationId' => 'getAllCredentialTypes',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/CredentialType"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/credential_type/{credentialTypeID}.{suffix}',
             'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
+            'classname' => 'AbstractCredentialTypeApi',
+            'userClassname' => 'CredentialTypeApi',
             'operationId' => 'getCredentialType',
             'responses' => [
                 '200' => [
@@ -734,8 +667,120 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/credential_type/{credentialTypeID}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractCredentialTypeApi',
+            'userClassname' => 'CredentialTypeApi',
+            'operationId' => 'updateCredentialType',
+            'responses' => [
+                '201' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Record was updated",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/getCredentialType_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
             ],
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/logout',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'logoutPost',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Odhlášení proběhlo úspěšně"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Uživatel není přihlášen nebo token je neplatný"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'rootGet',
+            'responses' => [
+                '301' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "redirect to index.html"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/index.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractDefaultApi',
+            'userClassname' => 'DefaultApi',
+            'operationId' => 'getApiIndex',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "OK"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'GET',
@@ -780,58 +825,7 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/topic/{topicId}.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'getTopic',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Successful operation",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/getTopic_200_response"
-      }
-    }
-  }
-}
-EOD,
-                ],
-                '400' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Invalid ID supplied"
-}
-EOD,
-                ],
-                '401' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Authentication information is missing or invalid",
-  "headers" : {
-    "WWW_Authenticate" : {
-      "style" : "simple",
-      "explode" : false,
-      "schema" : {
-        "type" : "string"
-      }
-    }
-  }
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'GET',
@@ -850,8 +844,7 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
-            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'POST',
@@ -870,8 +863,7 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
-            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'GET',
@@ -890,8 +882,7 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
-            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'GET',
@@ -917,158 +908,7 @@ EOD,
 EOD,
                 ],
             ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'POST',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/credential_type/{credentialTypeID}.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'updateCredentialType',
-            'responses' => [
-                '201' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Record was updated",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/getCredentialType_200_response"
-      }
-    }
-  }
-}
-EOD,
-                ],
-                '400' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Invalid ID supplied"
-}
-EOD,
-                ],
-                '401' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Authentication information is missing or invalid",
-  "headers" : {
-    "WWW_Authenticate" : {
-      "style" : "simple",
-      "explode" : false,
-      "schema" : {
-        "type" : "string"
-      }
-    }
-  }
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'POST',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/credential/{credentialId}.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'updateCredentials',
-            'responses' => [
-                '201' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Record was updated",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/updateCredentials_201_response"
-      }
-    }
-  }
-}
-EOD,
-                ],
-                '400' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Invalid token supplied"
-}
-EOD,
-                ],
-                '401' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Authentication information is missing or invalid",
-  "headers" : {
-    "WWW_Authenticate" : {
-      "style" : "simple",
-      "explode" : false,
-      "schema" : {
-        "type" : "string"
-      }
-    }
-  }
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
-        ],
-        [
-            'httpMethod' => 'POST',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/topic/{topicId}.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractDefaultApi',
-            'userClassname' => 'DefaultApi',
-            'operationId' => 'updateTopic',
-            'responses' => [
-                '201' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Record was updated",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/getTopic_200_response"
-      }
-    }
-  }
-}
-EOD,
-                ],
-                '400' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Invalid ID supplied"
-}
-EOD,
-                ],
-                '401' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Authentication information is missing or invalid",
-  "headers" : {
-    "WWW_Authenticate" : {
-      "style" : "simple",
-      "explode" : false,
-      "schema" : {
-        "type" : "string"
-      }
-    }
-  }
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-            ],
+            'authMethods' => [],
         ],
         [
             'httpMethod' => 'POST',
@@ -1900,7 +1740,7 @@ EOD,
                 '201' => [
                     'jsonSchema' => <<<'EOD'
 {
-  "description" : "record created or updated",
+  "description" : "Job scheduled",
   "content" : {
     "application/json" : {
       "schema" : {
@@ -1914,7 +1754,7 @@ EOD,
                 '400' => [
                     'jsonSchema' => <<<'EOD'
 {
-  "description" : "Invalid ID supplied"
+  "description" : "Invalid request body"
 }
 EOD,
                 ],
@@ -1937,7 +1777,14 @@ EOD,
                 '404' => [
                     'jsonSchema' => <<<'EOD'
 {
-  "description" : "App not found"
+  "description" : "RunTemplate not found"
+}
+EOD,
+                ],
+                '409' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "RunTemplate is not active"
 }
 EOD,
                 ],
@@ -2070,84 +1917,6 @@ EOD,
             ],
             'authMethods' => [
                 // http security schema named 'basicAuth'
-                [
-                    'type' => 'http',
-                    'isBasic' => true,
-                    'isBearer' => false,
-                    'isApiKey' => false,
-                    'isOAuth' => false,
-                ],
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/tasks.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractTaskApi',
-            'userClassname' => 'TaskApi',
-            'operationId' => 'listTasks',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "successful operation",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "type" : "array",
-        "items" : {
-          "$ref" : "#/components/schemas/Task"
-        }
-      }
-    }
-  }
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
-                [
-                    'type' => 'http',
-                    'isBasic' => true,
-                    'isBearer' => false,
-                    'isApiKey' => false,
-                    'isOAuth' => false,
-                ],
-            ],
-        ],
-        [
-            'httpMethod' => 'GET',
-            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
-            'path' => '/task/{taskId}.{suffix}',
-            'apiPackage' => 'MultiFlexi\Api\Server',
-            'classname' => 'AbstractTaskApi',
-            'userClassname' => 'TaskApi',
-            'operationId' => 'getTaskById',
-            'responses' => [
-                '200' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "successful operation",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/Task"
-      }
-    }
-  }
-}
-EOD,
-                ],
-                '404' => [
-                    'jsonSchema' => <<<'EOD'
-{
-  "description" : "Task not found"
-}
-EOD,
-                ],
-            ],
-            'authMethods' => [
                 [
                     'type' => 'http',
                     'isBasic' => true,
@@ -2442,6 +2211,261 @@ EOD,
             ],
         ],
         [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/task/{taskId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractTaskApi',
+            'userClassname' => 'TaskApi',
+            'operationId' => 'getTaskById',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Task"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Task not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/tasks.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractTaskApi',
+            'userClassname' => 'TaskApi',
+            'operationId' => 'listTasks',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Task"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/topics.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractTopicApi',
+            'userClassname' => 'TopicApi',
+            'operationId' => 'getAllTopics',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Topic"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/topic/{topicId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractTopicApi',
+            'userClassname' => 'TopicApi',
+            'operationId' => 'getTopic',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/getTopic_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/topic/{topicId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractTopicApi',
+            'userClassname' => 'TopicApi',
+            'operationId' => 'updateTopic',
+            'responses' => [
+                '201' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Record was updated",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/getTopic_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [],
+        ],
+        [
             'httpMethod' => 'POST',
             'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/user/',
@@ -2632,6 +2656,337 @@ EOD,
                 ],
             ],
         ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/company/{companyId}/user/',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractUserCompanyApi',
+            'userClassname' => 'UserCompanyApi',
+            'operationId' => 'assignUserToCompany',
+            'responses' => [
+                '201' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "User assigned to company",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/CompanyUser"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid request"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Company or user not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/company/{companyId}/users.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractUserCompanyApi',
+            'userClassname' => 'UserCompanyApi',
+            'operationId' => 'listCompanyUsers',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/listCompanyUsers_200_response_inner"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Company not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'DELETE',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/company/{companyId}/user/{userId}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractUserCompanyApi',
+            'userClassname' => 'UserCompanyApi',
+            'operationId' => 'unassignUserFromCompany',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "User unassigned (or was not assigned)",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/unassignUserFromCompany_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Company or user not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/user/{userId}/roles.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractUserRoleApi',
+            'userClassname' => 'UserRoleApi',
+            'operationId' => 'getUserRoles',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Successful operation",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/RbacRole"
+        }
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid ID supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "User not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/user/{userId}/roles/',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractUserRoleApi',
+            'userClassname' => 'UserRoleApi',
+            'operationId' => 'setUserRoles',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Roles updated",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/setUserRoles_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid request or unknown role names"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "User not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
     ];
 
     /**
@@ -2699,7 +3054,6 @@ EOD,
                             'cookie' => null,
                             'argument' => null,
                             'attribute' => 'authorization_token',
-                            'secure' => false,
                             'error' => ['MultiFlexi\Api\Auth\BasicAuthenticator', 'handleUnauthorized'],
                         ]));
                     }

@@ -81,9 +81,7 @@ class GetTopic200ResponseTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname),
         );
-        self::markTestIncomplete(
-            'Test of "GetTopic200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "GetTopic200Response" model has not been implemented yet.');
     }
 
     /**
@@ -91,9 +89,7 @@ class GetTopic200ResponseTest extends TestCase
      */
     public function testPropertyName(): void
     {
-        self::markTestIncomplete(
-            'Test of "name" property in "GetTopic200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "name" property in "GetTopic200Response" model has not been implemented yet.');
     }
 
     /**
@@ -101,9 +97,7 @@ class GetTopic200ResponseTest extends TestCase
      */
     public function testPropertyDescription(): void
     {
-        self::markTestIncomplete(
-            'Test of "description" property in "GetTopic200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "description" property in "GetTopic200Response" model has not been implemented yet.');
     }
 
     /**
@@ -111,9 +105,7 @@ class GetTopic200ResponseTest extends TestCase
      */
     public function testPropertyColor(): void
     {
-        self::markTestIncomplete(
-            'Test of "color" property in "GetTopic200Response" model has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "color" property in "GetTopic200Response" model has not been implemented yet.');
     }
 
     /**

@@ -78,9 +78,7 @@ class EventruleApiTest extends TestCase
      */
     public function testDeleteEventRuleById(): void
     {
-        self::markTestIncomplete(
-            'Test of "deleteEventRuleById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "deleteEventRuleById" method has not been implemented yet.');
     }
 
     /**
@@ -92,9 +90,7 @@ class EventruleApiTest extends TestCase
      */
     public function testGetEventRuleById(): void
     {
-        self::markTestIncomplete(
-            'Test of "getEventRuleById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "getEventRuleById" method has not been implemented yet.');
     }
 
     /**
@@ -106,9 +102,7 @@ class EventruleApiTest extends TestCase
      */
     public function testListEventRules(): void
     {
-        self::markTestIncomplete(
-            'Test of "listEventRules" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "listEventRules" method has not been implemented yet.');
     }
 
     /**
@@ -120,8 +114,6 @@ class EventruleApiTest extends TestCase
      */
     public function testSetEventRuleById(): void
     {
-        self::markTestIncomplete(
-            'Test of "setEventRuleById" method has not been implemented yet.',
-        );
+        self::markTestIncomplete('Test of "setEventRuleById" method has not been implemented yet.');
     }
 }
