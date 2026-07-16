@@ -1,4 +1,4 @@
-multiflexi-server (0.1.5) UNRELEASED; urgency=medium
+multiflexi-server (0.1.5) trixie; urgency=medium
 
   [ CyberVitexus ]
   * Fix apps.json/runtemplates.json returning an ID-keyed object instead
