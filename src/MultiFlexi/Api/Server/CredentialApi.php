@@ -51,7 +51,7 @@ class CredentialApi extends \MultiFlexi\Api\Server\AbstractCredentialApi
             return DefaultApi::prepareResponse($response->withStatus(404), ['error' => 'Credential not found'], $suffix);
         }
 
-        return DefaultApi::prepareResponse($response, $this->engine->getData(), $suffix, null, 'credential');
+        return DefaultApi::prepareResponse($response, $this->engine->getRedactedData(), $suffix, null, 'credential');
     }
 
     /**
@@ -65,7 +65,8 @@ class CredentialApi extends \MultiFlexi\Api\Server\AbstractCredentialApi
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : $this->engine->limit;
 
         foreach ($this->engine->listingQuery()->limit($limit) as $credential) {
-            $credentialsList[] = $credential;
+            $credentialLoader = new \MultiFlexi\Credential((int) $credential['id']);
+            $credentialsList[] = $credentialLoader->getRedactedData();
         }
 
         return DefaultApi::prepareResponse($response, $credentialsList, $suffix, null, 'credential');
@@ -91,6 +92,6 @@ class CredentialApi extends \MultiFlexi\Api\Server\AbstractCredentialApi
 
         $success = $this->engine->dbsync();
 
-        return DefaultApi::prepareResponse($response->withStatus($success ? 201 : 400), $this->engine->getData(), $suffix, null, 'credential');
+        return DefaultApi::prepareResponse($response->withStatus($success ? 201 : 400), $this->engine->getRedactedData(), $suffix, null, 'credential');
     }
 }

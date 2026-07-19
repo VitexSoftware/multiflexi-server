@@ -63,6 +63,10 @@ class JobApi extends AbstractJobApi
                 break;
 
             default:
+                if ($jobData['env'] instanceof \MultiFlexi\ConfigFields) {
+                    $jobData['env'] = $jobData['env']->getRedactedArray();
+                }
+
                 break;
         }
 
@@ -100,6 +104,10 @@ class JobApi extends AbstractJobApi
                     break;
 
                 default:
+                    if ($job['env'] instanceof \MultiFlexi\ConfigFields) {
+                        $job['env'] = $job['env']->getRedactedArray();
+                    }
+
                     break;
             }
 
