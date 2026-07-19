@@ -5,7 +5,15 @@
 // debian:forky disabled: Forky is still unstable/research-only.
 // The full Debian package ecosystem is not yet available for Forky.
 // Re-enable once the stack builds cleanly for Forky.
-String[] distributions = ['debian:bookworm', 'debian:trixie', 'ubuntu:jammy', 'ubuntu:noble']
+//
+// ubuntu:jammy disabled: the build image's jammy apt sources cannot satisfy
+// php-slim-psr7's dependency on php-psr-http-factory (>= 1.1) -- neither
+// Ubuntu jammy's own universe repo nor repo.vitexsoftware.com ship a jammy
+// build of either package at a compatible version (php-slim-psr7 isn't in
+// Ubuntu's jammy archive at all; jammy universe's own php-psr-http-factory
+// is pinned at 1.0.1-2). Re-enable once a compatible php-psr-http-factory
+// (or php-slim-psr7) build is available for jammy.
+String[] distributions = ['debian:bookworm', 'debian:trixie', 'ubuntu:noble']
 
 String vendor = 'vitexsoftware'
 //String distroFamily = ''
