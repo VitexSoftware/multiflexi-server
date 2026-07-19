@@ -42,7 +42,7 @@ $builder = new ContainerBuilder();
 
 // consider prod by default
 
-switch (strtolower($_SERVER['APP_ENV'] ?? getenv('APP_ENV') ?? 'prod')) {
+switch (strtolower(($_SERVER['APP_ENV'] ?? getenv('APP_ENV')) ?: 'prod')) {
     case 'development':
     case 'dev':
         $env = 'dev';
