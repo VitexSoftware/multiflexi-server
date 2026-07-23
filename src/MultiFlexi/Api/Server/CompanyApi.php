@@ -52,6 +52,7 @@ class CompanyApi extends \MultiFlexi\Api\Server\AbstractCompanyApi
         }
 
         $companyData = $this->engine->getData();
+        $companyData['enabled'] = (bool) $companyData['enabled'];
 
         switch ($suffix) {
             case 'html':
@@ -78,6 +79,7 @@ class CompanyApi extends \MultiFlexi\Api\Server\AbstractCompanyApi
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : $this->engine->limit;
 
         foreach ($this->engine->listingQuery()->limit($limit) as $company) {
+            $company['enabled'] = (bool) $company['enabled'];
             $companiesList[] = $company;
         }
 
