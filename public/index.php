@@ -74,6 +74,12 @@ $container = $builder->build();
 // Instantiate the app
 $app = Bridge::create($container);
 
+// Route patterns are registered without the deployment prefix (e.g. the "/api"
+// Apache Alias); Slim 4 no longer strips the script's directory from the
+// request path automatically the way Slim 3 did, so it must be set explicitly
+// or every request 404s (masked as 405 by the catch-all OPTIONS route below).
+$app->setBasePath(rtrim(\dirname($_SERVER['SCRIPT_NAME'] ?? ''), '/'));
+
 // Register middleware
 $middleware = new RegisterMiddlewares();
 $middleware($app);
