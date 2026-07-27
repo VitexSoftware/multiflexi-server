@@ -26,6 +26,9 @@ override_dh_install:
 	# Point site-specific config to /etc/multiflexi-server/
 	sed -i -e '/userConfig.*config\.inc\.php/c\$$userConfig = "/etc/multiflexi-server/config.inc.php";' \
 		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/index.php
+	# Point DB env loading (Shared::init) to the system-wide config; dev uses ../.env
+	sed -i -e '/dirname(__DIR__)/c\    "\/etc\/multiflexi\/multiflexi\.env",' \
+		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/api/index.php
 	# Fix logger path in installed default config
 	sed -i -e "/logger\.path/c\\    'logger.path' => '/var/log/multiflexi-server/app.log'," \
 		debian/php-vitexsoftware-multiflexi-server/usr/share/multiflexi-server/config/prod/default.inc.php

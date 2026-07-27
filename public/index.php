@@ -29,6 +29,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
+use Ease\Shared;
 use MultiFlexi\Api\App\RegisterDependencies;
 use MultiFlexi\Api\App\RegisterMiddlewares;
 use MultiFlexi\Api\App\RegisterRoutes;
@@ -36,6 +37,16 @@ use MultiFlexi\Api\App\ResponseEmitter;
 use Neomerx\Cors\Contracts\AnalyzerInterface;
 use Slim\Factory\ServerRequestCreatorFactory;
 use Slim\Middleware\ErrorMiddleware;
+
+// Load DB connection settings (DB_TYPE/DB_CONNECTION, DB_HOST, ...) for the
+// Ease\Sand-based core models (MultiFlexi\User, Job, Company, ...) used by every
+// authenticated endpoint -- BasicAuthenticator alone constructs a MultiFlexi\User
+// on each request. Without this, those models never see DB_TYPE/DB_CONNECTION via
+// getenv() and EaseFluentPDO\Orm::pdoConnect() throws "Unimplemented Database type".
+Shared::init(
+    ['DB_CONNECTION', 'DB_HOST', 'DB_PORT', 'DB_DATABASE', 'DB_USERNAME', 'DB_PASSWORD'],
+    \dirname(__DIR__).'/.env',
+);
 
 // Instantiate PHP-DI ContainerBuilder
 $builder = new ContainerBuilder();
