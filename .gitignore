@@ -38,4 +38,3 @@ composer.phar
 /debian/multiflexi-server.substvars
 /debian/php-vitexsoftware-multiflexi-server-dev.substvars
 /debian/php-vitexsoftware-multiflexi-server.substvars
-/composer.lock
