@@ -1,4 +1,6 @@
 # MultiFlexi - PHP Slim 4 Server library for MultiFlexi API
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Packaging: deb](https://img.shields.io/badge/packaging-.deb-red?logo=debian&logoColor=white)
 
 * [OpenAPI Generator](https://openapi-generator.tech)
 * [Slim 4 Documentation](https://www.slimframework.com/docs/v4/)
