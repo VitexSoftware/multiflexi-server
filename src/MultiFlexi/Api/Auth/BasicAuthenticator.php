@@ -37,12 +37,16 @@ class BasicAuthenticator extends Authenticator
             return true;
         }
 
-        $userInfo = $request->getUri()->getUserInfo();
+        // $tokenSearch captures the base64 payload after "Basic " from the
+        // Authorization header (see the regex in RegisterRoutes.php); the
+        // request URI never carries these credentials, unlike a literal
+        // http://user:pass@host URL, so it must not be read from getUserInfo().
+        $userInfo = base64_decode($tokenSearch->getToken($request), true);
 
-        if (strstr($userInfo, ':')) {
-            [$login,$password] = explode(':', $userInfo);
+        if ($userInfo && strstr($userInfo, ':')) {
+            [$login, $password] = explode(':', $userInfo, 2);
         } else {
-            $login = $userInfo;
+            $login = $userInfo ?: '';
             $password = '';
         }
 
