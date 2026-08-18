@@ -49,7 +49,10 @@ class EventruleApi extends \MultiFlexi\Api\Server\AbstractEventruleApi
             return DefaultApi::prepareResponse($response->withStatus(404), ['error' => 'EventRule not found'], $suffix);
         }
 
-        return DefaultApi::prepareResponse($response, $this->engine->getData(), $suffix, null, 'event_rule');
+        $eventRuleData = $this->engine->getData();
+        $eventRuleData['enabled'] = (bool) $eventRuleData['enabled'];
+
+        return DefaultApi::prepareResponse($response, $eventRuleData, $suffix, null, 'event_rule');
     }
 
     /**
@@ -62,6 +65,7 @@ class EventruleApi extends \MultiFlexi\Api\Server\AbstractEventruleApi
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : $this->engine->limit;
 
         foreach ($this->engine->listingQuery()->limit($limit) as $eventRule) {
+            $eventRule['enabled'] = (bool) $eventRule['enabled'];
             $eventRulesList[] = $eventRule;
         }
 
@@ -89,7 +93,10 @@ class EventruleApi extends \MultiFlexi\Api\Server\AbstractEventruleApi
 
         $success = $this->engine->dbsync();
 
-        return DefaultApi::prepareResponse($response->withStatus($success ? 201 : 400), $this->engine->getData(), 'json', null, 'event_rule');
+        $eventRuleData = $this->engine->getData();
+        $eventRuleData['enabled'] = (bool) $eventRuleData['enabled'];
+
+        return DefaultApi::prepareResponse($response->withStatus($success ? 201 : 400), $eventRuleData, 'json', null, 'event_rule');
     }
 
     /**

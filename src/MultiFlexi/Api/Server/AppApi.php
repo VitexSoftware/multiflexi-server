@@ -46,6 +46,7 @@ class AppApi extends \MultiFlexi\Api\Server\AbstractAppApi
     {
         $this->engine->loadFromSQL($appId);
         $appData = $this->engine->getData();
+        $appData['enabled'] = (bool) $appData['enabled'];
 
         // Add environment configuration fields
         $conffield = new \MultiFlexi\Conffield();
@@ -111,6 +112,7 @@ class AppApi extends \MultiFlexi\Api\Server\AbstractAppApi
         $appsList = [];
 
         foreach ($this->engine->getAll() as $app) {
+            $app['enabled'] = (bool) $app['enabled'];
             $appsList[$app['id']] = $app;
 
             switch ($suffix) {
@@ -132,7 +134,14 @@ class AppApi extends \MultiFlexi\Api\Server\AbstractAppApi
             }
         }
 
-        return DefaultApi::prepareResponse($response, array_values($appsList), $suffix, null, 'application');
+        // The spec (and the generated python3-multiflexi client) declares this
+        // endpoint as an id-keyed object (Dict[str, App]), not a bare array -
+        // array_values() here discarded that shape and broke client
+        // deserialization. Force object shape unconditionally, the same way
+        // getAppById() already does for environment/exitCodes, since
+        // json_encode() would otherwise still emit a JSON array whenever the
+        // list happens to be empty or its keys are sequential from 0.
+        return DefaultApi::prepareResponse($response, (object) $appsList, $suffix, null, 'application');
     }
 
     /**

@@ -1,3 +1,32 @@
+multiflexi-server (0.1.6) trixie; urgency=medium
+
+  * Revert 0.1.5's apps.json/runtemplates.json array_values() fix: that
+    change made the server match openapi-schema.yaml as it stood at the
+    time (which declared these endpoints as bare arrays), but
+    multiflexi-api's spec was corrected the other way shortly after
+    (2.3.3, 2026-07-15: "spec declared a JSON array, server has always
+    returned an object keyed by record id; corrected the spec to
+    match") - the canonical contract is now the id-keyed object
+    (Dict[str, App] / Dict[str, RunTemplate] in the generated
+    python3-multiflexi client), and this server's array_values() call
+    was never updated to follow, so it kept emitting the now-wrong
+    shape (confirmed live: multiflexi.vitexsoftware.com/.../apps.json
+    still returns a bare array, breaking client deserialization).
+    listApps()/listRuntemplates() now force object shape unconditionally
+    (same (object) cast added to multiflexi-api's equivalent endpoints),
+    matching getAppById()'s existing environment/exitCodes handling.
+  * Fix JobApi::getJobById/listJobs wrapping responses in an extra
+    'job'/'jobs' key, unlike every other by-id/list endpoint (App,
+    RunTemplate) and unlike the generated client's bare Job/Dict[str,
+    Job] return types; removed the wrapper for consistency (same fix
+    already applied on the multiflexi-api side).
+  * EventruleApi/EventsourceApi/UserApi: cast `enabled` to bool
+    consistently on both single-record and list responses (some paths
+    still returned the raw tinyint).
+  * composer.json: normalize formatting/dependency ordering.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Tue, 18 Aug 2026 00:00:00 +0200
+
 multiflexi-server (0.1.5) trixie; urgency=medium
 
   [ CyberVitexus ]

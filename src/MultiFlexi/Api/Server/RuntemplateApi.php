@@ -105,7 +105,11 @@ class RuntemplateApi extends AbstractRuntemplateApi
             $runtemplatesList[$runtemplateId] = $runtemplate;
         }
 
-        return DefaultApi::prepareResponse($response, array_values($runtemplatesList), $suffix, null, 'runtemplate');
+        // Force object shape (Dict[str, RunTemplate], id-keyed) to match the
+        // spec/generated client - array_values() here discarded that shape
+        // and broke client deserialization. See AppApi::listApps() for the
+        // same fix and rationale.
+        return DefaultApi::prepareResponse($response, (object) $runtemplatesList, $suffix, null, 'runtemplate');
     }
 
     /**

@@ -70,7 +70,9 @@ class JobApi extends AbstractJobApi
                 break;
         }
 
-        return DefaultApi::prepareResponse($response, $jobData, $suffix, 'job', 'job');
+        // No wrapper key - matches App/RunTemplate getById(), and the
+        // generated client's bare `Job` return type for get_job_by_id.
+        return DefaultApi::prepareResponse($response, $jobData, $suffix, null, 'job');
     }
 
     /**
@@ -114,6 +116,10 @@ class JobApi extends AbstractJobApi
             $jobsList[$jobId] = $job;
         }
 
-        return DefaultApi::prepareResponse($response, $jobsList, $suffix, 'jobs', 'job');
+        // Force object shape (Dict[str, Job], id-keyed, no wrapper key) to
+        // match the spec/generated client. See AppApi::listApps() for the
+        // (object) cast rationale, and JobApi::getJobById() above for why
+        // the 'jobs' wrapper key is dropped.
+        return DefaultApi::prepareResponse($response, (object) $jobsList, $suffix, null, 'job');
     }
 }

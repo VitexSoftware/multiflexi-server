@@ -52,6 +52,7 @@ class UserApi extends \MultiFlexi\Api\Server\AbstractUserApi
         }
 
         $userData = $this->engine->getData();
+        $userData['enabled'] = (bool) $userData['enabled'];
 
         switch ($suffix) {
             case 'html':
@@ -78,6 +79,7 @@ class UserApi extends \MultiFlexi\Api\Server\AbstractUserApi
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : $this->engine->limit;
 
         foreach ($this->engine->listingQuery()->limit($limit) as $user) {
+            $user['enabled'] = (bool) $user['enabled'];
             $usersList[] = $user;
         }
 

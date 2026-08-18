@@ -49,7 +49,10 @@ class EventsourceApi extends \MultiFlexi\Api\Server\AbstractEventsourceApi
             return DefaultApi::prepareResponse($response->withStatus(404), ['error' => 'EventSource not found'], $suffix);
         }
 
-        return DefaultApi::prepareResponse($response, $this->engine->getData(), $suffix, null, 'event_source');
+        $eventSourceData = $this->engine->getData();
+        $eventSourceData['enabled'] = (bool) $eventSourceData['enabled'];
+
+        return DefaultApi::prepareResponse($response, $eventSourceData, $suffix, null, 'event_source');
     }
 
     /**
@@ -62,6 +65,7 @@ class EventsourceApi extends \MultiFlexi\Api\Server\AbstractEventsourceApi
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : $this->engine->limit;
 
         foreach ($this->engine->listingQuery()->limit($limit) as $eventSource) {
+            $eventSource['enabled'] = (bool) $eventSource['enabled'];
             $eventSourcesList[] = $eventSource;
         }
 
@@ -89,7 +93,10 @@ class EventsourceApi extends \MultiFlexi\Api\Server\AbstractEventsourceApi
 
         $success = $this->engine->dbsync();
 
-        return DefaultApi::prepareResponse($response->withStatus($success ? 201 : 400), $this->engine->getData(), 'json', null, 'event_source');
+        $eventSourceData = $this->engine->getData();
+        $eventSourceData['enabled'] = (bool) $eventSourceData['enabled'];
+
+        return DefaultApi::prepareResponse($response->withStatus($success ? 201 : 400), $eventSourceData, 'json', null, 'event_source');
     }
 
     /**
