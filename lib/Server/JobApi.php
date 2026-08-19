@@ -86,7 +86,7 @@ SELECT id, app_id, company_id, runtemplate_id, executor, exitcode,
              FROM job
              ORDER BY id {$order}
              LIMIT :limit OFFSET :offset
-EOD,);
+EOD, );
         $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
         $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
         $stmt->execute();
@@ -171,7 +171,7 @@ SELECT id, app_id, company_id, runtemplate_id, executor, exitcode,
                     begin, end, schedule, schedule_type, launched_by, app_version,
                     pid, task_id
              FROM job WHERE id = :id
-EOD,);
+EOD, );
         $stmt->bindValue(':id', $jobId, \PDO::PARAM_INT);
         $stmt->execute();
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -188,7 +188,7 @@ EOD,);
 SELECT line FROM job_output_lines
              WHERE job_id = :job_id AND type = :type
              ORDER BY seq ASC, id ASC
-EOD,);
+EOD, );
         $stmt->bindValue(':job_id', $jobId, \PDO::PARAM_INT);
         $stmt->bindValue(':type', $type);
         $stmt->execute();
@@ -206,7 +206,7 @@ SELECT id, seq, type, line, created_at
              FROM job_output_lines
              WHERE job_id = :job_id
              ORDER BY seq ASC, id ASC
-EOD,);
+EOD, );
         $stmt->bindValue(':job_id', $jobId, \PDO::PARAM_INT);
         $stmt->execute();
 

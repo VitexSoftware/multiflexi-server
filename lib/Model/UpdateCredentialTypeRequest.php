@@ -30,13 +30,13 @@ namespace MultiFlexi\Api\Model;
 use MultiFlexi\Api\BaseModel;
 
 /**
- * EventRule.
+ * UpdateCredentialTypeRequest.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-class EventRule extends BaseModel
+class UpdateCredentialTypeRequest extends BaseModel
 {
     /**
      * @var string Models namespace.
@@ -50,59 +50,23 @@ class EventRule extends BaseModel
      */
     protected const MODEL_SCHEMA = <<<'SCHEMA'
 {
+  "type" : "object",
   "properties" : {
-    "id" : {
-      "type" : "integer",
-      "format" : "int64",
-      "example" : 1
+    "name" : {
+      "maxLength" : 32,
+      "type" : "string"
     },
-    "event_source_id" : {
-      "type" : "integer",
-      "description" : "References EventSource",
-      "format" : "int64"
+    "description" : {
+      "maxLength" : 255,
+      "type" : "string"
     },
-    "evidence" : {
-      "maxLength" : 60,
-      "type" : "string",
-      "description" : "Evidence type pattern to match (null = any)",
-      "nullable" : true,
-      "example" : "faktura-vydana"
+    "url" : {
+      "maxLength" : 255,
+      "type" : "string"
     },
-    "operation" : {
-      "type" : "string",
-      "description" : "Operation to match",
-      "default" : "any",
-      "enum" : [ "any", "create", "update", "delete" ]
-    },
-    "runtemplate_id" : {
-      "type" : "integer",
-      "description" : "RunTemplate ID to trigger when rule matches",
-      "format" : "int64"
-    },
-    "priority" : {
-      "type" : "integer",
-      "description" : "Higher priority rules are evaluated first",
-      "format" : "int32",
-      "default" : 0
-    },
-    "enabled" : {
-      "type" : "boolean",
-      "description" : "Whether this rule is active",
-      "default" : true
-    },
-    "env_mapping" : {
-      "type" : "string",
-      "description" : "JSON mapping of change fields to environment variables",
-      "nullable" : true,
-      "example" : "{\"RECORD_ID\": \"recordid\", \"EVIDENCE\": \"evidence\"}"
-    },
-    "created" : {
-      "type" : "string",
-      "format" : "date-time"
-    },
-    "modified" : {
-      "type" : "string",
-      "format" : "date-time"
+    "logo" : {
+      "maxLength" : 255,
+      "type" : "string"
     }
   }
 }

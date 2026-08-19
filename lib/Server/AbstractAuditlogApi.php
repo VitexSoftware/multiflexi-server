@@ -36,85 +36,64 @@ use Psr\Http\Message\ServerRequestInterface;
 use Slim\Exception\HttpNotImplementedException;
 
 /**
- * AbstractCompanyApi Class Doc Comment.
+ * AbstractAuditlogApi Class Doc Comment.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-abstract class AbstractCompanyApi
+abstract class AbstractAuditlogApi
 {
     /**
-     * GET getCompanyById
-     * Summary: Get Company by ID
-     * Notes: Returns a single Company
+     * GET getAuditLogById
+     * Summary: Get Audit Log entry by ID
+     * Notes: Returns a single audit log entry.
      * Output-Formats: [application/json].
      *
-     * @param ServerRequestInterface $request   Request
-     * @param ResponseInterface      $response  Response
-     * @param int                    $companyId ID of Company to return
-     * @param string                 $suffix    force format suffix
+     * @param ServerRequestInterface $request    Request
+     * @param ResponseInterface      $response   Response
+     * @param int                    $auditLogId auditLogId
+     * @param string                 $suffix     suffix
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function getCompanyById(
+    public function getAuditLogById(
         ServerRequestInterface $request,
         ResponseInterface $response,
-        int $companyId,
+        int $auditLogId,
         string $suffix
     ): ResponseInterface {
-        $queryParams = $request->getQueryParams();
-        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing getCompanyById as a GET method in MultiFlexi\\Api\\Server\\CompanyApi class?';
+        $message = 'How about implementing getAuditLogById as a GET method in MultiFlexi\\Api\\Server\\AuditlogApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }
 
     /**
-     * GET listCompanies
-     * Summary: Show All Companies
-     * Notes: All Companies registered
+     * GET listAuditLog
+     * Summary: List Audit Log entries
+     * Notes: Returns entity create/update/delete audit entries, recorded automatically for every model saved or deleted via the web UI, CLI, or REST API.
      * Output-Formats: [application/json].
      *
      * @param ServerRequestInterface $request  Request
      * @param ResponseInterface      $response Response
-     * @param string                 $suffix   force format suffix
+     * @param string                 $suffix   suffix
      *
      * @throws HttpNotImplementedException to force implementation class to override this method
      */
-    public function listCompanies(
+    public function listAuditLog(
         ServerRequestInterface $request,
         ResponseInterface $response,
         string $suffix
     ): ResponseInterface {
         $queryParams = $request->getQueryParams();
+        $userId = (\array_key_exists('user_id', $queryParams)) ? $queryParams['user_id'] : null;
+        $entityType = (\array_key_exists('entity_type', $queryParams)) ? $queryParams['entity_type'] : null;
+        $entityId = (\array_key_exists('entity_id', $queryParams)) ? $queryParams['entity_id'] : null;
+        $action = (\array_key_exists('action', $queryParams)) ? $queryParams['action'] : null;
+        $from = (\array_key_exists('from', $queryParams)) ? $queryParams['from'] : null;
+        $to = (\array_key_exists('to', $queryParams)) ? $queryParams['to'] : null;
         $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $offset = (\array_key_exists('offset', $queryParams)) ? $queryParams['offset'] : null;
-        $order = (\array_key_exists('order', $queryParams)) ? $queryParams['order'] : null;
-        $message = 'How about implementing listCompanies as a GET method in MultiFlexi\\Api\\Server\\CompanyApi class?';
-
-        throw new HttpNotImplementedException($request, $message);
-    }
-
-    /**
-     * POST setCompanyById
-     * Summary: Create or Update Company
-     * Notes: Create or Update Company by ID
-     * Output-Formats: [application/json].
-     *
-     * @param ServerRequestInterface $request  Request
-     * @param ResponseInterface      $response Response
-     *
-     * @throws HttpNotImplementedException to force implementation class to override this method
-     */
-    public function setCompanyById(
-        ServerRequestInterface $request,
-        ResponseInterface $response
-    ): ResponseInterface {
-        $queryParams = $request->getQueryParams();
-        $companyId = (\array_key_exists('companyId', $queryParams)) ? $queryParams['companyId'] : null;
-        $limit = (\array_key_exists('limit', $queryParams)) ? $queryParams['limit'] : null;
-        $message = 'How about implementing setCompanyById as a POST method in MultiFlexi\\Api\\Server\\CompanyApi class?';
+        $message = 'How about implementing listAuditLog as a GET method in MultiFlexi\\Api\\Server\\AuditlogApi class?';
 
         throw new HttpNotImplementedException($request, $message);
     }

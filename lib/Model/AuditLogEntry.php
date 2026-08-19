@@ -30,13 +30,13 @@ namespace MultiFlexi\Api\Model;
 use MultiFlexi\Api\BaseModel;
 
 /**
- * EventRule.
+ * AuditLogEntry.
  *
  * @author  OpenAPI Generator team
  *
  * @see    https://github.com/openapitools/openapi-generator
  */
-class EventRule extends BaseModel
+class AuditLogEntry extends BaseModel
 {
     /**
      * @var string Models namespace.
@@ -56,51 +56,43 @@ class EventRule extends BaseModel
       "format" : "int64",
       "example" : 1
     },
-    "event_source_id" : {
+    "user_id" : {
       "type" : "integer",
-      "description" : "References EventSource",
-      "format" : "int64"
+      "description" : "ID of the user who performed the action; null for unattended/system actions (e.g. scheduler daemon)",
+      "format" : "int64",
+      "nullable" : true
     },
-    "evidence" : {
-      "maxLength" : 60,
+    "entity_type" : {
       "type" : "string",
-      "description" : "Evidence type pattern to match (null = any)",
+      "description" : "Short class name of the audited entity, e.g. RunTemplate, Company, Credential",
       "nullable" : true,
-      "example" : "faktura-vydana"
+      "example" : "RunTemplate"
     },
-    "operation" : {
-      "type" : "string",
-      "description" : "Operation to match",
-      "default" : "any",
-      "enum" : [ "any", "create", "update", "delete" ]
-    },
-    "runtemplate_id" : {
+    "entity_id" : {
       "type" : "integer",
-      "description" : "RunTemplate ID to trigger when rule matches",
-      "format" : "int64"
+      "description" : "Primary key of the audited entity row",
+      "format" : "int64",
+      "nullable" : true
     },
-    "priority" : {
-      "type" : "integer",
-      "description" : "Higher priority rules are evaluated first",
-      "format" : "int32",
-      "default" : 0
-    },
-    "enabled" : {
-      "type" : "boolean",
-      "description" : "Whether this rule is active",
-      "default" : true
-    },
-    "env_mapping" : {
+    "action" : {
       "type" : "string",
-      "description" : "JSON mapping of change fields to environment variables",
       "nullable" : true,
-      "example" : "{\"RECORD_ID\": \"recordid\", \"EVIDENCE\": \"evidence\"}"
+      "enum" : [ "create", "update", "delete" ]
     },
-    "created" : {
+    "event_description" : {
       "type" : "string",
-      "format" : "date-time"
+      "description" : "Human-readable summary of the action"
     },
-    "modified" : {
+    "severity" : {
+      "type" : "string",
+      "enum" : [ "low", "medium", "high", "critical" ]
+    },
+    "additional_data" : {
+      "type" : "object",
+      "description" : "Extra context stored with the entry (e.g. the delete filter conditions)",
+      "nullable" : true
+    },
+    "created_at" : {
       "type" : "string",
       "format" : "date-time"
     }

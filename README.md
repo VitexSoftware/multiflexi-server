@@ -1,6 +1,4 @@
 # MultiFlexi - PHP Slim 4 Server library for MultiFlexi API
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Packaging: deb](https://img.shields.io/badge/packaging-.deb-red?logo=debian&logoColor=white)
 
 * [OpenAPI Generator](https://openapi-generator.tech)
 * [Slim 4 Documentation](https://www.slimframework.com/docs/v4/)
@@ -133,7 +131,7 @@ Add required log handlers/processors/formatters in `lib/App/RegisterDependencies
 
 ## API Endpoints
 
-All URIs are relative to *https://virtserver.swaggerhub.com/VitexSoftware/MultiFlexi/1.0.0*
+All URIs are relative to *https://demo.multiflexi.com/api/VitexSoftware/MultiFlexi/1.0.0*
 
 > Important! Do not modify abstract API controllers directly! Instead extend them by implementation classes like:
 
@@ -167,6 +165,8 @@ Class | Method | HTTP request | Description
 *AbstractAppApi* | **setAppById** | **POST** /app/ | Create or Update Application
 *AbstractAppApi* | **getAppById** | **GET** /app/{appId}.{suffix} | Get App by ID
 *AbstractAppApi* | **listApps** | **GET** /apps.{suffix} | Show All Apps
+*AbstractAuditlogApi* | **getAuditLogById** | **GET** /auditlog/{auditLogId}.{suffix} | Get Audit Log entry by ID
+*AbstractAuditlogApi* | **listAuditLog** | **GET** /auditlog.{suffix} | List Audit Log entries
 *AbstractCompanyApi* | **setCompanyById** | **POST** /company/ | Create or Update Company
 *AbstractCompanyApi* | **getCompanyById** | **GET** /company/{companyId}.{suffix} | Get Company by ID
 *AbstractCompanyApi* | **listCompanies** | **GET** /companies.{suffix} | Show All Companies
@@ -223,6 +223,7 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\App
 * MultiFlexi\Api\Model\AppEnvironmentValue
 * MultiFlexi\Api\Model\AssignUserToCompanyRequest
+* MultiFlexi\Api\Model\AuditLogEntry
 * MultiFlexi\Api\Model\Company
 * MultiFlexi\Api\Model\CompanyUser
 * MultiFlexi\Api\Model\ConfField
@@ -270,11 +271,14 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\TestEventSourceConnection200Response
 * MultiFlexi\Api\Model\Topic
 * MultiFlexi\Api\Model\UnassignUserFromCompany200Response
+* MultiFlexi\Api\Model\UpdateCredentialTypeRequest
 * MultiFlexi\Api\Model\UpdateCredentials201Response
+* MultiFlexi\Api\Model\UpdateCredentialsRequest
 * MultiFlexi\Api\Model\UpdateRunTemplateById400Response
 * MultiFlexi\Api\Model\UpdateRunTemplateById404Response
 * MultiFlexi\Api\Model\UpdateRunTemplateById500Response
 * MultiFlexi\Api\Model\UpdateRunTemplateByIdRequest
+* MultiFlexi\Api\Model\UpdateTopicRequest
 * MultiFlexi\Api\Model\User
 
 
