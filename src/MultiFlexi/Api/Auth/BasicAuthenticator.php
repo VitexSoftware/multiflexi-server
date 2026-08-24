@@ -34,6 +34,8 @@ class BasicAuthenticator extends Authenticator
         $prober = \Ease\Shared::user(null, '\MultiFlexi\User');
 
         if ($prober->isLogged()) {
+            $request = $request->withAttribute('authenticated_user_id', $prober->getUserID());
+
             return true;
         }
 
@@ -53,6 +55,12 @@ class BasicAuthenticator extends Authenticator
         $prober = new \MultiFlexi\User();
         $prober->loadFromSQL([$prober->loginColumn => $login]);
 
-        return $prober->getUserID() && \strlen($password) && $prober->isAccountEnabled() && $prober->passwordValidation($password, $prober->getDataValue($prober->passwordColumn));
+        $authenticated = $prober->getUserID() && \strlen($password) && $prober->isAccountEnabled() && $prober->passwordValidation($password, $prober->getDataValue($prober->passwordColumn));
+
+        if ($authenticated) {
+            $request = $request->withAttribute('authenticated_user_id', $prober->getUserID());
+        }
+
+        return $authenticated;
     }
 }

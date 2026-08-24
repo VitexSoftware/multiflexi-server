@@ -42,6 +42,7 @@ lib/Model/DataExportDataUserProfile.php
 lib/Model/DataExportResponse.php
 lib/Model/DataExportStatusResponse.php
 lib/Model/DataExportStatusResponseExportsInner.php
+lib/Model/Deletejobs200Response.php
 lib/Model/ErrorResponse.php
 lib/Model/EventRule.php
 lib/Model/EventSource.php
@@ -97,9 +98,5 @@ phpstan-default.neon.dist
 phpunit.xml.dist
 public/.htaccess
 public/index.php
-tests/Api/AuditlogApiTest.php
 tests/BaseModelTest.php
-tests/Model/AuditLogEntryTest.php
-tests/Model/UpdateCredentialTypeRequestTest.php
-tests/Model/UpdateCredentialsRequestTest.php
-tests/Model/UpdateTopicRequestTest.php
+tests/Model/Deletejobs200ResponseTest.php

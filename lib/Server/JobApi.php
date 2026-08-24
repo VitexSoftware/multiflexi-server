@@ -21,9 +21,11 @@ use Psr\Http\Message\ServerRequestInterface;
 /**
  * Concrete Job API implementation.
  *
- * Reads job data and output lines directly via PDO so this package stays
- * independent of multiflexi-core. Output is served from job_output_lines;
- * the jobs table no longer contains stdout/stderr columns.
+ * Reads job data and output lines directly via PDO. Output is served from
+ * job_output_lines; the jobs table no longer contains stdout/stderr columns.
+ * Deletion is delegated to MultiFlexi\Job::deleteFromSQL() (vitexsoftware/
+ * multiflexi-core) so runtemplate counters and related schedule rows stay
+ * consistent, rather than reimplementing that logic here.
  */
 class JobApi extends AbstractJobApi
 {
@@ -99,6 +101,91 @@ EOD, );
     }
 
     /**
+     * DELETE /job/{jobId}.{suffix}  — Delete a single job. Requires the admin RBAC role.
+     */
+    public function deletejobById(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $jobId,
+        string $suffix
+    ): ResponseInterface {
+        if (!$this->currentUserHasAdminRole($request)) {
+            return $response->withStatus(403);
+        }
+
+        if ($this->fetchJob($jobId) === null) {
+            return $response->withStatus(404);
+        }
+
+        (new \MultiFlexi\Job($jobId))->deleteFromSQL($jobId);
+
+        return $response->withStatus(200);
+    }
+
+    /**
+     * DELETE /jobs.{suffix}  — Bulk delete jobs matching runtemplate_id / from / to.
+     * Requires the admin RBAC role. At least one filter must be given.
+     */
+    public function deletejobs(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        string $suffix
+    ): ResponseInterface {
+        if (!$this->currentUserHasAdminRole($request)) {
+            return $response->withStatus(403);
+        }
+
+        $queryParams = $request->getQueryParams();
+        $runtemplateId = $queryParams['runtemplate_id'] ?? null;
+        $from = $queryParams['from'] ?? null;
+        $to = $queryParams['to'] ?? null;
+        $dryRun = filter_var($queryParams['dry_run'] ?? 'false', \FILTER_VALIDATE_BOOLEAN);
+
+        if ($runtemplateId === null && $from === null && $to === null) {
+            $response->getBody()->write((string) json_encode(['error' => 'At least one of runtemplate_id, from, to is required']));
+
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
+        }
+
+        $conditions = [];
+        $params = [];
+
+        if ($runtemplateId !== null) {
+            $conditions[] = 'runtemplate_id = :runtemplate_id';
+            $params[':runtemplate_id'] = (int) $runtemplateId;
+        }
+
+        if ($from !== null) {
+            $conditions[] = 'begin >= :from';
+            $params[':from'] = $from;
+        }
+
+        if ($to !== null) {
+            $conditions[] = 'begin <= :to';
+            $params[':to'] = $to;
+        }
+
+        $stmt = $this->pdo->prepare('SELECT id FROM job WHERE '.implode(' AND ', $conditions));
+        $stmt->execute($params);
+        $jobIds = array_map('intval', array_column($stmt->fetchAll(\PDO::FETCH_ASSOC), 'id'));
+
+        if (!$dryRun) {
+            foreach ($jobIds as $jobId) {
+                (new \MultiFlexi\Job($jobId))->deleteFromSQL($jobId);
+            }
+        }
+
+        $response->getBody()->write((string) json_encode([
+            'dry_run' => $dryRun,
+            'matched' => \count($jobIds),
+            'deleted' => $dryRun ? 0 : \count($jobIds),
+            'job_ids' => $jobIds,
+        ]));
+
+        return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+    }
+
+    /**
      * POST /job/  — Create or update a job record.
      */
     public function setjobById(
@@ -163,6 +250,22 @@ EOD, );
     // -----------------------------------------------------------------------
     // Private helpers
     // -----------------------------------------------------------------------
+
+    /**
+     * True when the authenticated user (set by BasicAuthenticator as the
+     * `authenticated_user_id` request attribute) holds the `admin` or
+     * `super_admin` RBAC role, via MultiFlexi\Rbac (multiflexi-core).
+     */
+    private function currentUserHasAdminRole(ServerRequestInterface $request): bool
+    {
+        $userId = (int) $request->getAttribute('authenticated_user_id');
+
+        if ($userId <= 0) {
+            return false;
+        }
+
+        return (new \MultiFlexi\Rbac())->userHasRole($userId, ['admin', 'super_admin']);
+    }
 
     private function fetchJob(int $jobId): ?array
     {

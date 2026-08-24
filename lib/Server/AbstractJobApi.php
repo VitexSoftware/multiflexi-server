@@ -45,6 +45,56 @@ use Slim\Exception\HttpNotImplementedException;
 abstract class AbstractJobApi
 {
     /**
+     * DELETE deletejobById
+     * Summary: Delete job by ID
+     * Notes: Remove a single job record. Requires the &#x60;admin&#x60; RBAC role.
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param int                    $jobId    ID of job to delete
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function deletejobById(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        int $jobId,
+        string $suffix
+    ): ResponseInterface {
+        $message = 'How about implementing deletejobById as a DELETE method in MultiFlexi\\Api\\Server\\JobApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
+     * DELETE deletejobs
+     * Summary: Bulk delete jobs matching filters
+     * Notes: Delete all jobs matching the given filters (runtemplate_id and/or a begin-time window). Intended for cleaning up runs produced by a scheduler malfunction. At least one filter is required. Requires the &#x60;admin&#x60; RBAC role.
+     * Output-Formats: [application/json].
+     *
+     * @param ServerRequestInterface $request  Request
+     * @param ResponseInterface      $response Response
+     * @param string                 $suffix   force format suffix
+     *
+     * @throws HttpNotImplementedException to force implementation class to override this method
+     */
+    public function deletejobs(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        string $suffix
+    ): ResponseInterface {
+        $queryParams = $request->getQueryParams();
+        $runtemplateId = (\array_key_exists('runtemplate_id', $queryParams)) ? $queryParams['runtemplate_id'] : null;
+        $from = (\array_key_exists('from', $queryParams)) ? $queryParams['from'] : null;
+        $to = (\array_key_exists('to', $queryParams)) ? $queryParams['to'] : null;
+        $dryRun = (\array_key_exists('dry_run', $queryParams)) ? $queryParams['dry_run'] : null;
+        $message = 'How about implementing deletejobs as a DELETE method in MultiFlexi\\Api\\Server\\JobApi class?';
+
+        throw new HttpNotImplementedException($request, $message);
+    }
+
+    /**
      * GET getjobById
      * Summary: Get job by ID
      * Notes: Returns a single job

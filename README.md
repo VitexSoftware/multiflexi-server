@@ -197,6 +197,8 @@ Class | Method | HTTP request | Description
 *AbstractGdprApi* | **requestDataExport** | **GET** /data-export | Request personal data export (GDPR Article 15)
 *AbstractGdprApi* | **requestDataExportPost** | **POST** /data-export | Request personal data export (GDPR Article 15)
 *AbstractJobApi* | **setjobById** | **POST** /job/ | Schedule a job from a RunTemplate
+*AbstractJobApi* | **deletejobById** | **DELETE** /job/{jobId}.{suffix} | Delete job by ID
+*AbstractJobApi* | **deletejobs** | **DELETE** /jobs.{suffix} | Bulk delete jobs matching filters
 *AbstractJobApi* | **getjobById** | **GET** /job/{jobId}.{suffix} | Get job by ID
 *AbstractJobApi* | **listjobs** | **GET** /jobs.{suffix} | Show All jobs
 *AbstractRuntemplateApi* | **setRunTemplateById** | **POST** /runtemplate | Create or Update RunTemplate
@@ -248,6 +250,7 @@ Class | Method | HTTP request | Description
 * MultiFlexi\Api\Model\DataExportResponse
 * MultiFlexi\Api\Model\DataExportStatusResponse
 * MultiFlexi\Api\Model\DataExportStatusResponseExportsInner
+* MultiFlexi\Api\Model\Deletejobs200Response
 * MultiFlexi\Api\Model\ErrorResponse
 * MultiFlexi\Api\Model\EventRule
 * MultiFlexi\Api\Model\EventSource

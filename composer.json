@@ -1,6 +1,6 @@
 {
   "name": "vitexsoftware/multiflexi-api-server",
-  "minimum-stability": "RC",
+  "minimum-stability": "dev",
   "repositories": [
     {
       "type": "vcs",
@@ -20,6 +20,7 @@
     "neomerx/cors-psr7": "^2.0",
     "php-di/slim-bridge": "^3.2",
     "slim/psr7": "*",
+    "vitexsoftware/multiflexi-core": "dev-main",
     "ybelenko/openapi-data-mocker": "^1.0",
     "ybelenko/openapi-data-mocker-server-middleware": "^1.2"
   },

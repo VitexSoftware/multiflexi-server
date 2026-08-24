@@ -1914,6 +1914,129 @@ EOD,
             ],
         ],
         [
+            'httpMethod' => 'DELETE',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/job/{jobId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractJobApi',
+            'userClassname' => 'JobApi',
+            'operationId' => 'deletejobById',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Job deleted"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '403' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Caller lacks the admin RBAC role"
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Job not found"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'DELETE',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/jobs.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractJobApi',
+            'userClassname' => 'JobApi',
+            'operationId' => 'deletejobs',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Jobs deleted (or matched, if dry_run)",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/deletejobs_200_response"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "No filter supplied"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid",
+  "headers" : {
+    "WWW_Authenticate" : {
+      "style" : "simple",
+      "explode" : false,
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '403' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Caller lacks the admin RBAC role"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/job/{jobId}.{suffix}',
