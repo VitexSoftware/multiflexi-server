@@ -74,6 +74,24 @@ $container = $builder->build();
 // Instantiate the app
 $app = Bridge::create($container);
 
+// This app's own route patterns are absolute (e.g.
+// /api/VitexSoftware/MultiFlexi/1.0.0/...), but Apache typically mounts it
+// under an additional Alias prefix (e.g. /multiflexi on this deployment)
+// that the app itself knows nothing about. Slim's routing middleware
+// matches route patterns against the URI *after* stripping $app's
+// basePath, so without this the router can never match anything beyond
+// its own wildcard OPTIONS catch-all (silently falling through to a 405
+// "Allow: OPTIONS" for every real route). Derive the externally-imposed
+// prefix by finding where the app's own known base begins in the raw
+// request URI, rather than hardcoding a specific deployment's mount point.
+$knownAppBase = '/api/VitexSoftware/MultiFlexi/1.0.0';
+$requestUri = $_SERVER['REQUEST_URI'] ?? '';
+$markerPos = strpos($requestUri, $knownAppBase);
+
+if ($markerPos !== false) {
+    $app->setBasePath(substr($requestUri, 0, $markerPos));
+}
+
 // Register middleware
 $middleware = new RegisterMiddlewares();
 $middleware($app);
