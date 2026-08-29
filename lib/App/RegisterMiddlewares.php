@@ -70,10 +70,21 @@ final class RegisterMiddlewares
 
         $basePath = $app->getBasePath();
 
+        // The exempt-path matchers below compare against the raw request
+        // URI, not Slim's route-relative path, so they need the real
+        // absolute mount prefix (e.g. "/multiflexi/api" under this
+        // project's Apache Alias) rather than $app->getBasePath() (which
+        // is empty here - Slim/FastRoute resolve routes through a
+        // different mechanism than these auth libraries use for path
+        // matching). Derive it from SCRIPT_NAME so it doesn't hardcode a
+        // specific deployment's mount point.
+        $mountPrefix = \dirname($_SERVER['SCRIPT_NAME'] ?? '');
+        $apiVersionPath = $mountPrefix.'/VitexSoftware/MultiFlexi/1.0.0';
+
         $app->add(new \Tuupola\Middleware\HttpBasicAuthentication([
             'relaxed' => ['localhost', 'multiflexi.local'],
             'path' => $basePath,
-            'ignore' => [$basePath.'/login', $basePath.'/ping'],
+            'ignore' => [$apiVersionPath.'/login', $apiVersionPath.'/ping'],
             'authenticator' => static function ($arguments) {
                 $prober = \Ease\Shared::user(null, '\MultiFlexi\User');
 
@@ -99,7 +110,7 @@ final class RegisterMiddlewares
             'secure' => true,
             'relaxed' => ['localhost', 'multiflexi.local'],
             'path' => $basePath,
-            'except' => [$basePath.'/login', $basePath.'/ping'],
+            'except' => [$apiVersionPath.'/login', $apiVersionPath.'/ping'],
             'authenticator' => static function ($request, \Dyorg\TokenAuthentication\TokenSearch $tokenSearch) {
                 try {
                     $tokenString = $tokenSearch->getToken($request);
