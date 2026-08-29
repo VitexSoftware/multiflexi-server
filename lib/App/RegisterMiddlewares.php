@@ -73,7 +73,7 @@ final class RegisterMiddlewares
         $app->add(new \Tuupola\Middleware\HttpBasicAuthentication([
             'relaxed' => ['localhost', 'multiflexi.local'],
             'path' => $basePath,
-            'ignore' => [$basePath.'/login', $basePath.'/ping', $basePath],
+            'ignore' => [$basePath.'/login', $basePath.'/ping'],
             'authenticator' => static function ($arguments) {
                 $prober = \Ease\Shared::user(null, '\MultiFlexi\User');
 
@@ -99,7 +99,7 @@ final class RegisterMiddlewares
             'secure' => true,
             'relaxed' => ['localhost', 'multiflexi.local'],
             'path' => $basePath,
-            'except' => [$basePath.'/login', $basePath.'/ping', $basePath],
+            'except' => [$basePath.'/login', $basePath.'/ping'],
             'authenticator' => static function ($request, \Dyorg\TokenAuthentication\TokenSearch $tokenSearch) {
                 try {
                     $tokenString = $tokenSearch->getToken($request);
