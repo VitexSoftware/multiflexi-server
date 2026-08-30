@@ -1,3 +1,18 @@
+multiflexi-server (0.1.7) trixie; urgency=medium
+
+  * Fix RegisterMiddlewares HttpBasicAuthentication 'ignore' and
+    TokenAuthentication 'except' lists: entries only listed the bare
+    name or the bare name + '.json', but public routes are also
+    reachable as .xml/.yaml/.html (see openapi-schema.yaml). The
+    underlying matcher regex ("^{$entry}(/.*)?$") never matched those
+    other suffixes, so login/ping stayed Basic-Auth-gated for non-json
+    requests. Also added 'status' and 'index', which are security: []
+    in the spec but were missing from both lists entirely (confirmed
+    live on multiflexi.vitexsoftware.com: status.json/index.json
+    returned 401 despite being meant to be public).
+
+ -- vitex <info@vitexsoftware.cz>  Sun, 30 Aug 2026 19:00:51 +0200
+
 multiflexi-server (0.1.6) trixie; urgency=medium
 
   * Revert 0.1.5's apps.json/runtemplates.json array_values() fix: that

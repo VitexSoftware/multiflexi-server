@@ -81,10 +81,27 @@ final class RegisterMiddlewares
         $mountPrefix = \dirname($_SERVER['SCRIPT_NAME'] ?? '');
         $apiVersionPath = $mountPrefix.'/VitexSoftware/MultiFlexi/1.0.0';
 
+        // All public (security: []) routes are registered as
+        // /{name}.{suffix} (suffix: json|xml|yaml|html), never as a bare
+        // /{name} alone (see openapi-schema.yaml + RegisterRoutes). The
+        // underlying RequestPathRule/except matcher compiles each entry as
+        // "^{$entry}(/.*)?$", so listing only the bare name (or only
+        // '.json') never actually matches the route for the other
+        // suffixes. Build one optional-suffix pattern per public route
+        // instead of hardcoding each literal suffix. 'status' and 'index'
+        // are also security: [] in the spec but were missing here
+        // entirely.
+        $publicSuffix = '(\.(?:json|xml|yaml|html))?';
+        $publicRoutes = ['login', 'ping', 'status', 'index'];
+        $publicPaths = \array_map(
+            static fn ($name) => $apiVersionPath.'/'.$name.$publicSuffix,
+            $publicRoutes,
+        );
+
         $app->add(new \Tuupola\Middleware\HttpBasicAuthentication([
             'relaxed' => ['localhost', 'multiflexi.local'],
             'path' => $basePath,
-            'ignore' => [$apiVersionPath.'/login', $apiVersionPath.'/login.json', $apiVersionPath.'/ping', $apiVersionPath.'/ping.json'],
+            'ignore' => $publicPaths,
             'authenticator' => static function ($arguments) {
                 $prober = \Ease\Shared::user(null, '\MultiFlexi\User');
 
@@ -110,7 +127,7 @@ final class RegisterMiddlewares
             'secure' => true,
             'relaxed' => ['localhost', 'multiflexi.local'],
             'path' => $basePath,
-            'except' => [$apiVersionPath.'/login', $apiVersionPath.'/login.json', $apiVersionPath.'/ping', $apiVersionPath.'/ping.json'],
+            'except' => $publicPaths,
             'authenticator' => static function ($request, \Dyorg\TokenAuthentication\TokenSearch $tokenSearch) {
                 try {
                     $tokenString = $tokenSearch->getToken($request);
