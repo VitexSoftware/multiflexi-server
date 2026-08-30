@@ -1,5 +1,7 @@
 # MultiFlexi - PHP Slim 4 Server library for MultiFlexi API
 
+![Logo](php-vitexsoftware-multiflexi-server.svg?raw=true)
+
 * [OpenAPI Generator](https://openapi-generator.tech)
 * [Slim 4 Documentation](https://www.slimframework.com/docs/v4/)
 
