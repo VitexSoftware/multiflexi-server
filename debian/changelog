@@ -1,3 +1,20 @@
+multiflexi-server (UNRELEASED) trixie; urgency=medium
+
+  * Fix public/index.php crashing every API request with an uncaught
+    TypeError ("strtolower(): Argument #1 ($string) must be of type
+    string, false given"). getenv() returns false (not null) when a
+    variable is unset, so the fallback chain
+    "$_SERVER['APP_ENV'] ?? getenv('APP_ENV') ?? 'prod'" never reached
+    'prod' whenever both were unset -- ?? only short-circuits on null,
+    not false. Under declare(strict_types=1) this made every request to
+    /api/VitexSoftware/MultiFlexi/1.0.0/* return a bare 500 with no
+    body, on both multiflexi.vitexsoftware.com and demo.multiflexi.eu
+    (confirmed via direct `php -d display_errors=1` execution of
+    index.php as www-data). Replaced with `getenv('APP_ENV') ?: 'prod'`,
+    which treats false as falsy too.
+
+ -- vitex <info@vitexsoftware.cz>  Thu, 03 Sep 2026 10:33:15 +0200
+
 multiflexi-server (0.1.7) trixie; urgency=medium
 
   * Fix RegisterMiddlewares HttpBasicAuthentication 'ignore' and
