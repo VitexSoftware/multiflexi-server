@@ -1,4 +1,4 @@
-multiflexi-server (UNRELEASED) trixie; urgency=medium
+multiflexi-server (0.1.8) trixie; urgency=medium
 
   * Fix public/index.php crashing every API request with an uncaught
     TypeError ("strtolower(): Argument #1 ($string) must be of type
@@ -13,7 +13,7 @@ multiflexi-server (UNRELEASED) trixie; urgency=medium
     index.php as www-data). Replaced with `getenv('APP_ENV') ?: 'prod'`,
     which treats false as falsy too.
 
- -- vitex <info@vitexsoftware.cz>  Thu, 03 Sep 2026 10:33:15 +0200
+ -- vitex <info@vitexsoftware.cz>  Thu, 03 Sep 2026 10:37:50 +0200
 
 multiflexi-server (0.1.7) trixie; urgency=medium
 
