@@ -1,3 +1,26 @@
+multiflexi-server (0.1.9) trixie; urgency=medium
+
+  * Fix public/index.php still 500ing on every API request even after the
+    getenv()/strtolower fix in 0.1.8 (never actually deployed -- affected
+    hosts were still on 0.1.7.76~trixie): the main PHP-DI config lookup
+    used a __DIR__-relative path (../config/{$env}/default.inc.php),
+    assuming index.php is reached via the /usr/share/multiflexi-server/api
+    symlink. multiflexi-web5 dropped the Apache Alias that routed requests
+    through that symlink (older multiflexi-web had it; confirmed by
+    diffing both packages' debian/conf/multiflexi.conf) and now serves
+    index.php directly from its physical location under
+    /usr/share/multiflexi-web/api/, so __DIR__ resolved to the wrong
+    directory and require() fatally failed on every request (confirmed
+    live via the Apache error log on multiflexi.vitexsoftware.com:
+    "Failed opening required .../multiflexi-web/api/../config/prod/
+    default.inc.php"). debian/rules already patched two of the three
+    filesystem-dependent paths in this file to absolute paths for this
+    exact reason (autoload require, userConfig); this was the one path
+    the sed patches missed. Added the missing sed rule so the main config
+    path is absolute too.
+
+ -- CyberVitexus <info@vitexsoftware.cz>  Fri, 11 Sep 2026 07:11:31 +0200
+
 multiflexi-server (0.1.8) trixie; urgency=medium
 
   * Fix public/index.php crashing every API request with an uncaught
