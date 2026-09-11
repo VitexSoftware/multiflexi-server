@@ -1,4 +1,4 @@
-multiflexi-server (UNRELEASED) trixie; urgency=medium
+multiflexi-server (0.1.9) UNRELEASED; urgency=medium
 
   * Fix public/index.php crashing every API request with an uncaught
     TypeError ("strtolower(): Argument #1 ($string) must be of type
