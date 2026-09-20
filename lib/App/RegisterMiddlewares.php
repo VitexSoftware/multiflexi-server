@@ -99,7 +99,7 @@ final class RegisterMiddlewares
         );
 
         $app->add(new \Tuupola\Middleware\HttpBasicAuthentication([
-            'relaxed' => ['localhost', 'multiflexi.local'],
+            'relaxed' => ['localhost', '127.0.0.1', 'multiflexi.local'],
             'path' => $basePath,
             'ignore' => $publicPaths,
             'authenticator' => static function ($arguments) {
@@ -125,7 +125,7 @@ final class RegisterMiddlewares
         // than silently falling back to Basic.
         $app->add(new \Dyorg\TokenAuthentication([
             'secure' => true,
-            'relaxed' => ['localhost', 'multiflexi.local'],
+            'relaxed' => ['localhost', '127.0.0.1', 'multiflexi.local'],
             'path' => $basePath,
             'except' => $publicPaths,
             'authenticator' => static function ($request, \Dyorg\TokenAuthentication\TokenSearch $tokenSearch) {
@@ -143,7 +143,15 @@ final class RegisterMiddlewares
                     throw new \Dyorg\TokenAuthentication\Exceptions\UnauthorizedException('Invalid or expired token');
                 }
 
-                \Ease\Shared::user($token->getUser());
+                $user = $token->getUser();
+                if ($user instanceof \MultiFlexi\User) {
+                    // loginSuccess() sets $logged=true so the subsequent
+                    // HttpBasicAuthentication middleware sees isLogged() and
+                    // skips the password check. Shared::user() alone only
+                    // stores the object — isLogged() stays false.
+                    $user->loginSuccess();
+                    \Ease\Shared::user($user);
+                }
 
                 return true;
             },

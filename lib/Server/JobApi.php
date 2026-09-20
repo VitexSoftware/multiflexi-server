@@ -186,7 +186,13 @@ EOD, );
     }
 
     /**
-     * POST /job/  — Create or update a job record.
+     * POST /job/ — Schedule a job from a RunTemplate.
+     *
+     * Mirrors `multiflexi-cli run-template:schedule`. Used by Node-RED and
+     * other orchestrators. Body fields:
+     *   runtemplate_id (required), scheduled ("now" or Y-m-d H:i:s),
+     *   executor, env (object of one-shot overrides), schedule_type,
+     *   launched_by (optional override; defaults to the Bearer token user).
      */
     public function setjobById(
         ServerRequestInterface $request,
@@ -194,55 +200,94 @@ EOD, );
     ): ResponseInterface {
         $body = (array) ($request->getParsedBody() ?? []);
 
-        if (empty($body)) {
-            return $response->withStatus(400);
+        $runtemplateId = (int) ($body['runtemplate_id'] ?? $body['id'] ?? 0);
+
+        if ($runtemplateId <= 0) {
+            $response->getBody()->write((string) json_encode([
+                'message' => 'runtemplate_id is required',
+            ]));
+
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
         }
 
-        // Allowed writable fields (stdout/stderr are no longer columns)
-        $allowed = ['app_id', 'company_id', 'runtemplate_id', 'executor', 'exitcode',
-            'begin', 'end', 'schedule', 'schedule_type', 'launched_by', 'app_version',
-            'pid', 'task_id', 'env', 'command'];
-        $data = array_intersect_key($body, array_flip($allowed));
+        $rt = new \MultiFlexi\RunTemplate($runtemplateId);
 
-        if (isset($body['id']) && (int) $body['id'] > 0) {
-            // Update
-            $jobId = (int) $body['id'];
+        if (empty($rt->getMyKey())) {
+            $response->getBody()->write((string) json_encode([
+                'message' => 'RunTemplate not found',
+            ]));
 
-            if (!$this->fetchJob($jobId)) {
-                return $response->withStatus(404);
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
+        }
+
+        if ((int) $rt->getDataValue('active') !== 1) {
+            $response->getBody()->write((string) json_encode([
+                'message' => 'RunTemplate is not active. Scheduling forbidden.',
+            ]));
+
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(403);
+        }
+
+        $executor = $body['executor'] ?? null;
+
+        if ($executor === null || $executor === '') {
+            $rtExecutor = $rt->getDataValue('executor');
+            $executor = !empty($rtExecutor) ? $rtExecutor : 'Native';
+        }
+
+        $scheduleRaw = (string) ($body['scheduled'] ?? $body['schedule'] ?? 'now');
+        $scheduleDateTime = new \DateTime($scheduleRaw === '' ? 'now' : $scheduleRaw);
+        $now = new \DateTime();
+        $isImmediate = ($scheduleDateTime->getTimestamp() <= $now->getTimestamp() + 5);
+
+        $scheduleType = (string) ($body['schedule_type'] ?? '');
+
+        if ($scheduleType === '') {
+            $scheduleType = $isImmediate
+                ? \MultiFlexi\Job::SCHEDULE_TYPE_ADHOC_API
+                : \MultiFlexi\Job::SCHEDULE_TYPE_COMMAND_LINE;
+        }
+
+        $envOverride = new \MultiFlexi\ConfigFields('ApiOverride');
+
+        if (!empty($body['env']) && \is_array($body['env'])) {
+            foreach ($body['env'] as $key => $value) {
+                $envOverride->addField(new \MultiFlexi\ConfigField(
+                    (string) $key,
+                    'string',
+                    (string) $key,
+                    '',
+                    '',
+                    (string) $value,
+                ));
             }
+        }
 
-            if (!empty($data)) {
-                $setClauses = implode(', ', array_map(static fn ($k) => "{$k} = :{$k}", array_keys($data)));
-                $stmt = $this->pdo->prepare("UPDATE job SET {$setClauses} WHERE id = :id");
-                $stmt->bindValue(':id', $jobId, \PDO::PARAM_INT);
+        // prepareJob reads launched_by from Ease\Shared::user() (set by the
+        // Bearer authenticator). Optional body.launched_by overrides after
+        // insert — Node-RED uses that for editor ad-hoc Inject.
+        $jobber = new \MultiFlexi\Job();
+        $jobber->prepareJob($rt, $envOverride, $scheduleDateTime, (string) $executor, $scheduleType);
+        $jobId = (int) $jobber->getMyKey();
 
-                foreach ($data as $key => $value) {
-                    $stmt->bindValue(":{$key}", $value);
-                }
-
-                $stmt->execute();
-            }
-        } else {
-            // Insert
-            if (empty($data)) {
-                return $response->withStatus(400);
-            }
-
-            $cols = implode(', ', array_keys($data));
-            $placeholders = implode(', ', array_map(static fn ($k) => ":{$k}", array_keys($data)));
-            $stmt = $this->pdo->prepare("INSERT INTO job ({$cols}) VALUES ({$placeholders})");
-
-            foreach ($data as $key => $value) {
-                $stmt->bindValue(":{$key}", $value);
-            }
-
+        if (isset($body['launched_by']) && (int) $body['launched_by'] > 0) {
+            $stmt = $this->pdo->prepare('UPDATE job SET launched_by = :uid WHERE id = :id');
+            $stmt->bindValue(':uid', (int) $body['launched_by'], \PDO::PARAM_INT);
+            $stmt->bindValue(':id', $jobId, \PDO::PARAM_INT);
             $stmt->execute();
-            $jobId = (int) $this->pdo->lastInsertId();
         }
 
-        $job = $this->fetchJob($jobId);
-        $response->getBody()->write((string) json_encode($job));
+        $payload = [
+            'job_id' => $jobId,
+            'runtemplate_id' => $runtemplateId,
+            'scheduled' => $scheduleDateTime->format('Y-m-d H:i:s'),
+            'executor' => $executor,
+            'schedule_type' => $scheduleType,
+            'launched_by' => isset($body['launched_by']) && (int) $body['launched_by'] > 0
+                ? (int) $body['launched_by']
+                : (int) ($this->fetchJob($jobId)['launched_by'] ?? 0),
+        ];
+        $response->getBody()->write((string) json_encode($payload));
 
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }

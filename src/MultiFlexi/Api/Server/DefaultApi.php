@@ -56,8 +56,15 @@ class DefaultApi extends AbstractDefaultApi
                     $token->setDataValue('user_id', $user->getDataValue('id'));
                     $token->generate()->dbSync();
                     $payload['token'] = $token->getRecordName();
+                    $payload['user'] = [
+                        'id' => (int) $user->getDataValue('id'),
+                        'login' => $user->getDataValue('login'),
+                        'email' => $user->getDataValue('email'),
+                    ];
+                    $payload['user_id'] = (int) $user->getDataValue('id');
                     $payload['message'] = _('Token generated');
                     $payload['satatus'] = 'success';
+                    $payload['status'] = 'success';
                 } else {
                     $payload['message'] = _('Account is disabled');
                     $payload['satatus'] = 'error';

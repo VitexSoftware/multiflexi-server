@@ -2563,6 +2563,88 @@ EOD,
         [
             'httpMethod' => 'GET',
             'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/nodered/catalog.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'NodeRedCatalogApi',
+            'userClassname' => 'NodeRedCatalogApi',
+            'operationId' => 'getCatalog',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "RBAC-scoped Node-RED catalog (companies, runtemplates, credentials)",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "object"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/nodered/executors.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'NodeRedCatalogApi',
+            'userClassname' => 'NodeRedCatalogApi',
+            'operationId' => 'getExecutors',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Installed MultiFlexi executors on this host",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "type" : "object"
+      }
+    }
+  }
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
             'path' => '/topics.{suffix}',
             'apiPackage' => 'MultiFlexi\Api\Server',
             'classname' => 'AbstractTopicApi',
@@ -3216,6 +3298,197 @@ EOD,
             ],
             'authMethods' => [
                 // http security schema named 'basicAuth'
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/flow/',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractFlowApi',
+            'userClassname' => 'FlowApi',
+            'operationId' => 'syncFlow',
+            'responses' => [
+                '201' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Flow created or new version deployed"
+}
+EOD,
+                ],
+                '400' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Invalid flow graph"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/flows.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractFlowApi',
+            'userClassname' => 'FlowApi',
+            'operationId' => 'listFlows',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/flow/{flowId}.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractFlowApi',
+            'userClassname' => 'FlowApi',
+            'operationId' => 'getFlowById',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation"
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Flow not found"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'GET',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/flow/{flowId}/runs.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractFlowApi',
+            'userClassname' => 'FlowApi',
+            'operationId' => 'listFlowRuns',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "successful operation"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
+                [
+                    'type' => 'http',
+                    'isBasic' => true,
+                    'isBearer' => false,
+                    'isApiKey' => false,
+                    'isOAuth' => false,
+                ],
+            ],
+        ],
+        [
+            'httpMethod' => 'POST',
+            'basePathWithoutHost' => '/api/VitexSoftware/MultiFlexi/1.0.0',
+            'path' => '/flow-run/{flowRunId}/cancel.{suffix}',
+            'apiPackage' => 'MultiFlexi\Api\Server',
+            'classname' => 'AbstractFlowApi',
+            'userClassname' => 'FlowApi',
+            'operationId' => 'cancelFlowRun',
+            'responses' => [
+                '200' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Flow run cancelled"
+}
+EOD,
+                ],
+                '404' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Flow run not found"
+}
+EOD,
+                ],
+                '401' => [
+                    'jsonSchema' => <<<'EOD'
+{
+  "description" : "Authentication information is missing or invalid"
+}
+EOD,
+                ],
+            ],
+            'authMethods' => [
                 [
                     'type' => 'http',
                     'isBasic' => true,
