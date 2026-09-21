@@ -37,6 +37,27 @@ use Neomerx\Cors\Contracts\AnalyzerInterface;
 use Slim\Factory\ServerRequestCreatorFactory;
 use Slim\Middleware\ErrorMiddleware;
 
+// Load MultiFlexi DB/runtime config so MultiFlexi\User (BasicAuthenticator) and
+// other core classes can connect. Load every readable system file (later files
+// merge on top) so a present-but-incomplete multiflexi.env cannot hide
+// database.env credentials. Fall back to a local .env for development checkouts.
+$multiflexiEnvLoaded = false;
+foreach ([
+    '/etc/multiflexi/multiflexi.env',
+    '/etc/multiflexi/database.env',
+] as $multiflexiEnvFile) {
+    if (is_readable($multiflexiEnvFile)) {
+        \Ease\Shared::singleton()->loadConfig($multiflexiEnvFile, true);
+        $multiflexiEnvLoaded = true;
+    }
+}
+if (!$multiflexiEnvLoaded) {
+    $devEnv = dirname(__DIR__).'/.env';
+    if (is_readable($devEnv)) {
+        \Ease\Shared::singleton()->loadConfig($devEnv, true);
+    }
+}
+
 // Instantiate PHP-DI ContainerBuilder
 $builder = new ContainerBuilder();
 

@@ -87,6 +87,18 @@ class AppApi extends \MultiFlexi\Api\Server\AbstractAppApi
             $appData['exitCodes'][$code]['description'][$lang] = $exitCodeRow['description'];
         }
 
+        // json_encode() turns an empty PHP array into JSON [] (list), but the
+        // OpenAPI schema / generated clients expect an object keyed by exit
+        // code. Same for environment. Cast empties to stdClass so the wire
+        // shape stays an object even when there are no rows.
+        if ($appData['environment'] === []) {
+            $appData['environment'] = new \stdClass();
+        }
+
+        if ($appData['exitCodes'] === []) {
+            $appData['exitCodes'] = new \stdClass();
+        }
+
         switch ($suffix) {
             case 'html':
                 //                $appData['name'] = new \Ease\Html\ATag($appData['id'] . '.html', $appData['name']);

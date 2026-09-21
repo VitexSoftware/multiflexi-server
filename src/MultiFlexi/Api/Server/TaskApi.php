@@ -76,8 +76,49 @@ class TaskApi extends AbstractTaskApi
             return $response->withStatus(404)->withHeader('Content-Type', 'application/json');
         }
 
-        $taskData['jobs'] = $this->engine->getJobs();
+        $taskData['jobs'] = $this->normalizeJobEnvs($this->engine->getJobs());
 
         return DefaultApi::prepareResponse($response, $taskData, $suffix, null, 'task');
+    }
+
+    /**
+     * Task::getJobs() returns raw DB rows whose env column is still a PHP
+     * serialized ConfigFields blob. Decode and redact it so JSON clients get
+     * a plain object instead of an opaque serialize() string.
+     *
+     * @param list<array<string, mixed>> $jobs
+     *
+     * @return list<array<string, mixed>>
+     */
+    private function normalizeJobEnvs(array $jobs): array
+    {
+        foreach ($jobs as &$job) {
+            if (!\array_key_exists('env', $job)) {
+                continue;
+            }
+
+            $env = $job['env'];
+
+            if (\is_string($env)) {
+                $decoded = @unserialize($env);
+                $env = $decoded === false && $env !== 'b:0;' ? $env : $decoded;
+            }
+
+            if ($env instanceof \MultiFlexi\ConfigFields) {
+                $job['env'] = $env->getRedactedArray();
+            } elseif (\is_array($env)) {
+                $job['env'] = $env;
+            } elseif ($env === null || $env === false) {
+                $job['env'] = new \stdClass();
+            } else {
+                // Leave unexpected shapes as an empty object rather than a
+                // raw serialize blob that breaks typed clients.
+                $job['env'] = new \stdClass();
+            }
+        }
+
+        unset($job);
+
+        return $jobs;
     }
 }

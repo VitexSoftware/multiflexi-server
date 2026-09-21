@@ -1,3 +1,17 @@
+multiflexi-server (0.1.10) UNRELEASED; urgency=medium
+
+  * Load /etc/multiflexi/{multiflexi,database}.env from public/index.php
+    (merge both when present) so BasicAuthenticator can reach MySQL
+    without relying on Apache SetEnv snippets.
+  * AppApi: encode empty environment/exitCodes as {} objects so
+    generated clients do not see JSON arrays for object-typed fields.
+  * JobApi: return jobs list as an id-keyed object; PDO-backed list/
+    get paths aligned with OpenAPI Dict[str, Job].
+  * TaskApi: normalize nested job env from PHP serialize() strings to
+    decoded objects (or {}).
+
+ -- vitex <info@vitexsoftware.cz>  Mon, 21 Sep 2026 08:30:36 +0200
+
 multiflexi-server (0.1.9) UNRELEASED; urgency=medium
 
   * Fix public/index.php crashing every API request with an uncaught
