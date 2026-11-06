@@ -45,13 +45,13 @@ class JobApi extends AbstractJobApi
         int $jobId,
         string $suffix
     ): ResponseInterface {
-        $job = $this->fetchJob($jobId);
+        $queryParams = $request->getQueryParams();
+        $job = $this->fetchJob($jobId, self::sanitizeLang($queryParams['lang'] ?? 'en'));
 
         if ($job === null) {
             return $response->withStatus(404);
         }
 
-        $queryParams = $request->getQueryParams();
         $includeOutput = filter_var($queryParams['output'] ?? 'true', \FILTER_VALIDATE_BOOLEAN);
 
         if ($includeOutput) {
@@ -80,15 +80,23 @@ class JobApi extends AbstractJobApi
 
         $limit = max(1, min($limit, 1000));
         $offset = max(0, $offset);
+        $lang = self::sanitizeLang($queryParams['lang'] ?? 'en');
 
         $stmt = $this->pdo->prepare(<<<EOD
-SELECT id, app_id, company_id, runtemplate_id, executor, exitcode,
-                    begin, end, schedule, schedule_type, launched_by, app_version,
-                    pid, task_id
+SELECT job.id, job.app_id, job.company_id, job.runtemplate_id, job.executor, job.exitcode,
+                    COALESCE(aec.description, aec_en.description) AS exitcode_description,
+                    COALESCE(aec.severity, aec_en.severity) AS exitcode_severity,
+                    job.begin, job.end, job.schedule, job.schedule_type, job.launched_by, job.app_version,
+                    job.pid, job.task_id
              FROM job
-             ORDER BY id {$order}
+             LEFT JOIN app_exit_codes aec
+                    ON aec.app_id = job.app_id AND aec.exit_code = job.exitcode AND aec.lang = :lang
+             LEFT JOIN app_exit_codes aec_en
+                    ON aec_en.app_id = job.app_id AND aec_en.exit_code = job.exitcode AND aec_en.lang = 'en'
+             ORDER BY job.id {$order}
              LIMIT :limit OFFSET :offset
 EOD, );
+        $stmt->bindValue(':lang', $lang, \PDO::PARAM_STR);
         $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
         $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
         $stmt->execute();
@@ -312,14 +320,32 @@ EOD, );
         return (new \MultiFlexi\Rbac())->userHasRole($userId, ['admin', 'super_admin']);
     }
 
-    private function fetchJob(int $jobId): ?array
+    /**
+     * Sanitize a lang query parameter to a plain language code (e.g. 'en', 'cs').
+     */
+    private static function sanitizeLang($lang): string
+    {
+        $lang = preg_replace('/[^a-zA-Z]/', '', substr((string) $lang, 0, 5));
+
+        return '' !== $lang ? $lang : 'en';
+    }
+
+    private function fetchJob(int $jobId, string $lang = 'en'): ?array
     {
         $stmt = $this->pdo->prepare(<<<'EOD'
-SELECT id, app_id, company_id, runtemplate_id, executor, exitcode,
-                    begin, end, schedule, schedule_type, launched_by, app_version,
-                    pid, task_id
-             FROM job WHERE id = :id
+SELECT job.id, job.app_id, job.company_id, job.runtemplate_id, job.executor, job.exitcode,
+                    COALESCE(aec.description, aec_en.description) AS exitcode_description,
+                    COALESCE(aec.severity, aec_en.severity) AS exitcode_severity,
+                    job.begin, job.end, job.schedule, job.schedule_type, job.launched_by, job.app_version,
+                    job.pid, job.task_id
+             FROM job
+             LEFT JOIN app_exit_codes aec
+                    ON aec.app_id = job.app_id AND aec.exit_code = job.exitcode AND aec.lang = :lang
+             LEFT JOIN app_exit_codes aec_en
+                    ON aec_en.app_id = job.app_id AND aec_en.exit_code = job.exitcode AND aec_en.lang = 'en'
+             WHERE job.id = :id
 EOD, );
+        $stmt->bindValue(':lang', $lang, \PDO::PARAM_STR);
         $stmt->bindValue(':id', $jobId, \PDO::PARAM_INT);
         $stmt->execute();
         $row = $stmt->fetch(\PDO::FETCH_ASSOC);
