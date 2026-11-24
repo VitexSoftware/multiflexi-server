@@ -48,6 +48,7 @@ class RuntemplateApi extends AbstractRuntemplateApi
         $this->engine->loadFromSQL($runTemplateId);
         $runtemplateData = $this->engine->getData();
         $runtemplateData['active'] = (bool) $runtemplateData['active'];
+        $runtemplateData['prepared'] = isset($runtemplateData['prepared']) ? (bool) $runtemplateData['prepared'] : null;
         $runtemplateData['success'] = empty($runtemplateData['success']) ? null : unserialize($runtemplateData['success']);
         $runtemplateData['fail'] = empty($runtemplateData['fail']) ? null : unserialize($runtemplateData['fail']);
 
@@ -87,6 +88,7 @@ class RuntemplateApi extends AbstractRuntemplateApi
         foreach ($this->engine->listingQuery()->limit($limit) as $runtemplate) {
             $runtemplateId = $runtemplate['id'];
             $runtemplate['active'] = (bool) $runtemplate['active'];
+            $runtemplate['prepared'] = isset($runtemplate['prepared']) ? (bool) $runtemplate['prepared'] : null;
             $runtemplate['success'] = empty($runtemplate['success']) ? null : unserialize($runtemplate['success']);
             $runtemplate['fail'] = empty($runtemplate['fail']) ? null : unserialize($runtemplate['fail']);
 
@@ -161,6 +163,7 @@ class RuntemplateApi extends AbstractRuntemplateApi
             // Return updated data
             $updatedData = $this->engine->getData();
             $updatedData['active'] = (bool) $updatedData['active'];
+            $updatedData['prepared'] = isset($updatedData['prepared']) ? (bool) $updatedData['prepared'] : null;
             $updatedData['success'] = empty($updatedData['success']) ? null : unserialize($updatedData['success']);
             $updatedData['fail'] = empty($updatedData['fail']) ? null : unserialize($updatedData['fail']);
 
