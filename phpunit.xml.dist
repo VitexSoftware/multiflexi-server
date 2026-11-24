@@ -11,6 +11,9 @@
     <testsuite name="Apis">
       <directory>./tests/Api</directory>
     </testsuite>
+    <testsuite name="Config">
+      <file>./tests/ProdConfigTest.php</file>
+    </testsuite>
     <testsuite name="Models">
       <file>./tests/BaseModelTest.php</file>
       <directory>./tests/Model</directory>

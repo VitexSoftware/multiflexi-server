@@ -1,3 +1,13 @@
+multiflexi-server (0.1.11) trixie; urgency=medium
+
+  * config/prod: derive PDO DSN and credentials from the MultiFlexi DB_*
+    settings instead of root/root without a database (JobApi uses raw PDO).
+  * debian/Jenkinsfile: one workspace per branch, drop debian:forky (unmet
+    dependencies blocked publishing since build 77).
+  * Tests for the production config and the APP_ENV fallback.
+
+ -- vitex <info@vitexsoftware.cz>  Tue, 24 Nov 2026 12:10:00 +0100
+
 multiflexi-server (0.1.10) UNRELEASED; urgency=medium
 
   * Load /etc/multiflexi/{multiflexi,database}.env from public/index.php

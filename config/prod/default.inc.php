@@ -60,9 +60,24 @@ return [
         true, // isCheckHost
     ],
     // PDO
-    'pdo.dsn' => 'mysql:host=localhost;charset=utf8mb4',
-    'pdo.username' => 'root',
-    'pdo.password' => 'root',
+    // Derived from the MultiFlexi DB_* settings loaded by public/index.php, so that
+    // JobApi (raw PDO) talks to the same database as the rest of MultiFlexi.
+    'pdo.dsn' => \DI\factory(static function (): string {
+        $driver = (string) \Ease\Shared::cfg('DB_CONNECTION', 'mysql');
+        $database = (string) \Ease\Shared::cfg('DB_DATABASE', 'multiflexi');
+
+        if ($driver === 'sqlite') {
+            return 'sqlite:'.$database;
+        }
+
+        $host = (string) \Ease\Shared::cfg('DB_HOST', 'localhost');
+        $port = (string) \Ease\Shared::cfg('DB_PORT', '');
+        $dsn = $driver.':host='.$host.($port === '' ? '' : ';port='.$port).';dbname='.$database;
+
+        return $driver === 'mysql' ? $dsn.';charset=utf8mb4' : $dsn;
+    }),
+    'pdo.username' => \DI\factory(static fn (): string => (string) \Ease\Shared::cfg('DB_USERNAME', '')),
+    'pdo.password' => \DI\factory(static fn (): string => (string) \Ease\Shared::cfg('DB_PASSWORD', '')),
     'pdo.options' => [
         \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
     ],
