@@ -1,3 +1,9 @@
+multiflexi-server (0.1.13) trixie; urgency=medium
+
+  * JobApi: refuse (403) to schedule a job of a disabled company.
+
+ -- vitex <info@vitexsoftware.cz>  Wed, 25 Nov 2026 02:30:00 +0100
+
 multiflexi-server (0.1.12) trixie; urgency=medium
 
   * config/prod: derive PDO DSN and credentials from the MultiFlexi DB_*

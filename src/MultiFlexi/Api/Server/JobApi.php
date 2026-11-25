@@ -244,6 +244,14 @@ EOD, );
             return $response->withHeader('Content-Type', 'application/json')->withStatus(403);
         }
 
+        if (!$rt->isCompanyEnabled()) {
+            $response->getBody()->write((string) json_encode([
+                'message' => 'Company is disabled. Scheduling forbidden.',
+            ]));
+
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(403);
+        }
+
         $executor = $body['executor'] ?? null;
 
         if ($executor === null || $executor === '') {
